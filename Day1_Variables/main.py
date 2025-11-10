@@ -18,7 +18,26 @@ print("Hello" + " " + "Masoud")
 
 # The input() function in Python is used to take input from the user via the console. 
 # Whatever the user types is returned as a string.
-print("Hello " + input("What is your name?") + "!")
+# print("Hello " + input("What is your name?") + "!")
 
 
 # In Python, the # symbol is used to write comments.
+
+# Python Variables: used to store data values that can change during program execution.
+
+name= "Hello World!"
+print(len(name))
+
+# print(len(input("What is your name?")))
+
+# username = input("What is your name?")
+# length= len(username)
+# print(length)
+
+# Your code must be readable when using variables
+
+print("Welcome to the Band Name Generator.")
+city_name = input("What's the name of the city you grew up in?\n")
+pet_name = input("What's your pet's name?\n")
+print("Your band name could be " + city_name + " " + pet_name)
+
