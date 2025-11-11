@@ -30,9 +30,9 @@ print(len(name))
 
 # print(len(input("What is your name?")))
 
-# username = input("What is your name?")
-# length= len(username)
-# print(length)
+username = input("What is your name?")
+length= len(username)
+print(length)
 
 # Your code must be readable when using variables
 
