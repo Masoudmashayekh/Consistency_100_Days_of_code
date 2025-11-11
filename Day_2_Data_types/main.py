@@ -13,3 +13,12 @@ print(123 + 456)
 
 # Large integer : The underscores (_) make large numbers easier to read in Python.
 print(123_345_546_333)
+
+# Float = Floating-point number
+print(3.14159)
+
+# Boolean = True or False
+print(True)
+print(False)
+
+
