@@ -28,6 +28,8 @@ print(type("Hello")) # <class 'str'>
 print(type(True)) # <class 'bool'>
 
 # Type conversion
+print(int("123") + int("456"))
 
+print("Number of letters: " + str(len(input("What is the name?"))))
 
 
