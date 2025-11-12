@@ -44,6 +44,8 @@ print(round(bmi, 2)) # 30.85
 score = 0
 score +=10
 print(score)
+height = 1.86
+is_winning = True
 
 # f-string
-print(f"Your score is {score}")
+print(f"Your score is {score}, your height is {height}m, You are winning is {is_winning}.")
