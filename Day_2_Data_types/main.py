@@ -30,6 +30,12 @@ print(type(True)) # <class 'bool'>
 # Type conversion
 print(int("123") + int("456"))
 
-print("Number of letters: " + str(len(input("What is the name?"))))
+# print("Number of letters: " + str(len(input("What is the name?"))))
+
+
+bmi = 84 / 1.65 ** 2
+print(bmi)
+print(int(bmi))
+print(round(bmi)) # for rounding numbers
 
 
