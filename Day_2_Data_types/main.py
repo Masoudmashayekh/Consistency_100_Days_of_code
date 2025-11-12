@@ -40,3 +40,10 @@ print(round(bmi)) # for rounding numbers. # 30
 print(round(bmi, 2)) # 30.85
 
 
+#  +=  -= *= /=
+score = 0
+score +=10
+print(score)
+
+# f-string
+print(f"Your score is {score}")
