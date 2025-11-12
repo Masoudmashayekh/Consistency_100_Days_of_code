@@ -36,6 +36,7 @@ print(int("123") + int("456"))
 bmi = 84 / 1.65 ** 2
 print(bmi)
 print(int(bmi))
-print(round(bmi)) # for rounding numbers
+print(round(bmi)) # for rounding numbers. # 30
+print(round(bmi, 2)) # 30.85
 
 
