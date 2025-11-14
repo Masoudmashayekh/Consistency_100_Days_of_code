@@ -1,6 +1,6 @@
 # Conditional sentences: if else 
-
-height = 186
+print("Welcome!")
+height = int(input("What is your height cm? "))
 
 if height > 120:
     print("Can Ride")
