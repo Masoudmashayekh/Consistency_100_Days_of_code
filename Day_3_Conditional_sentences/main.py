@@ -33,3 +33,13 @@ print(10 / 3)
     
 # Nested if / else
 
+print("Welcome!")
+height = int(input("What is your height cm? "))
+age = int(input("How old are you?"))
+if height >= 120:
+    if age <= 18:
+        print("Can Ride and pay 7$")
+    else:
+        print("Can Ride and pay 12$")
+else:
+    print("Can not Ride")
