@@ -15,3 +15,5 @@ else:
 # not equal to !=
 # = assigns a value.
 # == compares values.
+
+# Modulo Operator %
