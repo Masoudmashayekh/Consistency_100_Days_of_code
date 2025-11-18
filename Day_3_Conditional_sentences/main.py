@@ -34,18 +34,32 @@ print(10 / 3)
 # Nested if / else
 # if / elif / else
 
-print("Welcome!")
-height = int(input("What is your height cm? "))
-age = int(input("How old are you?"))
-if height >= 120:
-    if age <= 12:
-        print("Can Ride and pay 5$")
-    elif 12 < age <= 18:
-        print("Can Ride and pay 7$")
-    else:
-        print("Can Ride and pay 12$")
-else:
-    print("Can not Ride")
+# print("Welcome!")
+# height = int(input("What is your height cm? "))
+# age = int(input("How old are you?"))
+# if height >= 120:
+#     if age <= 12:
+#         print("Can Ride and pay 5$")
+#     elif 12 < age <= 18:
+#         print("Can Ride and pay 7$")
+#     else:
+#         print("Can Ride and pay 12$")
+# else:
+#     print("Can not Ride")
     
 
 
+weight = 85
+height = 1.85
+
+bmi = weight / (height ** 2)
+
+# 🚨 Do not modify the values above
+# Write your code below 👇
+
+if bmi <= 18.5:
+    print("underweight")
+elif 18.5 < bmi < 25:
+    print("normal weight")
+else:
+    print("overweight")
