@@ -37,9 +37,14 @@ print("Welcome!")
 height = int(input("What is your height cm? "))
 age = int(input("How old are you?"))
 if height >= 120:
-    if age <= 18:
+    if age <= 12:
+        print("Can Ride and pay 5$")
+    elif 12 < age <= 18:
         print("Can Ride and pay 7$")
     else:
         print("Can Ride and pay 12$")
 else:
     print("Can not Ride")
+    
+# if / elif / else
+
