@@ -1,11 +1,11 @@
 # Conditional sentences: if else 
 print("Welcome!")
-height = int(input("What is your height cm? "))
+# height = int(input("What is your height cm? "))
 
-if height >= 120:
-    print("Can Ride")
-else:
-    print("Can not Ride")
+# if height >= 120:
+#     print("Can Ride")
+# else:
+#     print("Can not Ride")
 
 # Greater than >
 # Less than <
@@ -17,3 +17,7 @@ else:
 # == compares values.
 
 # Modulo Operator %
+# 10 % 5 = 0
+# 10 % 3 = 1 remaining
+print(10 % 3)
+print(10 / 3)
