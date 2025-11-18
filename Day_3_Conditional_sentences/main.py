@@ -32,6 +32,7 @@ print(10 / 3)
     
     
 # Nested if / else
+# if / elif / else
 
 print("Welcome!")
 height = int(input("What is your height cm? "))
@@ -46,5 +47,5 @@ if height >= 120:
 else:
     print("Can not Ride")
     
-# if / elif / else
+
 
