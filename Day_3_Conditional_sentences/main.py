@@ -63,3 +63,6 @@ elif 18.5 < bmi < 25:
     print("normal weight")
 else:
     print("overweight")
+
+
+# Multiple if
