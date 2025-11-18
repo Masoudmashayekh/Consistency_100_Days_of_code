@@ -24,8 +24,12 @@ print(10 / 3)
 # Even number: A number divisible by 2 with no remainder (e.g., 2, 4, 8, 100).
 # Odd number: A number that leaves a remainder of 1 when divided by 2 (e.g., 1, 3, 7, 101).
 
-number = int(input("Enter a number: "))
-if number % 2 == 0 :
-    print("Number is even")
-else:
-    print("Number is odd")
+# number = int(input("Enter a number: "))
+# if number % 2 == 0 :
+#     print("Number is even")
+# else:
+#     print("Number is odd")
+    
+    
+# Nested if / else
+
