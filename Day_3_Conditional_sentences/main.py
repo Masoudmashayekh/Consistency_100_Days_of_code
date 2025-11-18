@@ -74,16 +74,16 @@ bill = 0
 if height >= 120:
     if age <= 12:
         bill = 5
-        print("Can Ride and pay 5$")
+        print("Can Ride and pay $5")
     elif 12 < age <= 18:
         bill = 7
-        print("Can Ride and pay 7$")
+        print("Can Ride and pay $7")
     else:
         bill = 12
-        print("Can Ride and pay 12$")
+        print("Can Ride and pay $12")
     wants_photo = input("Do you want to have a photo take? Type y for Yes and n for No.")
     if wants_photo == "y":
         bill += 3
-    print(f"Your final bill is {bill} $")
+    print(f"Your final bill is ${bill}")
 else:
     print("Can not Ride")
