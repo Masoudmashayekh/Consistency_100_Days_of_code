@@ -31,4 +31,5 @@ else:
     print("You typed the wrong inputs.")
 
 print(f"Your final bill is: ${bill}.")
+
     
