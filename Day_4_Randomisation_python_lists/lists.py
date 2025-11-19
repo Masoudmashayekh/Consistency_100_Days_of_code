@@ -13,5 +13,6 @@ states = [
     "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ]
 
-
 print(states[0])
+states.append("Masoud_land")
+print(states)
