@@ -8,5 +8,8 @@ print(random_integer)
 print(my_module.my_favorite_number)
 
 # Radom floating random.random()
-random_float = random.random()
+random_float = random.random() * 10
 print(random_float)
+
+random_float_2 = random.uniform(1,10)
+print(random_float_2)
