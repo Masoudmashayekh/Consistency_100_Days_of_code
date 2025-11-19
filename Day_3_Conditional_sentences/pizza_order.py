@@ -21,12 +21,14 @@ elif size == "M":
         bill += pepperoni_l_m
     if extra_cheese == "Y":
         bill += cheese_price
-else:
+elif size == "L":
     bill += large_pizza
     if pepperoni == "Y":
         bill += pepperoni_l_m
     if extra_cheese == "Y":
         bill += cheese_price
+else:
+    print("You typed the wrong inputs.")
 
 print(f"Your final bill is: ${bill}.")
     
