@@ -19,10 +19,29 @@ for number in range(0,nr_numbers):
     password += random.choice(numbers)
       
 print(password)
+
 # Hard Version
 mixed = ''.join(random.sample(password, len(password)))
 print(mixed)
 
-
 # Shuffle characters in a string.  mixed = ''.join(random.sample(s, len(s)))
 # Shuffle list of characters. random.shuffle(chars)
+
+# Hard Version
+password_list = []
+for letter in range(0,nr_letters):
+    password_list.append(random.choice(letters))
+for sympol in range(0,nr_symbols):
+    password_list.append(random.choice(symbols))
+for number in range(0,nr_numbers):
+    password_list.append(random.choice(numbers))
+    
+print(password_list)
+random.shuffle(password_list)
+print(password_list)
+
+new_password = ""
+for char in password_list:
+    new_password += char
+    
+print(f"Your password is: {new_password} ")
