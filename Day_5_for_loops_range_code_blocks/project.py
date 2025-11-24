@@ -12,15 +12,12 @@ nr_numbers = int(input("How many numbers would you like?\n"))
 # Easy Version
 password = ""
 for letter in range(0,nr_letters):
-    random_letter = random.choice(letters)
-    password += random_letter
+    password += random.choice(letters)
 for sympol in range(0,nr_symbols):
-    random_symbol = random.choice(symbols)
-    password += random_symbol
+    password += random.choice(symbols)
 for number in range(0,nr_numbers):
-    random_number = random.choice(numbers)
-    password += random_number
-    
+    password += random.choice(numbers)
+      
 print(password)
 # Hard Version
 mixed = ''.join(random.sample(password, len(password)))
