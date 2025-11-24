@@ -10,20 +10,20 @@ nr_symbols = int(input("How many symbols would you like?\n"))
 nr_numbers = int(input("How many numbers would you like?\n"))
 
 # Easy Version
-rn_letters = ""
+password = ""
 for letter in range(0,nr_letters):
     letter = random.choice(letters)
-    rn_letters += letter
+    password += letter
 for sympol in range(0,nr_symbols):
     symbol = random.choice(symbols)
-    rn_letters += symbol
+    password += symbol
 for number in range(0,nr_numbers):
     number = random.choice(numbers)
-    rn_letters += number
+    password += number
     
-print(rn_letters)
+print(password)
 # Hard Version
-mixed = ''.join(random.sample(rn_letters, len(rn_letters)))
+mixed = ''.join(random.sample(password, len(password)))
 print(mixed)
 
 
