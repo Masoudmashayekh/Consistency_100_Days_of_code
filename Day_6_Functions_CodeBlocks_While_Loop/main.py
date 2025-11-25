@@ -14,6 +14,19 @@ my_function()
 # While something_is_true:
 #     Do something repeatedly      
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 # def turn_right():
 #     turn_left()
 #     turn_left()
