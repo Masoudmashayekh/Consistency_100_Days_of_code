@@ -6,10 +6,9 @@ def my_function():
 # calling Function
 my_function()
 
-# Indentation: 4 spaces ....
+# Indentation: 4 spaces .... use Tab
 # def my_function():
 # ....print("Hello")
-
 
 
 
