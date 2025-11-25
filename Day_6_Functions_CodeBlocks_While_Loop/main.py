@@ -10,7 +10,9 @@ my_function()
 # def my_function():
 # ....print("Hello")
 
-
+# While Loop
+# While something_is_true:
+#     Do something repeatedly      
 
 # def turn_right():
 #     turn_left()
