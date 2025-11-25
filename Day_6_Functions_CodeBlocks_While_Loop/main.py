@@ -45,3 +45,29 @@ my_function()
 # for step in range(6):
 #     turn()
     
+
+
+# def turn_right():
+#     turn_left()
+#     turn_left()
+#     turn_left()
+
+# def turn():
+#     move()
+#     turn_left()
+#     move()
+#     turn_right()
+#     move()
+#     turn_right()
+#     move()
+#     turn_left()
+
+# n = 6
+# while n>0:
+#     turn()
+#     n -= 1
+#     print(n)
+    
+
+# while not at_goal():
+    # turn()
