@@ -1,5 +1,4 @@
-# Review: For & While Loops, If/else, Lists, Strings, Range, Modules
-import random
+import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
 word_list =["aardvark", "baboon", "camel"]
 
 # TODO-1 - Randomly choose a word from the word_list 
