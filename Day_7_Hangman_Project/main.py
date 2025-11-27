@@ -9,8 +9,11 @@ print(random_word)
 print(letter_random_word)
 
 # TODO-2 - Ask the user to guess a letter 
-
-
+guess_letter = input("Guess a letter: ")
 
 # TODO-3 - Check if the letter the user guessed is right or wrong.
-
+for letter in letter_random_word:
+    if letter == guess_letter:
+        print("Right")
+    else:
+        print("Wrong")
