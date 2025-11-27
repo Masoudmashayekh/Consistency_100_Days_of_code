@@ -13,10 +13,12 @@ print(num_chosen_word)
 guess = input("Guess a letter: ").lower()
 
 # TODO-3 - Check if the letter the user guessed is right or wrong.
+
 for letter in list_chosen_word:
     if letter == guess:
-        for letter in list_chosen_word:
-            n = list_chosen_word.index(letter)
-            num_chosen_word[n] = letter
-
+        for letter in range(len(list_chosen_word)):
+            
+            
+        
+        
 print("".join(num_chosen_word))
