@@ -16,7 +16,7 @@ guess = input("Guess a letter: ").lower()
 
 for letter in list_chosen_word:
     if letter == guess:
-        for letter in range(len(list_chosen_word)):
+        
             
                    
 print("".join(num_chosen_word))
