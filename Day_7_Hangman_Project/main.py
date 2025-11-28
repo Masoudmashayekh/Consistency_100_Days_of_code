@@ -18,7 +18,7 @@ for letter in list_chosen_word:
     if letter == guess:
         position += letter
     else:
-        pass 
+        position += "_"
 print(position)
             
                    
