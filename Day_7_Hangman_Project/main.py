@@ -22,4 +22,3 @@ for letter in list_chosen_word:
 print(position)
             
                    
-print("".join(num_chosen_word))
