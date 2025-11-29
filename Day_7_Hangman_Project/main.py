@@ -9,16 +9,21 @@ print(list_chosen_word)
 num_chosen_word = list(len(chosen_word)*"_")
 
 # TODO-2 - Ask the user to guess a letter 
-print(num_chosen_word)
-guess = input("Guess a letter: ").lower()
+n = len(chosen_word)
+while n > 0:
+    print(num_chosen_word)
+    guess = input("Guess a letter: ").lower()
 
-# TODO-3 - Check if the letter the user guessed is right or wrong.
-position = ""
-for letter in list_chosen_word:
-    if letter == guess:
-        position += letter
-    else:
-        position += "_"
-print(position)
+    # TODO-3 - Check if the letter the user guessed is right or wrong.
+    position = ""
+    for letter in list_chosen_word:
+        if letter == guess:
+            position += letter
+        elif letter in position:
+            position
+        else:
+            position += "_"
+    n -= 1
+    print(position)
             
                    
