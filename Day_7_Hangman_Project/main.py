@@ -1,5 +1,5 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
-word_list =["baboon"]
+word_list =["baboon","alice", "bob", "charlie", "diana", "ethan"]
 
 # TODO-1 - Randomly choose a word from the word_list 
 chosen_word = random.choice(word_list)
