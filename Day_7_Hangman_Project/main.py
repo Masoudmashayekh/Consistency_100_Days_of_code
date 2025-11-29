@@ -11,7 +11,7 @@ num_chosen_word = list(len(chosen_word)*"_")
 # TODO-2 - Ask the user to guess a letter 
 print(num_chosen_word)
 n = len(chosen_word)
-while n > 5:
+while n > 0:
     guess = input("Guess a letter: ").lower()
 
     # TODO-3 - Check if the letter the user guessed is right or wrong.
