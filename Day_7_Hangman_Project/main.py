@@ -1,5 +1,5 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
-word_list =["aardvark", "baboon", "camel"]
+word_list =["baboon"]
 
 # TODO-1 - Randomly choose a word from the word_list 
 chosen_word = random.choice(word_list)
@@ -16,14 +16,15 @@ while n > 0:
 
     # TODO-3 - Check if the letter the user guessed is right or wrong.
     position = ""
-    for letter in list_chosen_word:
+    for letter in chosen_word:
         if letter == guess:
-            position += letter
+            num_chosen_word[list_chosen_word.index(letter)] = guess            
         elif letter in position:
             position
         else:
             position += "_"
     n -= 1
     print(position)
+    print(num_chosen_word)
             
                    
