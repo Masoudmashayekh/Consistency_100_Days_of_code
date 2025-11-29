@@ -16,13 +16,16 @@ while n > 0:
 
     # TODO-3 - Check if the letter the user guessed is right or wrong.
     position = ""
-    for letter in chosen_word:
-        if letter == guess:
-            num_chosen_word[list_chosen_word.index(letter)] = guess            
-        elif letter in position:
-            position
-        else:
-            position += "_"
+    nm = len(chosen_word)
+    while n > 0:
+        for letter in chosen_word:
+            if letter == guess:
+                num_chosen_word[list_chosen_word.index(letter)] = guess            
+            elif letter in position:
+                position
+            else:
+                position += "_"
+        nm -= 1
     n -= 1
     print(position)
     print(num_chosen_word)
