@@ -44,7 +44,7 @@ while not game_over :
         print(HANGMANPICS[hangman])
         if lives == 0:
             game_over = True
-            print("Game Over!")
+            print(f"It was '{chosen_word}'. Game Over!")
             
     
     
