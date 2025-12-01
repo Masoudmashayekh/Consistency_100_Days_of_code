@@ -66,24 +66,26 @@ num_chosen_word = list(len(chosen_word)*"_")
 print(num_chosen_word)
 
 
-
-
-
-guess = input("Guess a letter: ").lower()
+life = 6
 hangman = 0
-# TODO-3 - Check if the letter the user guessed is right or wrong.
-for i in range(len(chosen_word)):
-    if chosen_word[i] == guess:
-        num_chosen_word[i] = guess  
-if guess in num_chosen_word:
-    hangman == hangman
-    print(HANGMANPICS[hangman])
-else:
-    hangman += 1
-    print(HANGMANPICS[hangman])
-         
-final_word = "".join(num_chosen_word)
-print(final_word)
+while life > 0 :
+
+    guess = input("Guess a letter: ").lower()
+    
+    # TODO-3 - Check if the letter the user guessed is right or wrong.
+    for i in range(len(chosen_word)):
+        if chosen_word[i] == guess:
+            num_chosen_word[i] = guess  
+    if guess in num_chosen_word:
+        hangman == hangman
+        print(HANGMANPICS[hangman])
+    else:
+        hangman += 1
+        life -= 1
+        print(HANGMANPICS[hangman])
+            
+    final_word = "".join(num_chosen_word)
+    print(final_word)
     
 
             
