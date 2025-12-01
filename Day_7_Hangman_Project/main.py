@@ -1,56 +1,57 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
 
 
-HANGMANPICS = ['''
+HANGMANPICS = [r"""
   +---+
   |   |
       |
       |
       |
       |
-=========''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========''', '''
+=========""", r"""
   +---+
   |   |
   O   |
+      |
+      |
+      |
+=========""", r"""
+  +---+
+  |   |
+  O   |
   |   |
       |
       |
-=========''', '''
+=========""", r"""
   +---+
   |   |
   O   |
  /|   |
       |
       |
-=========''', '''
+=========""", r"""
   +---+
   |   |
   O   |
  /|\  |
       |
       |
-=========''', '''
+=========""", r"""
   +---+
   |   |
   O   |
  /|\  |
  /    |
       |
-=========''', '''
+=========""", r"""
   +---+
   |   |
   O   |
  /|\  |
  / \  |
       |
-=========''']
+========="""]
+
 word_list =["baboon","alice", "bob", "charlie", "diana", "ethan"]
 
 
@@ -65,19 +66,18 @@ num_chosen_word = list(len(chosen_word)*"_")
 print(num_chosen_word)
 # n = len(chosen_word)
 game_over = False
-hangman = 0
-while not game_over:
-    guess = input("Guess a letter: ").lower()
 
+while not game_over:
+    hangman = 0
+    guess = input("Guess a letter: ").lower()
     # TODO-3 - Check if the letter the user guessed is right or wrong.
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
-            num_chosen_word[i] = guess
-            print(HANGMANPICS[hangman])  
+            num_chosen_word[i] = guess  
         else:
             hangman += 1
-            print(HANGMANPICS[hangman])
-    
+            
+    print(HANGMANPICS[hangman])
     if "_" not in num_chosen_word:
         game_over = True
         print("You Win!")
