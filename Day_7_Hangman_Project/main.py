@@ -70,7 +70,7 @@ lives = 6
 hangman = 0
 game_over = False
 while not game_over :
-
+    print(f"*** {lives}/6 Lives left ***")
     guess = input("Guess a letter: ").lower()
     
     # TODO-3 - Check if the letter the user guessed is right or wrong.
