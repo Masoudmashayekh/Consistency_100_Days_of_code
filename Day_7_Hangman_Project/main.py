@@ -1,5 +1,58 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
+
+
+HANGMANPICS = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+      |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+  |   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|   |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+      |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ /    |
+      |
+=========''', '''
+  +---+
+  |   |
+  O   |
+ /|\  |
+ / \  |
+      |
+=========''']
 word_list =["baboon","alice", "bob", "charlie", "diana", "ethan"]
+
 
 # TODO-1 - Randomly choose a word from the word_list 
 chosen_word = random.choice(word_list)
@@ -12,13 +65,18 @@ num_chosen_word = list(len(chosen_word)*"_")
 print(num_chosen_word)
 # n = len(chosen_word)
 game_over = False
+hangman = 0
 while not game_over:
     guess = input("Guess a letter: ").lower()
 
     # TODO-3 - Check if the letter the user guessed is right or wrong.
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
-            num_chosen_word[i] = guess  
+            num_chosen_word[i] = guess
+            print(HANGMANPICS[hangman])  
+        else:
+            hangman += 1
+            print(HANGMANPICS[hangman])
     
     if "_" not in num_chosen_word:
         game_over = True
