@@ -64,23 +64,25 @@ num_chosen_word = list(len(chosen_word)*"_")
 
 # TODO-2 - Ask the user to guess a letter 
 print(num_chosen_word)
-# n = len(chosen_word)
-game_over = False
 
-while not game_over:
+game_over = 3
+
+while game_over:
     hangman = 0
     guess = input("Guess a letter: ").lower()
     # TODO-3 - Check if the letter the user guessed is right or wrong.
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             num_chosen_word[i] = guess  
-        else:
-            hangman += 1
             
+
+    if "_" in num_chosen_word != len(chosen_word) :
+        hangman = hangman
+    else:
+        hangman += 1
+        
     print(HANGMANPICS[hangman])
-    if "_" not in num_chosen_word:
-        game_over = True
-        print("You Win!")
+    
                       
     # n -= 1
     final_word = "".join(num_chosen_word)
