@@ -68,7 +68,8 @@ print(num_chosen_word)
 
 lives = 6
 hangman = 0
-while lives > 0 :
+game_over = False
+while not game_over :
 
     guess = input("Guess a letter: ").lower()
     
@@ -83,6 +84,9 @@ while lives > 0 :
         hangman += 1
         lives -= 1
         print(HANGMANPICS[hangman])
+        if lives == 0:
+            game_over = True
+            print("Game Over!")
             
     final_word = "".join(num_chosen_word)
     print(final_word)
