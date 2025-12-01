@@ -1,57 +1,6 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
 from hangman_words import word_list
-
-HANGMANPICS = [r"""
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========""", r"""
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-========="""]
-
+from hangman_art import HANGMANPICS
 
 # TODO-1 - Randomly choose a word from the word_list 
 chosen_word = random.choice(word_list)
