@@ -77,9 +77,15 @@ while not game_over :
     for i in range(len(chosen_word)):
         if chosen_word[i] == guess:
             num_chosen_word[i] = guess  
+    
+    final_word = "".join(num_chosen_word)
+    print(final_word)
     if guess in num_chosen_word:
         hangman == hangman
         print(HANGMANPICS[hangman])
+        if "_" not in num_chosen_word:
+            print("You Win!")
+            game_over = True
     else:
         hangman += 1
         lives -= 1
@@ -88,8 +94,7 @@ while not game_over :
             game_over = True
             print("Game Over!")
             
-    final_word = "".join(num_chosen_word)
-    print(final_word)
+    
     
 
             
