@@ -20,7 +20,7 @@ while not game_over :
     
     final_word = "".join(num_chosen_word)
     print(f"Word to guess: {final_word}")
-    print(f"****** {lives}/6 Lives left ******")
+    print(f"************ {lives}/6 Lives left ************")
     guess = input("Guess a letter: ").lower()
     if guess in num_chosen_word:
         print(f"You've already guessed {guess}")
