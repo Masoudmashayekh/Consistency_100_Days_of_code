@@ -66,9 +66,9 @@ num_chosen_word = list(len(chosen_word)*"_")
 print(num_chosen_word)
 
 
-life = 6
+lives = 6
 hangman = 0
-while life > 0 :
+while lives > 0 :
 
     guess = input("Guess a letter: ").lower()
     
@@ -81,7 +81,7 @@ while life > 0 :
         print(HANGMANPICS[hangman])
     else:
         hangman += 1
-        life -= 1
+        lives -= 1
         print(HANGMANPICS[hangman])
             
     final_word = "".join(num_chosen_word)
