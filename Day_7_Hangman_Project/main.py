@@ -1,5 +1,5 @@
 import random # Review: For & While Loops, If/else, Lists, Strings, Range, Modules
-
+from hangman_words import word_list
 
 HANGMANPICS = [r"""
   +---+
@@ -51,8 +51,6 @@ HANGMANPICS = [r"""
  / \  |
       |
 ========="""]
-
-word_list =["baboon","alice", "bob", "charlie", "diana", "ethan"]
 
 
 # TODO-1 - Randomly choose a word from the word_list 

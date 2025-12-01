@@ -1,0 +1,22 @@
+word_list = [
+    "planet",
+    "jungle",
+    "crystal",
+    "python",
+    "oxygen",
+    "wizard",
+    "magnet",
+    "shadow",
+    "volcano",
+    "lantern",
+    "freezer",
+    "compass",
+    "thunder",
+    "horizon",
+    "pyramid",
+    "galaxy",
+    "mystery",
+    "dolphin",
+    "tornado",
+    "emerald"
+]
