@@ -27,6 +27,7 @@ while not game_over:
     # n -= 1
     final_word = "".join(num_chosen_word)
     print(final_word)
+    
 
             
                    
