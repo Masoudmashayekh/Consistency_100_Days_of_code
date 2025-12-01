@@ -40,6 +40,7 @@ while not game_over :
     else:
         hangman += 1
         lives -= 1
+        print(f"You guessed {guess}, that's not in the word. You lose a life.")
         print(HANGMANPICS[hangman])
         if lives == 0:
             game_over = True
