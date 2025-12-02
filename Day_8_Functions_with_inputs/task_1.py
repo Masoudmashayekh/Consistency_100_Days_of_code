@@ -8,6 +8,8 @@
     
 # greet()
 
+# something = 123  , something is Parameter and 123 is Argument
+
 
 # Function with input
 
