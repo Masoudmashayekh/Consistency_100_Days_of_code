@@ -1,9 +1,15 @@
 # Function
 
-def greet():
-    print("Hello")
-    print("How do you do?")
-    print("Isn't the weather nice?")
+# def greet():
+#     print("Hello")
+#     print("How do you do?")
+#     print("Isn't the weather nice?")
     
     
-greet()
+# greet()
+
+
+# Function with input
+
+def greet_with_name(name):
+    
