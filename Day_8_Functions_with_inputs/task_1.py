@@ -28,3 +28,4 @@ def greet_with(name,location):
     print(f"What is it like in {location}?")
     
 greet_with("Masoud", "London")
+greet_with(name= "Masoud", location= "London")
