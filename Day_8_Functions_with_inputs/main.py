@@ -22,9 +22,7 @@ import string
 alphabet = list(string.ascii_lowercase)
 print(alphabet)
 
-direction = input("Type 'encode' to encrypt, type 'decode to decrypt:\n").lower()
-text = input("Type your message:\n").lower()
-shift = int(input("Type the shift number:\n"))
+
 
 # def encrypt_or_decrypt(original_text, shift_amount, o_direction):
 #     output_list = []
@@ -68,8 +66,11 @@ def caeser(original_text, shift_amount, o_direction):
     
 go_again = True
 while go_again:
+    direction = input("Type 'encode' to encrypt, type 'decode to decrypt:\n").lower()
+    text = input("Type your message:\n").lower()
+    shift = int(input("Type the shift number:\n"))
     caeser(original_text= text, shift_amount= shift, o_direction= direction)
-    again =  input("Type 'yes if you want to go again. Otherwise type 'no'.")
+    again =  input("Type 'yes if you want to go again. Otherwise type 'no'.\n").loer()
     if again == "no":
         go_again = False
       
