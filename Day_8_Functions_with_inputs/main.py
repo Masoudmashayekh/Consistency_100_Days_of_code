@@ -63,8 +63,9 @@ def caeser(original_text, shift_amount, o_direction):
         else:
             output_list.append(" ")
     output_list = "".join(output_list)
-    print(f"Here is the encoded result: {output_list}")    
+    print(f"Here is the {o_direction}d result: {output_list}")    
     
+
 
 caeser(original_text= text, shift_amount= shift, o_direction= direction)
           
