@@ -18,9 +18,10 @@
 # 9
 # Here's the encoded result: .....!
 import string
-
+from art import logo
+print(logo)
 alphabet = list(string.ascii_lowercase)
-print(alphabet)
+# print(alphabet)
 
 
 
@@ -52,17 +53,19 @@ print(alphabet)
 # encrypt_or_decrypt(original_text= text, shift_amount= shift, o_direction= direction)
 
 def caeser(original_text, shift_amount, o_direction):
-    output_list = []
-    if o_direction == "decode":
-        shift_amount *= -1
-    for item in original_text:
-        if item in alphabet:
-            output_list.append(alphabet[((alphabet.index(item)) + shift_amount) % len(alphabet)])
-        else:
-            output_list.append(item)
-    output_list = "".join(output_list)
-    print(f"Here is the {o_direction}d result: {output_list}")
-     
+    if o_direction == "encode" or o_direction == "decode":
+        output_list = []
+        if o_direction == "decode":
+            shift_amount *= -1
+        for item in original_text:
+            if item in alphabet:
+                output_list.append(alphabet[((alphabet.index(item)) + shift_amount) % len(alphabet)])
+            else:
+                output_list.append(item)
+        output_list = "".join(output_list)
+        print(f"Here is the {o_direction}d result: {output_list}")
+    else:
+        print("You must select decode or encode!!!") 
     
 go_again = True
 while go_again:
@@ -70,7 +73,7 @@ while go_again:
     text = input("Type your message:\n").lower()
     shift = int(input("Type the shift number:\n"))
     caeser(original_text= text, shift_amount= shift, o_direction= direction)
-    again =  input("Type 'yes if you want to go again. Otherwise type 'no'.\n").loer()
+    again =  input("Type 'yes if you want to go again. Otherwise type 'no'.\n").lower()
     if again == "no":
         go_again = False
       
