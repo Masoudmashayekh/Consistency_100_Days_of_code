@@ -26,7 +26,7 @@ direction = input("Type 'encode' to encrypt, type 'decode to decrypt:\n").lower(
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-def encrypt(original_text, shift_amount, o_direction):
+def encrypt_or_decrypt(original_text, shift_amount, o_direction):
     output_list = []
     if direction == "encode":
         for item in text:
@@ -51,4 +51,4 @@ def encrypt(original_text, shift_amount, o_direction):
 
 
 
-encrypt(original_text= text, shift_amount= shift, o_direction= direction)
+encrypt_or_decrypt(original_text= text, shift_amount= shift, o_direction= direction)
