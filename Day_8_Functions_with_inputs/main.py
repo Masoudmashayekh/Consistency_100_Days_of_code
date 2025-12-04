@@ -31,16 +31,18 @@ shifted_list = []
 if direction == "encode":
     for item in text_list:
         if item != " ":
-            shifted_list.append(alphabet[(alphabet.index(item))+shift])
+            shifted_list.append(alphabet[(alphabet.index(item)) + shift])
         else:
             shifted_list.append(" ")
+    shifted_list = "".join(shifted_list)
+    print(f"Here is the encoded result: {shifted_list}")
+    
 elif direction == "decode":
     for item in text_list:
         if item != " ":
             shifted_list.append(alphabet[(alphabet.index(item))-shift])
         else:
-            shifted_list.append(" ")       
+            shifted_list.append(" ")    
+    shifted_list = "".join(shifted_list)
+    print(f"Here is the decoded result: {shifted_list}")   
 
-
-shifted_list = "".join(shifted_list)
-print(shifted_list)
