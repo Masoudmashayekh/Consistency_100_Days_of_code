@@ -26,29 +26,45 @@ direction = input("Type 'encode' to encrypt, type 'decode to decrypt:\n").lower(
 text = input("Type your message:\n").lower()
 shift = int(input("Type the shift number:\n"))
 
-def encrypt_or_decrypt(original_text, shift_amount, o_direction):
-    output_list = []
-    if direction == "encode":
-        for item in text:
-            if item != " ":
-                output_list.append(alphabet[((alphabet.index(item)) + shift) % len(alphabet)])
-            else:
-                output_list.append(" ")
-        output_list = "".join(output_list)
-        print(f"Here is the encoded result: {output_list}")    
-    elif direction == "decode":
-        for item in text:
-            if item != " ":
-                output_list.append(alphabet[((alphabet.index(item)) - shift) % len(alphabet)])
-            else:
-                output_list.append(" ")    
-        output_list = "".join(output_list)
-        print(f"Here is the decoded result: {output_list}") 
-    else:
-        print("You must select encode or decode!")
+# def encrypt_or_decrypt(original_text, shift_amount, o_direction):
+#     output_list = []
+#     if direction == "encode":
+#         for item in text:
+#             if item != " ":
+#                 output_list.append(alphabet[((alphabet.index(item)) + shift) % len(alphabet)])
+#             else:
+#                 output_list.append(" ")
+#         output_list = "".join(output_list)
+#         print(f"Here is the encoded result: {output_list}")    
+#     elif direction == "decode":
+#         for item in text:
+#             if item != " ":
+#                 output_list.append(alphabet[((alphabet.index(item)) - shift) % len(alphabet)])
+#             else:
+#                 output_list.append(" ")    
+#         output_list = "".join(output_list)
+#         print(f"Here is the decoded result: {output_list}") 
+#     else:
+#         print("You must select encode or decode!")
           
 
 
 
 
-encrypt_or_decrypt(original_text= text, shift_amount= shift, o_direction= direction)
+# encrypt_or_decrypt(original_text= text, shift_amount= shift, o_direction= direction)
+
+def caeser(original_text, shift_amount, o_direction):
+    output_list = []
+    if o_direction == "decode":
+        shift_amount *= -1
+    for item in original_text:
+        if item != " ":
+            output_list.append(alphabet[((alphabet.index(item)) + shift_amount) % len(alphabet)])
+        else:
+            output_list.append(" ")
+    output_list = "".join(output_list)
+    print(f"Here is the encoded result: {output_list}")    
+    
+
+caeser(original_text= text, shift_amount= shift, o_direction= direction)
+          
