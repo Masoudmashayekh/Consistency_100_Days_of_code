@@ -76,4 +76,5 @@ while go_again:
     again =  input("Type 'yes if you want to go again. Otherwise type 'no'.\n").lower()
     if again == "no":
         go_again = False
+        print("Goodbye")
       
