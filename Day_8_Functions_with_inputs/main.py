@@ -58,14 +58,18 @@ def caeser(original_text, shift_amount, o_direction):
     if o_direction == "decode":
         shift_amount *= -1
     for item in original_text:
-        if item != " ":
+        if item in alphabet:
             output_list.append(alphabet[((alphabet.index(item)) + shift_amount) % len(alphabet)])
         else:
-            output_list.append(" ")
+            output_list.append(item)
     output_list = "".join(output_list)
-    print(f"Here is the {o_direction}d result: {output_list}")    
+    print(f"Here is the {o_direction}d result: {output_list}")
+     
     
-
-
-caeser(original_text= text, shift_amount= shift, o_direction= direction)
-          
+go_again = True
+while go_again:
+    caeser(original_text= text, shift_amount= shift, o_direction= direction)
+    again =  input("Type 'yes if you want to go again. Otherwise type 'no'.")
+    if again == "no":
+        go_again = False
+      
