@@ -18,6 +18,10 @@ while repeat:
     repeat_q = input("Are there any other bidders? Type 'yes' or 'no'").lower()
     if repeat_q == "no":
         repeat = False
+        row = {}
+        for key in all_bids:
+            
+            
 
 
 
