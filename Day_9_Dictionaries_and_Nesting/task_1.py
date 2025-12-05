@@ -1,7 +1,8 @@
-my_dict = {
+dict = {
     "name": "Alice",
     "age": 30,
     "city": "Paris"
 }
 
 
+print(dict["name"])
