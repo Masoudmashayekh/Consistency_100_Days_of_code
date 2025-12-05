@@ -10,3 +10,11 @@ dict["ID"] = "123"
 print(dict)
 
 empty_dictionary = {}
+
+# Wipe an existing dictionary
+# dict = {}
+# print(dict)
+
+# Edit an item in a dictionary
+dict["name"] = "Tom"
+print(dict)
