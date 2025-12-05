@@ -6,3 +6,7 @@ dict = {
 
 
 print(dict["name"])
+dict["ID"] = "123"
+print(dict)
+
+empty_dictionary = {}
