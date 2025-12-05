@@ -18,12 +18,14 @@ while repeat:
     repeat_q = input("Are there any other bidders? Type 'yes' or 'no'").lower()
     if repeat_q == "no":
         repeat = False
-        row = {"name": "", "price": "0"}
+        final_dic = {"name": "", "price": "0"}
         for key in all_bids:
-            if int(all_bids[key]) > int(row["price"]):
-                row["name"] = key
-                row["price"] = all_bids[key]
-        print(f"Winner is {row}")
+            if int(all_bids[key]) > int(final_dic["price"]):
+                final_dic["name"] = key
+                final_dic["price"] = all_bids[key]
+        print(f"The winner is {final_dic['name'].capitalize()} with a bid of ${final_dic['price']}.")
+    else:
+        print("\n" * 10)
 
                 
             
