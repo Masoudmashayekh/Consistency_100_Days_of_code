@@ -1,5 +1,5 @@
 dict = {
-    "name": "Alice",
+    "name": "Tom",
     "age": 30,
     "city": "Paris"
 }
@@ -16,5 +16,10 @@ empty_dictionary = {}
 # print(dict)
 
 # Edit an item in a dictionary
-dict["name"] = "Tom"
-print(dict)
+# dict["name"] = "Tom"
+# print(dict)
+
+for key in dict:
+    print(key)
+    print(dict[key])
+    
