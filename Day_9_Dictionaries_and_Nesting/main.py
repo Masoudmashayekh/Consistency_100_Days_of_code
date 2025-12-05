@@ -18,9 +18,14 @@ while repeat:
     repeat_q = input("Are there any other bidders? Type 'yes' or 'no'").lower()
     if repeat_q == "no":
         repeat = False
-        row = {}
+        row = {"name": "", "price": "0"}
         for key in all_bids:
-            
+            if int(all_bids[key]) > int(row["price"]):
+                row["name"] = key
+                row["price"] = all_bids[key]
+        print(f"Winner is {row}")
+
+                
             
 
 
