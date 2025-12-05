@@ -23,3 +23,12 @@ for key in dict:
     print(key)
     print(dict[key])
     
+    
+# Nesting
+
+# {
+# key: [list],
+# key2: {Dict}
+# }
+
+    
