@@ -24,3 +24,5 @@ travel_log_dic ={
         "cities_visited": ["Stuttgart", "Berlin"]
     }
 }
+
+print(travel_log_dic["France"]["cities_visited"][2])
