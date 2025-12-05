@@ -24,11 +24,5 @@ for key in dict:
     print(dict[key])
     
     
-# Nesting
-
-# {
-# key: [list],
-# key2: {Dict}
-# }
 
     
