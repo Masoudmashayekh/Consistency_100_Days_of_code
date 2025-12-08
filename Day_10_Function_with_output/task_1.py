@@ -9,3 +9,4 @@ def format_name(f_name, l_name):
 
 formated_string = format_name(f_name="masoud", l_name="mashayekh")
 print(formated_string)
+
