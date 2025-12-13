@@ -23,12 +23,19 @@
 
 
 def add(n1, n2):
+    ''' Add numbers'''
     return n1 + n2
+
 def subtract(n1, n2):
+    ''' Subtract numbers'''
     return n1 - n2
+
 def multiply(n1, n2):
+    ''' Multiply numbers'''
     return n1 * n2
+
 def divide(n1, n2):
+    ''' Divide numbers'''
     return n1 / n2
 
-operation = { "+": add, "-": subtract, "*": multiply, "/": divide}
+operation = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
