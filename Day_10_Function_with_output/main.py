@@ -39,3 +39,6 @@ def divide(n1, n2):
     return n1 / n2
 
 operation = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
+
+n1 = 4
+n2 = 2
