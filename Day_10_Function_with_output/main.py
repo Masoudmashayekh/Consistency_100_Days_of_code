@@ -50,6 +50,13 @@ while continue_:
     final_result = operations[pick_operation](first_number, second_number)
     save_num == final_result
     print(final_result)
-    continue_or_not = input("Type 'y' to continue calculating with 15 or type 'n' to start new calculation: ")
+    continue_or_not = input(f"Type 'y' to continue calculating with {final_result} or type 'n' to start new calculation: ")
     if continue_or_not == 'n':
         continue_ == False
+    else:
+        save_num == final_result
+        pick_operation = input(f"+\n-\n*\n/\nPick an operation: ")
+        second_number = float(input("What is the next number?"))
+        final_result = operations[pick_operation](first_number, second_number)
+        save_num == final_result
+        print(final_result)
