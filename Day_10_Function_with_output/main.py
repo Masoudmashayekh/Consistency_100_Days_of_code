@@ -42,3 +42,5 @@ operation = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
 n1 = 4
 n2 = 2
+
+
