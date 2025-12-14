@@ -40,8 +40,10 @@ def divide(n1, n2):
 
 operations = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
-print(operations["-"](n1= 5, n2= 3))
+
 first_number = float(input("what is your first number? "))
 pick_operation = input(f"+\n-\n*\n/\nPick an operation: ")
 second_number = float(input("What is the next number?"))
-print(operations[pick_operation](first_number, second_number))
+final_result = operations[pick_operation](first_number, second_number))
+print(final_result)
+continue_or_not = input("Type 'y' to continue calculating with 15 or type 'n' to start new calculation: ")
