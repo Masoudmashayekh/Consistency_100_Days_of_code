@@ -38,9 +38,10 @@ def divide(n1, n2):
     ''' Divide numbers'''
     return n1 / n2
 
-operation = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
+operations = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
-n1 = 4
-n2 = 2
-print(operation["*"])
-
+print(operations["-"](n1= 5, n2= 3))
+first_number = float(input("what is your first number? "))
+pick_operation = input(f"+\n-\n*\n/\nPick an operation: ")
+second_number = float(input("What is the next number?"))
+print(operations[pick_operation](first_number, second_number))
