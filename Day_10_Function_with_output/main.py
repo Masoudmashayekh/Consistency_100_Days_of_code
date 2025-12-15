@@ -41,13 +41,13 @@ def divide(n1, n2):
 operations = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
 
-first_number = float(input("what is your first number? "))
+num1 = float(input("what is your first number? "))
 continue_ = True
 save_num = 0
 while continue_:
-    pick_operation = input(f"+\n-\n*\n/\nPick an operation: ")
-    second_number = float(input("What is the next number?"))
-    final_result = operations[pick_operation](first_number, second_number)
+    operation_symbol = input(f"+\n-\n*\n/\nPick an operation: ")
+    num2 = float(input("What is the next number?"))
+    final_result = operations[operation_symbol](num1, num2)
     save_num == final_result
     print(final_result)
     continue_or_not = input(f"Type 'y' to continue calculating with {final_result} or type 'n' to start new calculation: ")
@@ -55,9 +55,9 @@ while continue_:
         continue_ == False
     else:
         save_num == final_result
-        pick_operation = input(f"+\n-\n*\n/\nPick an operation: ")
-        second_number = float(input("What is the next number?"))
-        final_result = operations[pick_operation](first_number, second_number)
+        operation_symbol = input(f"+\n-\n*\n/\nPick an operation: ")
+        num2 = float(input("What is the next number?"))
+        final_result = operations[operation_symbol](num1, num2)
         save_num == final_result
         print(final_result)
         
