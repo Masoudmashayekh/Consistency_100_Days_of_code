@@ -20,7 +20,7 @@
 # /
 # Pick an operation:
 # What is the next number?
-
+import art
 
 def add(n1, n2):
     ''' Add numbers'''
@@ -41,6 +41,7 @@ def divide(n1, n2):
 operations = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
 def calculator():
+    print(art.calculator_art)
     should_accumulate = True
     num1 = float(input("what is your first number? "))
     while should_accumulate:
