@@ -42,23 +42,11 @@ operations = { "+" : add, "-" : subtract, "*" : multiply, "/" : divide}
 
 
 num1 = float(input("what is your first number? "))
-continue_ = True
-save_num = 0
-while continue_:
-    operation_symbol = input(f"+\n-\n*\n/\nPick an operation: ")
-    num2 = float(input("What is the next number?"))
-    final_result = operations[operation_symbol](num1, num2)
-    save_num == final_result
-    print(final_result)
-    continue_or_not = input(f"Type 'y' to continue calculating with {final_result} or type 'n' to start new calculation: ")
-    if continue_or_not == 'n':
-        continue_ == False
-    else:
-        save_num == final_result
-        operation_symbol = input(f"+\n-\n*\n/\nPick an operation: ")
-        num2 = float(input("What is the next number?"))
-        final_result = operations[operation_symbol](num1, num2)
-        save_num == final_result
-        print(final_result)
-        
-        
+for symbol in operations:
+    print(symbol)
+operation_symbol = input("Pick an operation: ")
+num2 = float(input("What is the next number?"))
+final_result = operations[operation_symbol](num1, num2)
+
+print(final_result)
+continue_or_not = input(f"Type 'y' to continue calculating with {final_result} or type 'n' to start new calculation: ")
