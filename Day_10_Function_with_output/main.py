@@ -45,8 +45,8 @@ num1 = float(input("what is your first number? "))
 for symbol in operations:
     print(symbol)
 operation_symbol = input("Pick an operation: ")
-num2 = float(input("What is the next number?"))
+num2 = float(input("What is the next number? "))
 final_result = operations[operation_symbol](num1, num2)
 
-print(final_result)
+print(f"{num1} {operation_symbol} {num2} = {final_result}")
 continue_or_not = input(f"Type 'y' to continue calculating with {final_result} or type 'n' to start new calculation: ")
