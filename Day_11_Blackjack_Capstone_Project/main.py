@@ -11,4 +11,15 @@ for _ in range(2) :
     
 print(f"Your cards: {my_cards}")
 print(f"Computer's first card: {pc_cards[0]}")
-print("Type 'y' to get another card, type 'n' to pass:  ")
+decision = input("Type 'y' to get another card, type 'n' to pass:  ")
+if decision == "y":
+    my_cards.append(cards[random.randint(0, len(cards)-1)])
+else:
+    my_total = sum(my_cards)
+    pc_total = sum(pc_cards)
+    if my_total > pc_total:
+        print("You win!")
+    elif my_total < pc_total:
+        print("You loss!!!")
+    else:
+        print("Draw!")
