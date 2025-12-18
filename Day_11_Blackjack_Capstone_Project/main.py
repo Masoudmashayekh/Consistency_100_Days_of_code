@@ -10,4 +10,5 @@ for _ in range(2) :
     pc_cards.append(cards[random.randint(0, len(cards)-1)])
     
 print(f"Your cards: {my_cards}")
-print
+print(f"Computer's first card: {pc_cards[0]}")
+print("Type 'y' to get another card, type 'n' to pass:  ")
