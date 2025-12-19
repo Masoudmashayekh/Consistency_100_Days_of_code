@@ -33,7 +33,7 @@ print(f"Your cards: {my_cards}")
 print(f"Computer's first card: {pc_cards[0]}")
 decision = input("Type 'y' to get another card, type 'n' to pass:  ")
 if decision == 'y':
-    my_cards.append(cards[random.randint(0, len(cards)-1)])
+    my_cards.append(deal_card())
     test(my_cards, pc_cards)
 else:
     test(my_cards, pc_cards)
