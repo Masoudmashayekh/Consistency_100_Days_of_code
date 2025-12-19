@@ -1,7 +1,13 @@
 # Day_11 Blackjack Capstone Project
 import random
 
-
+def deal_card():
+    '''Returns a random card from the deck'''
+    cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+    card = random.choice(cards)
+    return card
+    
+    
 def test(my_cards,pc_cards):
     my_total = sum(my_cards)
     pc_total = sum(pc_cards)
@@ -19,13 +25,13 @@ def test(my_cards,pc_cards):
 
 
 
-cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
+
 
 my_cards = []
 pc_cards = []
 for _ in range(2) :
-    my_cards.append(cards[random.randint(0, len(cards)-1)])
-    pc_cards.append(cards[random.randint(0, len(cards)-1)])
+    my_cards.append(deal_card())
+    pc_cards.append(deal_card())
     
 print(f"Your cards: {my_cards}")
 print(f"Computer's first card: {pc_cards[0]}")
