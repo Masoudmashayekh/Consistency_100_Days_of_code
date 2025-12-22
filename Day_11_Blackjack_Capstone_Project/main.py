@@ -30,7 +30,7 @@ def calculate_score(cards):
 #     else:
 #         print("Draw!")
 
-
+is_game_over = False
 user_cards = []
 pc_cards = []
 for _ in range(2) :
@@ -45,3 +45,6 @@ pc_score = calculate_score(pc_cards)
 print(f"Your cards: {user_cards}, current score: {user_score}")
 print(f"Computer's first card: {pc_cards[0]}")
 
+
+if user_score == 0 or pc_score == 0 or user_score > 21:
+    is_game_over = True
