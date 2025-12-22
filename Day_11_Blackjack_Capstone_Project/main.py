@@ -8,18 +8,27 @@ def deal_card():
     card = random.choice(cards)
     return card
     
+def calculate_score(cards):
+    '''Take a list of cards'''
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+    return sum(cards)
+
         
-def test(my_cards,pc_cards):
-    my_total = sum(my_cards)
-    pc_total = sum(pc_cards)
-    print(my_cards)
-    print(pc_cards)
-    if 21 >= my_total > pc_total:
-        print("You win!")
-    elif my_total < pc_total or my_total > 21:
-        print("You loss!!!")
-    else:
-        print("Draw!")
+# def test(my_cards,pc_cards):
+#     my_total = sum(my_cards)
+#     pc_total = sum(pc_cards)
+#     print(my_cards)
+#     print(pc_cards)
+#     if 21 >= my_total > pc_total:
+#         print("You win!")
+#     elif my_total < pc_total or my_total > 21:
+#         print("You loss!!!")
+#     else:
+#         print("Draw!")
 
 
 my_cards = []
