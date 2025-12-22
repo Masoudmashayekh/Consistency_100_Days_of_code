@@ -17,7 +17,24 @@ def calculate_score(cards):
         cards.append(1)
     return sum(cards)
 
-        
+    
+def compare(u_score, p_score):
+    if u_score == p_score:
+        return "Draw 🙄"
+    elif p_score == 0:
+        return "Lose, Opponent has Blackjack 😰"
+    elif u_score == 0:
+        return "Win with a Blackjack 🤭"
+    elif u_score > 21:
+        return "You went over. You lose 😢"
+    elif p_score > 21:
+        return "Opponent went over. You win! 🥇"
+    elif u_score > p_score:
+        return "You win! 🥇"
+    else:
+        return "You lose 😡"
+    
+            
 
 is_game_over = False
 user_cards = []
