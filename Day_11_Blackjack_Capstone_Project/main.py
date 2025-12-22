@@ -46,3 +46,7 @@ while not is_game_over:
             user_cards.append(deal_card())
         else:
             is_game_over = True
+            
+while pc_score != 0 and pc_score < 17:
+    pc_cards.append(deal_card())
+    pc_score = calculate_score(pc_cards)
