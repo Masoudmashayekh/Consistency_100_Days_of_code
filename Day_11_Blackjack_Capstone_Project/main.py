@@ -50,4 +50,7 @@ if user_score == 0 or pc_score == 0 or user_score > 21:
     is_game_over = True
 else:
     user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
-    
+    if user_should_deal == "y":
+        user_cards.append(deal_card())
+    else:
+        is_game_over = True
