@@ -22,6 +22,9 @@ def calculate_score(cards):
 is_game_over = False
 user_cards = []
 pc_cards = []
+user_score = -1
+pc_score = -1
+
 for _ in range(2) :
     user_cards.append(deal_card())
     pc_cards.append(deal_card())
