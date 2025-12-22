@@ -1,6 +1,6 @@
 # Day_11 Blackjack Capstone Project
 import random
-
+from art import logo
 
 def deal_card():
     '''Returns a random card from the deck'''
@@ -38,6 +38,7 @@ def compare(u_score, p_score):
     
             
 def play_game():
+    print(logo)
     is_game_over = False
     user_cards = []
     pc_cards = []
@@ -78,5 +79,5 @@ def play_game():
     
     
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
-    print("\n" *20)
+    print("\n" * 20)
     play_game()
