@@ -48,3 +48,6 @@ print(f"Computer's first card: {pc_cards[0]}")
 
 if user_score == 0 or pc_score == 0 or user_score > 21:
     is_game_over = True
+else:
+    user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+    
