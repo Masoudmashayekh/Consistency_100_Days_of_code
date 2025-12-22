@@ -31,13 +31,19 @@ def calculate_score(cards):
 #         print("Draw!")
 
 
-my_cards = []
+user_cards = []
 pc_cards = []
 for _ in range(2) :
-    my_cards.append(deal_card())
+    user_cards.append(deal_card())
     pc_cards.append(deal_card())
   
     
+
+user_score = calculate_score(user_cards)
+pc_score = calculate_score(pc_cards)
+
+print(user_score)
+print(pc_score)
 # print(f"Your cards: {my_cards}")
 # print(f"Computer's first card: {pc_cards[0]}")
 # decision = input("Type 'y' to get another card, type 'n' to pass:  ")
