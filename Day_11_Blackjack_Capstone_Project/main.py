@@ -25,6 +25,8 @@ def compare(u_score, p_score):
         return "Lose, Opponent has Blackjack 😰"
     elif u_score == 0:
         return "Win with a Blackjack 🤭"
+    elif u_score > 21 and p_score > 21:
+        return "Draw 😬"
     elif u_score > 21:
         return "You went over. You lose 😢"
     elif p_score > 21:
