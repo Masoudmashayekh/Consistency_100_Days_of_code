@@ -29,11 +29,11 @@ for _ in range(2) :
     pc_cards.append(deal_card())
   
     
-print(f"Your cards: {my_cards}")
-print(f"Computer's first card: {pc_cards[0]}")
-decision = input("Type 'y' to get another card, type 'n' to pass:  ")
-if decision == 'y':
-    my_cards.append(deal_card())
-    test(my_cards, pc_cards)
-else:
-    test(my_cards, pc_cards)
+# print(f"Your cards: {my_cards}")
+# print(f"Computer's first card: {pc_cards[0]}")
+# decision = input("Type 'y' to get another card, type 'n' to pass:  ")
+# if decision == 'y':
+#     my_cards.append(deal_card())
+#     test(my_cards, pc_cards)
+# else:
+#     test(my_cards, pc_cards)
