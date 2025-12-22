@@ -18,17 +18,6 @@ def calculate_score(cards):
     return sum(cards)
 
         
-# def test(my_cards,pc_cards):
-#     my_total = sum(my_cards)
-#     pc_total = sum(pc_cards)
-#     print(my_cards)
-#     print(pc_cards)
-#     if 21 >= my_total > pc_total:
-#         print("You win!")
-#     elif my_total < pc_total or my_total > 21:
-#         print("You loss!!!")
-#     else:
-#         print("Draw!")
 
 is_game_over = False
 user_cards = []
@@ -37,20 +26,20 @@ for _ in range(2) :
     user_cards.append(deal_card())
     pc_cards.append(deal_card())
   
-    
+ 
+while not is_game_over:   
+    user_score = calculate_score(user_cards)
+    pc_score = calculate_score(pc_cards)
 
-user_score = calculate_score(user_cards)
-pc_score = calculate_score(pc_cards)
-
-print(f"Your cards: {user_cards}, current score: {user_score}")
-print(f"Computer's first card: {pc_cards[0]}")
+    print(f"Your cards: {user_cards}, current score: {user_score}")
+    print(f"Computer's first card: {pc_cards[0]}")
 
 
-if user_score == 0 or pc_score == 0 or user_score > 21:
-    is_game_over = True
-else:
-    user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
-    if user_should_deal == "y":
-        user_cards.append(deal_card())
-    else:
+    if user_score == 0 or pc_score == 0 or user_score > 21:
         is_game_over = True
+    else:
+        user_should_deal = input("Type 'y' to get another card, type 'n' to pass: ")
+        if user_should_deal == "y":
+            user_cards.append(deal_card())
+        else:
+            is_game_over = True
