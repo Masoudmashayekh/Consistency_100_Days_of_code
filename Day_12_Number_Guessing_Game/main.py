@@ -45,6 +45,11 @@ while guess != actual_answer:
     print(f"You have {turns} attempts remaining to guess the number.")  
     user_guess = int(input("Make a guess: "))
     turns = check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
+    if turns == 0:
+        print("You've run out of guesses, you lose.")
+        quit()
+    else:
+        print("Guess again.")
 
 
 
