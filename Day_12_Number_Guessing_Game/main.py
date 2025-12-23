@@ -1,5 +1,7 @@
 import random
+from art import logo
 play_again = True
+print(logo)
 print("Welcome to Number Guessing Game!")
 while play_again:
     print("I'm thinking of a number between 1 and 100.")
@@ -18,16 +20,18 @@ while play_again:
         guess_num = int(input("Make a guess: "))
         if guess_num > ANSWER_NUMBER:
             print("Too high.")
-            print("Guess again.")
             i -= 1
             if i == 0:
-                print("loss")
+                print("You've run out of guesses, you lose.")
+            else:
+                print("Guess again.")
         elif guess_num < ANSWER_NUMBER:
-            print("Too lowr.")
-            print("Guess again.")
+            print("Too low.")
             i -= 1
             if i == 0:
-                print("loss")
+                print("You've run out of guesses, you lose.")
+            else:
+                print("Guess again.")  
         else:
             print("You win!")
             i = 0
