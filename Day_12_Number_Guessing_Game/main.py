@@ -8,17 +8,9 @@ def check_answer(user_guess, actual_answer, turns):
     if user_guess > actual_answer:
         print("Too high.")
         return turns - 1
-        if turns == 0:
-            print("You've run out of guesses, you lose.")
-        else:
-            print("Guess again.")
     elif user_guess < actual_answer:
         print("Too low.")
-        return turns - 1
-        if turns == 0:
-            print("You've run out of guesses, you lose.")
-        else:
-            print("Guess again.")  
+        return turns - 1 
     else:
         print(f"You got it! The answer was {actual_answer}")
         turns = 0
