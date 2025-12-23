@@ -22,6 +22,7 @@ def check_answer(user_guess, actual_answer, turns):
     else:
         print(f"You got it! The answer was {actual_answer}")
         turns = 0
+        quit()
 
 def set_difficulty():
     level = input("Choose a difficulty. Type 'easy' or 'hard': ").capitalize()
@@ -43,7 +44,7 @@ guess = 0
 while guess != actual_answer:
     print(f"You have {turns} attempts remaining to guess the number.")  
     user_guess = int(input("Make a guess: "))
-    check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
+    turns = check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
 
 
 
