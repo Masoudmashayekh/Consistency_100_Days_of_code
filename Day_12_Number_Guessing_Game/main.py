@@ -5,16 +5,15 @@ HARD_LEVEL_TURNS = 5
 
 
 def check_answer(user_guess, actual_answer, turns):
-    global again
     if user_guess > actual_answer:
         print("Too high.")
-        return turns - 1
+        return turns - 1, True
     elif user_guess < actual_answer:
         print("Too low.")
-        return turns - 1 
+        return turns - 1, True
     else:
         print(f"You got it! The answer was {actual_answer}")
-        return False
+        return turns, False
         
 
 def set_difficulty():
@@ -33,18 +32,16 @@ def game():
     print(actual_answer)
 
     turns = set_difficulty()
-    again = True
-    while again:
+    game_on = True
+    while game_on and turns > 0:
         print(f"You have {turns} attempts remaining to guess the number.")  
         user_guess = int(input("Make a guess: "))
-        turns = check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
-        if turns == False:
-            again = False
-        elif turns == 0:
-            print("You've run out of guesses, you lose.")
-            return
-        else:
+        turns, game_on = check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
+        if game_on and turns > 0:
             print("Guess again.")
+        elif turns == 0 and game_on:
+            print("You've run out of guesses, you lose.")
+            game_on = False
 
         
         
