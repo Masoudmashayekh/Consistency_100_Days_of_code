@@ -7,12 +7,7 @@ def is_prime(num):
             return False   
     return True
     
-    
-    
-
-
-
-    
+      
     
 print(is_prime(73))
 
