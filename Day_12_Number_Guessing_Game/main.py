@@ -3,25 +3,25 @@ from art import logo
 EASY_LEVEL_TURNS = 10
 HARD_LEVEL_TURNS = 5
 
-def check_answer(user_guess, actual_answer, turn):
-    global turns
+
+def check_answer(user_guess, actual_answer, turns):
     if user_guess > actual_answer:
         print("Too high.")
-        turn -= 1
-        if turn == 0:
+        return turns - 1
+        if turns == 0:
             print("You've run out of guesses, you lose.")
         else:
             print("Guess again.")
     elif user_guess < actual_answer:
         print("Too low.")
-        turn -= 1
-        if turn == 0:
+        return turns - 1
+        if turns == 0:
             print("You've run out of guesses, you lose.")
         else:
             print("Guess again.")  
     else:
         print(f"You got it! The answer was {actual_answer}")
-        turn = 0
+        turns = 0
 
 def set_difficulty():
     level = input("Choose a difficulty. Type 'easy' or 'hard': ").capitalize()
@@ -39,9 +39,11 @@ actual_answer = random.randint(1,100)
 print(actual_answer)
 
 turns = set_difficulty()
-print(f"You have {turns} attempts remaining to guess the number.")  
-user_guess = int(input("Make a guess: "))
-check_answer(user_guess= user_guess, actual_answer= actual_answer, turn= turns)
+guess = 0
+while guess != actual_answer:
+    print(f"You have {turns} attempts remaining to guess the number.")  
+    user_guess = int(input("Make a guess: "))
+    check_answer(user_guess= user_guess, actual_answer= actual_answer, turns= turns)
 
 
 
