@@ -29,25 +29,21 @@ def set_difficulty():
         return EASY_LEVEL_TURNS
     elif level == "Hard":
         return HARD_LEVEL_TURNS
-    else:
-        return "You type wrong input!!!"
 
 
-play_again = True
+
 print(logo)
 print("Welcome to Number Guessing Game!")
-while play_again:
-    print("I'm thinking of a number between 1 and 100.")
-    actual_answer = random.randint(1,100)
-    print(actual_answer)
- 
- 
+print("I'm thinking of a number between 1 and 100.")
+actual_answer = random.randint(1,100)
+print(actual_answer)
 
-    while turns > 0:    
-        print(f"You have {turns} attempts remaining to guess the number.")
-        user_guess = int(input("Make a guess: "))
-        check_answer(user_guess= user_guess, actual_answer= actual_answer, turn= turns)
-    play = input("Do you want to play again? Type 'y' or 'n'. ").capitalize()
-    if play == "N":
-        play_again = False
-        print("See you later Good boy!")
+turns = set_difficulty()
+print(f"You have {turns} attempts remaining to guess the number.")  
+user_guess = int(input("Make a guess: "))
+check_answer(user_guess= user_guess, actual_answer= actual_answer, turn= turns)
+
+
+
+# play = input("Do you want to play again? Type 'y' or 'n'. ").capitalize()
+# print("See you later Good boy!")
