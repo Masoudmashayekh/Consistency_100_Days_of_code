@@ -42,3 +42,6 @@ except ValueError:
     
 if age > 18:
     print(f"You can drive at age {age}")
+    
+    
+# 5. Print is your friend.
