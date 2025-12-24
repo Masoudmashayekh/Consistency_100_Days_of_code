@@ -19,5 +19,5 @@ my_function()
 # 2. Reproduce the Bug
 from random import randint
 dice_images = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
-dice_num = randint(6, 8)
+dice_num = randint(0, 5) # range should be (0, 5) not (1, 6)
 print(dice_images[dice_num])
