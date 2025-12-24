@@ -17,4 +17,7 @@ my_function()
 
 
 # 2. Reproduce the Bug
-
+from random import randint
+dice_images = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
+dice_num = randint(6, 8)
+print(dice_images[dice_num])
