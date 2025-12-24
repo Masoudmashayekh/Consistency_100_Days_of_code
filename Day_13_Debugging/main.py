@@ -30,3 +30,6 @@ if year > 1980 and year <= 1994:  # should use year <= 1994 instead of year < 19
     print("You are a millennial.")
 elif year > 1994:
     print("You are a Gen Z.")
+    
+    
+# 4. Fix the Errors
