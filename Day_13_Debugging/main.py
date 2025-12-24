@@ -15,3 +15,6 @@ my_function()
 # When is the function meant to print "You got it"?
 # What are your assumptions about the value of i ? 1, 2, 3, 4, . . . , 19
 
+
+# 2. Reproduce the Bug
+
