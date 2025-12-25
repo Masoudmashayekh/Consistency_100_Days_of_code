@@ -1,56 +1,56 @@
-# # Debugging
-# # Grace Hopper
-# # Everyone gets bugs.
-# # 1. Describe the problem
+# Debugging
+# Grace Hopper
+# Everyone gets bugs.
+# 1. Describe the problem
 
-# def my_function():
-#     for i in range(1, 20): # 21 not 20
-#         if i == 20:
-#             print("You got it.")
+def my_function():
+    for i in range(1, 20): # 21 not 20
+        if i == 20:
+            print("You got it.")
             
-# my_function()
+my_function()
 
-# # Describe the Problem - Write your answers as comments:
-# # What is the for loop doing?
-# # When is the function meant to print "You got it"?
-# # What are your assumptions about the value of i ? 1, 2, 3, 4, . . . , 19
-
-
-# # 2. Reproduce the Bug
-# from random import randint
-# dice_images = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
-# dice_num = randint(0, 5) # range should be (0, 5) not (1, 6)
-# print(dice_images[dice_num])
+# Describe the Problem - Write your answers as comments:
+# What is the for loop doing?
+# When is the function meant to print "You got it"?
+# What are your assumptions about the value of i ? 1, 2, 3, 4, . . . , 19
 
 
-# # 3. Play Computer
-# year = int(input("What's your year of birth? "))
+# 2. Reproduce the Bug
+from random import randint
+dice_images = ["⚀", "⚁", "⚂", "⚃", "⚄", "⚅"]
+dice_num = randint(0, 5) # range should be (0, 5) not (1, 6)
+print(dice_images[dice_num])
 
-# if year > 1980 and year <= 1994:  # should use year <= 1994 instead of year < 1994
-#     print("You are a millennial.")
-# elif year > 1994:
-#     print("You are a Gen Z.")
+
+# 3. Play Computer
+year = int(input("What's your year of birth? "))
+
+if year > 1980 and year <= 1994:  # should use year <= 1994 instead of year < 1994
+    print("You are a millennial.")
+elif year > 1994:
+    print("You are a Gen Z.")
     
     
-# # 4. Fix the Errors
-# try:
-#     age = int(input("How old are you?"))
-# except ValueError:
-#     print("You have typed in an invalid number. Please try again.")
-#     age = int(input("How old are you?"))  
+# 4. Fix the Errors
+try:
+    age = int(input("How old are you?"))
+except ValueError:
+    print("You have typed in an invalid number. Please try again.")
+    age = int(input("How old are you?"))  
     
     
-# if age > 18:
-#     print(f"You can drive at age {age}")
+if age > 18:
+    print(f"You can drive at age {age}")
     
     
-# # 5. Print is your friend. BFF
+# 5. Print is your friend. BFF
 
-# word_per_page = 0
-# pages = int(input("Number of pages: "))
-# word_per_page == int(input("Number of words per pages: ")) # = insted of ==
-# total_words = pages * word_per_page
-# print(total_words)
+word_per_page = 0
+pages = int(input("Number of pages: "))
+word_per_page == int(input("Number of words per pages: ")) # = insted of ==
+total_words = pages * word_per_page
+print(total_words)
 
 
 # 6. Use a Debugger
@@ -68,3 +68,9 @@ def mutate(a_list):
     print(b_list)
     
 mutate([1, 2, 3, 5, 8, 12])
+
+
+
+# 7. Take a Break
+
+# 8. Ask a Friend
