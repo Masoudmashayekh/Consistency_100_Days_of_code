@@ -72,10 +72,19 @@ mutate([1, 2, 3, 5, 8, 12])
 
 
 # 7. Take a Break
-# It's really, really important when you're just staring at the code and you keep looking at it, it's not going to tell you the solution. Just have a cup of tea or have a nap, or just go to sleep and try to tackle it tomorrow.
+# It's really, really important when you're just staring at the code and
+# you keep looking at it, it's not going to tell you the solution. Just have
+# a cup of tea or have a nap, or just go to sleep and try to tackle it tomorrow.
 
 # 8. Ask a Friend
-# The really good thing about asking a friend to look through your code is they won't make the same assumptions that you've made. So they have some fresh eyes that they can look at the code with, and it might be incredibly obvious what's actually happening. And it's really not embarrassing at all.
+# The really good thing about asking a friend to look through your code is they
+# won't make the same assumptions that you've made. So they have some fresh eyes
+# that they can look at the code with, and it might be incredibly obvious what's 
+# actually happening. And it's really not embarrassing at all.
 
 # 9. Run Often
-# what I mean is run your code often. Don't wait until you've written loads and loads of code to hit run and then find out you've got loads of snags and loads of bugs. But run it after every little execution.
+# what I mean is run your code often. Don't wait until you've written loads and
+# loads of code to hit run and then find out you've got loads of snags and loads
+# of bugs. But run it after every little execution.
+
+# 10. Ask StackOverflow
