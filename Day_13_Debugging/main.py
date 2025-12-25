@@ -1,6 +1,8 @@
 # Debugging
 # Grace Hopper
 # Everyone gets bugs.
+# 10 top tips for debugging
+
 # 1. Describe the problem
 
 def my_function():
