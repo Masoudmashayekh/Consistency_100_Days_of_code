@@ -7,13 +7,7 @@ def check_resources():
     print(f"Coffee: {resources["coffee"]} g")
     print(f"Money: $ {resources["money"]}")
     
-def check_ingredients(user_request):
-    '''Returns True when order can be made, False if ingredients are insuffucuent.'''
-    for i in menu[user_request]["ingredients"]:
-        if resources[i] < menu[user_request]["ingredients"][i]:
-            print(f"Sorry there is not enough {i}.")
-            return False
-    return True
+
 
 def use_ingredients(user_request):
     for i in menu[user_request]["ingredients"]:
@@ -21,14 +15,7 @@ def use_ingredients(user_request):
         
 
 
-def input_coins():
-    '''Returns the total calculated from coins inserted.'''
-    print("Please insert coins.")
-    total = float(input("How many penny?: ")) * 0.01
-    total += float(input("How many nickel?: ")) * 0.05
-    total += float(input("How many dime?: ")) * 0.1
-    total += float(input("How many quarter?: ")) * 0.25
-    return total
+
 
 def is_transaction_successful(payment,drink_cost,user_request):
      if payment >= drink_cost:
@@ -40,7 +27,7 @@ def is_transaction_successful(payment,drink_cost,user_request):
      else:
         print("Sorry that's not enough money. Money refunded.")
 
-
+# 1
 def user_input():
     correct_input = False
     allowable_answers = ["Report", "Espresso", "Latte", "Cappuccino", "Off"]
@@ -51,6 +38,26 @@ def user_input():
         else:
             correct_input = True
             return request
+
+# 2
+def check_ingredients(user_request):
+    '''Returns True when order can be made, False if ingredients are insuffucuent.'''
+    for i in menu[user_request]["ingredients"]:
+        if resources[i] < menu[user_request]["ingredients"][i]:
+            print(f"Sorry there is not enough {i}.")
+            return False
+    return True
+
+# 3
+def input_coins():
+    '''Returns the total calculated from coins inserted.'''
+    print("Please insert coins.")
+    total = float(input("How many penny?: ")) * 0.01
+    total += float(input("How many nickel?: ")) * 0.05
+    total += float(input("How many dime?: ")) * 0.1
+    total += float(input("How many quarter?: ")) * 0.25
+    return total
+
 
 
 
