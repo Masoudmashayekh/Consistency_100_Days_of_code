@@ -3,11 +3,11 @@ from art import VS_ART_SIMPLE, HIGH_LOW_ART
 import random
 
 def format_data(account):
+    '''Takes the account data and returns the printable format.'''
     account_name = account["name"]
     account_descr = account["description"]
     account_country = account["country"]
     return f"{account_name}, a {account_descr}, form {account_country}"
-
 
 
 def game():
