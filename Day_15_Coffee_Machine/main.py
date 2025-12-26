@@ -37,9 +37,18 @@ def check_resources(money):
     print(f"Money: $ {money}")
 
 
-money = 2
+money = 0
+correct_input = True
+while not correct_input:
+    global user_request
+    user_request = input("What would you like? (espresso/latte/cappuccino): ").lower()
+    if user_request != "report" or user_request != "espresso" or user_request != "latte" or user_request != "cappuccino" or user_request != "off":
+        print("Please enter correct input")
+        correct_input = False
+if user_request == "report":
+    check_resources(money)
 
-user_request = input("What would you like? (espresso/latte/cappuccino): ")
+
 penny = float(input("How many penny?: "))
 nickel = float(input("How many nickel?: "))
 dime = float(input("How many dime?: "))
