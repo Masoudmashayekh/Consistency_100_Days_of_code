@@ -1,3 +1,4 @@
+# Coffee Machine
 # Makes 3 hot flavours
 
 # Espresso  50ml water, 18g Coffee, $1.5
@@ -11,7 +12,8 @@
 # Print Report
 # Check resources sufficient?
 # Process coins
-
+# Check transaction successful?
+# Make Coffee
 
 
 # What would you like? (espresso/latte/cappuccino): report
