@@ -1,55 +1,10 @@
 # Coffee Machine
-
-
-
-# Process coins
-# Check transaction successful?
-# Make Coffee
-
-
-
-# Here is your $ in change.
-# Here is your latte Enjoy!
-# Sorry there is not enough water.
-# Please insert coins.
-# How many quarters?: 
-menu = {
-    "Espresso": {
-        "ingredients": {
-            "water": 50,
-            "coffee": 18
-        },
-        "price": 1.5
-    },
-    "Latte": {
-        "ingredients": {
-            "water": 200,
-            "coffee": 24,
-            "milk": 150
-        },
-        "price": 2.5
-    },
-    "Cappuccino": {
-        "ingredients": {
-            "water": 250,
-            "coffee": 24,
-            "milk": 100
-        },
-        "price": 3.0
-    }
-}
-
-resources = {
-    "water": 300,
-    "coffee": 100,
-    "milk": 200,
-    "money": 0,
-}
+from menu import resources, menu
 
 def check_resources():
     print(f"Water: {resources["water"]} ml")
     print(f"Milk: {resources["milk"]} ml")
-    print(f"Coffee: {resources["coffee"]} ml")
+    print(f"Coffee: {resources["coffee"]} g")
     print(f"Money: $ {resources["money"]}")
     
 def check_ingredients(user_request):
@@ -87,29 +42,28 @@ def user_input():
 
 
 
+def coffee_machine():
+    machine_off = True
+    while machine_off:
+        user_request = user_input()    
+        if user_request == "Report":
+            check_resources()
+        elif user_request in menu:
+            if not check_ingredients(user_request):
+                pass
+            else:    
+                coins = input_coins()
+                if coins >= menu[user_request]["price"]:
+                    remain = coins - menu[user_request]["price"]
+                    resources["money"] += menu[user_request]["price"]
+                    print(f"Here is your ${remain} in change.")
+                    print(f"Here is your {user_request} Enjoy!")
+                    use_ingredients(user_request)
+                else:
+                    print("Sorry that's not enough money. Money refunded.")
+        else:
+            print("See you soon!")
+            machine_off = False
+            
 
-machine_off = True
-while machine_off:
-    user_request = user_input()    
-    if user_request == "Report":
-        check_resources()
-    elif user_request in menu:
-        if not check_ingredients(user_request):
-            pass
-        else:    
-            coins = input_coins()
-            if coins >= menu[user_request]["price"]:
-                remain = coins - menu[user_request]["price"]
-                resources["money"] += menu[user_request]["price"]
-                print(f"Here is your ${remain} in change.")
-                print(f"Here is your {user_request} Enjoy!")
-                use_ingredients(user_request)
-            else:
-                print("Sorry that's not enough money. Money refunded.")
-    else:
-        print("See you soon!")
-        machine_off = False
-        
-        
-        
-                
+coffee_machine()         
