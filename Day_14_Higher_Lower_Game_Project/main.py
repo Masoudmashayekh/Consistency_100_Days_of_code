@@ -14,7 +14,8 @@ while continue_game:
 
     if a["followers_count"] > b["followers_count"]:
         score += 1
+        print(f"You're right! Current score: {score}")
     else:
+        print(f"Sorry, that's wrong. Final score: {score}")
         
-    # print("Sorry, that's wrong. Final score: 0")
-    # print("You're right! Current score: 1")
+    
