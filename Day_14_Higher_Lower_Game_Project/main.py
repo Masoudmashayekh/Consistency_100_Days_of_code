@@ -23,7 +23,7 @@ def game():
         print(VS_ART_SIMPLE)
         print(f"Against B: {format_data(account_b)}")
         user_guess = input("Who has more followers? Type 'A' or 'B': ").upper()
-        if user_guess == "q":
+        if user_guess == "Q":
             print(f"Your score is {score} .")
             quit()
             
