@@ -38,7 +38,7 @@ def is_transaction_successful(payment,drink_cost,user_request):
         remain = payment - drink_cost
         resources["money"] += drink_cost
         print(f"Here is your ${round(remain,2)} in change.")
-        print(f"Here is your {user_request} Enjoy!")
+        print(f"Here is your {user_request} Enjoy!☕️")
         use_ingredients(user_request)
      else:
         print("Sorry that's not enough money. Money refunded.")
