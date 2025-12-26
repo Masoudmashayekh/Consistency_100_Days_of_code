@@ -21,12 +21,13 @@ def use_ingredients(user_request):
 
 
 def input_coins():
-    penny = float(input("How many penny?: "))
-    nickel = float(input("How many nickel?: "))
-    dime = float(input("How many dime?: "))
-    quarter = float(input("How many quarter?: "))
-    total_money = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25)
-    return total_money
+    '''Returns the total calculated from coins inserted.'''
+    print("Please insert coins.")
+    total = float(input("How many penny?: ")) * 0.01
+    total += float(input("How many nickel?: ")) * 0.05
+    total += float(input("How many dime?: ")) * 0.1
+    total += float(input("How many quarter?: ")) * 0.25
+    return total
 
 def user_input():
     correct_input = False
