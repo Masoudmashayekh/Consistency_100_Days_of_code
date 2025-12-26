@@ -1,3 +1,4 @@
+# Higher and Lower game project
 from game_data import instagram_data
 from art import VS_ART_SIMPLE, HIGH_LOW_ART
 import random
