@@ -46,9 +46,10 @@ def coins():
 
 def user_input():
     correct_input = False
-    allowable_answers = ["report", "espresso", "latte", "cappuccino", "off"]
+    allowable_answers = ["Report", "Espresso", "Latte", "Cappuccino", "Off"]
     while not correct_input:
-        request = input("What would you like? (espresso/latte/cappuccino): ").lower()
+        request = input("What would you like? (espresso/latte/cappuccino): ").upper()
+        print(request)
         if request not in allowable_answers: 
             print("Please enter correct input")
         else:
@@ -60,8 +61,9 @@ def user_input():
 money = 0
 
 user_request = user_input()
-        
+      
 if user_request == "report":
     check_resources(money)
 elif user_request == "espresso":
-    pass
+    if resources["water_ml"] >= menu[user_request]["ingredients"]["water_ml"]:
+        print ("ok")
