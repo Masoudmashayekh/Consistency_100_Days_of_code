@@ -40,7 +40,7 @@ def check_resources(money):
 money = 0
 correct_input = False
 allowable_answers = ["report", "espresso", "latte", "cappuccino", "off"]
-while correct_input:
+while not correct_input:
     global user_request
     user_request = input("What would you like? (espresso/latte/cappuccino): ").lower()
     if user_request not in allowable_answers: 
