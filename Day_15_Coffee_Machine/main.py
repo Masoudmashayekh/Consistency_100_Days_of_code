@@ -13,7 +13,7 @@
 # Sorry there is not enough water.
 # Please insert coins.
 # How many quarters?: 
-# Sorry that's not enough money. Money refunded.
+# 
 
 from menu import resources, menu
 
@@ -53,20 +53,26 @@ def user_input():
 
 
 
-
-user_request = user_input()
-      
-if user_request == "Report":
-    check_resources()
-elif user_request in menu:
-    coins = input_coins()
-    if check_ingredients(user_request) == True:
-        if coins >= menu["price"]:
-            remain = coins - menu["price"]
-            resources["money"] += menu["price"]
-            print(f"Here is your ${remain} in change.")
-        Here is your latte Enjoy!
-    
-    
-    
-            
+machine_off = True
+while machine_off:
+    user_request = user_input()    
+    if user_request == "Report":
+        check_resources()
+    elif user_request in menu:
+        coins = input_coins()
+        if check_ingredients(user_request) == True:
+            if coins >= menu[user_request]["price"]:
+                remain = coins - menu[user_request]["price"]
+                resources["money"] += menu[user_request]["price"]
+                print(f"Here is your ${remain} in change.")
+                print(f"Here is your {user_request} Enjoy!")
+                check_resources()
+            else:
+                print("Sorry that's not enough money. Money refunded.")
+    else:
+        print("See you soon!")
+        machine_off = False
+        
+        
+        
+                
