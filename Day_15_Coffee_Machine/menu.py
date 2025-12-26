@@ -1,31 +1,32 @@
 menu = {
     "Espresso": {
         "ingredients": {
-            "water_ml": 50,
-            "coffee_g": 18
+            "water": 50,
+            "coffee": 18
         },
         "price": 1.5
     },
     "Latte": {
         "ingredients": {
-            "water_ml": 200,
-            "coffee_g": 24,
-            "milk_ml": 150
+            "water": 200,
+            "coffee": 24,
+            "milk": 150
         },
         "price": 2.5
     },
     "Cappuccino": {
         "ingredients": {
-            "water_ml": 250,
-            "coffee_g": 24,
-            "milk_ml": 100
+            "water": 250,
+            "coffee": 24,
+            "milk": 100
         },
         "price": 3.0
     }
 }
 
 resources = {
-    "water_ml": 300,
-    "milk_ml": 200,
-    "coffee_g": 100
+    "water": 30,
+    "milk": 200,
+    "coffee": 100,
+    "money": 0,
 }

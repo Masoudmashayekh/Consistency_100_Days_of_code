@@ -30,13 +30,21 @@
 
 from menu import resources, menu
 
-def check_resources(money):
-    print(f"Water: {resources["water_ml"]} ml")
-    print(f"Water: {resources["milk_ml"]} ml")
-    print(f"Water: {resources["coffee_g"]} ml")
-    print(f"Money: $ {money}")
+def check_resources():
+    print(f"Water: {resources["water"]} ml")
+    print(f"Water: {resources["milk"]} ml")
+    print(f"Water: {resources["coffee"]} ml")
+    print(f"Money: $ {resources["money"]}")
+    
+def check_ingredients(user_request):
+    for i in menu[user_request]["ingredients"]:
+        if resources[i] >= menu[user_request]["ingredients"][i]:
+            return True
+        else:
+            print(f"Sorry there is not enough {i}.")
 
-def coins():
+
+def input_coins():
     penny = float(input("How many penny?: "))
     nickel = float(input("How many nickel?: "))
     dime = float(input("How many dime?: "))
@@ -57,12 +65,13 @@ def user_input():
 
 
 
-money = 0
+
 
 user_request = user_input()
       
-if user_request == "report":
-    check_resources(money)
+if user_request == "Report":
+    check_resources()
 elif user_request == "Espresso":
-    if resources["water_ml"] >= menu[user_request]["ingredients"]["water_ml"]:
-        print ("ok")
+    check_ingredients(user_request)
+    
+            
