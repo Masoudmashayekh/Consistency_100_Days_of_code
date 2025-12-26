@@ -1,6 +1,14 @@
 from game_data import instagram_data
 from art import VS_ART_SIMPLE, HIGH_LOW_ART
 import random
+def format_data(account):
+    account_name = account["name"]
+    account_descr = account["description"]
+    account_country = account["country"]
+    return f"{account_name}, a {account_descr}, form {account_country}"
+
+
+
 def game():
     account_a = random.choice(instagram_data)
     account_b = random.choice(instagram_data)
@@ -10,9 +18,9 @@ def game():
     score = 0
     continue_game = True
     while continue_game:
-        print(f"Compare A: {account_a["name"]}, {account_a["description"]}, {account_a["country"]} ")
+        print(f"Compare A: {format_data(account_a)}")
         print(VS_ART_SIMPLE)
-        print(f"Against B: {account_b["name"]}, {account_b["description"]}, {account_b["country"]} ")
+        print(f"Against B: {format_data(account_b)}")
         choose = input("Who has more followers? Type 'A' or 'B': ").upper()
         if choose == "q":
             print(f"Your score is {score} .")
