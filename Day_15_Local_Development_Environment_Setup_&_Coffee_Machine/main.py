@@ -27,3 +27,16 @@
 # Please insert coins.
 # How many quarters?: 
 # Sorry that's not enough money. Money refunded.
+
+from menu import resources, menu
+
+
+
+
+user_request = input("What would you like? (espresso/latte/cappuccino): \n")
+penny = float(input("How many penny?:\n"))
+nickel = float(input("How many nickel?:\n"))
+dime = float(input("How many dime?:\n"))
+quarter = float(input("How many quarter?:\n"))
+total_money = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25)
+print(total_money)
