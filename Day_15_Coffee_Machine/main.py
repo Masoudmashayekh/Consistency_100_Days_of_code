@@ -1,33 +1,7 @@
 # Coffee Machine
 from menu import resources, menu
 
-def check_resources():
-    print(f"Water: {resources["water"]} ml")
-    print(f"Milk: {resources["milk"]} ml")
-    print(f"Coffee: {resources["coffee"]} g")
-    print(f"Money: $ {resources["money"]}")
-    
-
-
-def use_ingredients(user_request):
-    for i in menu[user_request]["ingredients"]:
-        resources[i] -= menu[user_request]["ingredients"][i]
-        
-
-
-
-
-def is_transaction_successful(payment,drink_cost,user_request):
-     if payment >= drink_cost:
-        remain = payment - drink_cost
-        resources["money"] += drink_cost
-        print(f"Here is your ${round(remain,2)} in change.")
-        print(f"Here is your {user_request} Enjoy!")
-        use_ingredients(user_request)
-     else:
-        print("Sorry that's not enough money. Money refunded.")
-
-# 1
+# 1 ############################################################################################################
 def user_input():
     correct_input = False
     allowable_answers = ["Report", "Espresso", "Latte", "Cappuccino", "Off"]
@@ -39,7 +13,7 @@ def user_input():
             correct_input = True
             return request
 
-# 2
+# 2 ############################################################################################################
 def check_ingredients(user_request):
     '''Returns True when order can be made, False if ingredients are insuffucuent.'''
     for i in menu[user_request]["ingredients"]:
@@ -48,7 +22,7 @@ def check_ingredients(user_request):
             return False
     return True
 
-# 3
+# 3 ############################################################################################################
 def input_coins():
     '''Returns the total calculated from coins inserted.'''
     print("Please insert coins.")
@@ -58,9 +32,30 @@ def input_coins():
     total += float(input("How many quarter?: ")) * 0.25
     return total
 
+# 4 ############################################################################################################
+def is_transaction_successful(payment,drink_cost,user_request):
+     if payment >= drink_cost:
+        remain = payment - drink_cost
+        resources["money"] += drink_cost
+        print(f"Here is your ${round(remain,2)} in change.")
+        print(f"Here is your {user_request} Enjoy!")
+        use_ingredients(user_request)
+     else:
+        print("Sorry that's not enough money. Money refunded.")
 
+# 5 ############################################################################################################
+def use_ingredients(user_request):
+    for i in menu[user_request]["ingredients"]:
+        resources[i] -= menu[user_request]["ingredients"][i]
 
+# 6 ############################################################################################################
+def check_resources():
+    print(f"Water: {resources["water"]} ml")
+    print(f"Milk: {resources["milk"]} ml")
+    print(f"Coffee: {resources["coffee"]} g")
+    print(f"Money: $ {resources["money"]}")
 
+# 7 ############################################################################################################
 def coffee_machine():
     machine_off = True
     while machine_off:
@@ -78,5 +73,7 @@ def coffee_machine():
             print("See you soon!")
             machine_off = False
             
+
+
 
 coffee_machine()         
