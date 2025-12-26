@@ -38,20 +38,23 @@ def check_resources(money):
 
 
 money = 0
-correct_input = True
-while not correct_input:
+correct_input = False
+allowable_answers = ["report", "espresso", "latte", "cappuccino", "off"]
+while correct_input:
     global user_request
     user_request = input("What would you like? (espresso/latte/cappuccino): ").lower()
-    if user_request != "report" or user_request != "espresso" or user_request != "latte" or user_request != "cappuccino" or user_request != "off":
+    if user_request not in allowable_answers: 
         print("Please enter correct input")
-        correct_input = False
-if user_request == "report":
-    check_resources(money)
+    else:
+        correct_input = True
+        
+    if user_request == "report":
+        check_resources(money)
 
 
-penny = float(input("How many penny?: "))
-nickel = float(input("How many nickel?: "))
-dime = float(input("How many dime?: "))
-quarter = float(input("How many quarter?: "))
-total_money = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25)
-print(total_money)
+# penny = float(input("How many penny?: "))
+# nickel = float(input("How many nickel?: "))
+# dime = float(input("How many dime?: "))
+# quarter = float(input("How many quarter?: "))
+# total_money = (penny * 0.01) + (nickel * 0.05) + (dime * 0.1) + (quarter * 0.25)
+# print(total_money)
