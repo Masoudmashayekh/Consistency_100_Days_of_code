@@ -30,6 +30,17 @@ def input_coins():
     total += float(input("How many quarter?: ")) * 0.25
     return total
 
+def is_transaction_successful(payment,drink_cost,user_request):
+     if payment >= drink_cost:
+        remain = payment - drink_cost
+        resources["money"] += drink_cost
+        print(f"Here is your ${round(remain,2)} in change.")
+        print(f"Here is your {user_request} Enjoy!")
+        use_ingredients(user_request)
+     else:
+        print("Sorry that's not enough money. Money refunded.")
+
+
 def user_input():
     correct_input = False
     allowable_answers = ["Report", "Espresso", "Latte", "Cappuccino", "Off"]
@@ -54,14 +65,8 @@ def coffee_machine():
                 pass
             else:    
                 payment = input_coins()
-                if payment >= menu[user_request]["price"]:
-                    remain = payment - menu[user_request]["price"]
-                    resources["money"] += menu[user_request]["price"]
-                    print(f"Here is your ${round(remain,2)} in change.")
-                    print(f"Here is your {user_request} Enjoy!")
-                    use_ingredients(user_request)
-                else:
-                    print("Sorry that's not enough money. Money refunded.")
+                drink_cost = menu[user_request]["price"]
+                is_transaction_successful(payment,drink_cost,user_request)
         else:
             print("See you soon!")
             machine_off = False
