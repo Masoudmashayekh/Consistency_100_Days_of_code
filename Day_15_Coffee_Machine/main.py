@@ -48,8 +48,7 @@ def user_input():
     correct_input = False
     allowable_answers = ["Report", "Espresso", "Latte", "Cappuccino", "Off"]
     while not correct_input:
-        request = input("What would you like? (espresso/latte/cappuccino): ").upper()
-        print(request)
+        request = input("What would you like? (espresso/latte/cappuccino): ").capitalize()
         if request not in allowable_answers: 
             print("Please enter correct input")
         else:
@@ -64,6 +63,6 @@ user_request = user_input()
       
 if user_request == "report":
     check_resources(money)
-elif user_request == "espresso":
+elif user_request == "Espresso":
     if resources["water_ml"] >= menu[user_request]["ingredients"]["water_ml"]:
         print ("ok")
