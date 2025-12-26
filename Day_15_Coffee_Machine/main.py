@@ -8,6 +8,7 @@ def check_resources():
     print(f"Money: $ {resources["money"]}")
     
 def check_ingredients(user_request):
+    '''Returns True when order can be made, False if ingredients are insuffucuent.'''
     for i in menu[user_request]["ingredients"]:
         if resources[i] < menu[user_request]["ingredients"][i]:
             print(f"Sorry there is not enough {i}.")
@@ -52,9 +53,9 @@ def coffee_machine():
             if not check_ingredients(user_request):
                 pass
             else:    
-                coins = input_coins()
-                if coins >= menu[user_request]["price"]:
-                    remain = coins - menu[user_request]["price"]
+                payment = input_coins()
+                if payment >= menu[user_request]["price"]:
+                    remain = payment - menu[user_request]["price"]
                     resources["money"] += menu[user_request]["price"]
                     print(f"Here is your ${round(remain,2)} in change.")
                     print(f"Here is your {user_request} Enjoy!")
