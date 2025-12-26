@@ -19,3 +19,6 @@
 # Milk: 200 ml
 # Coffee: 100 g
 #Money: $0
+# Here is your $ in change.
+# Here is your latte Enjoy!
+# Sorry there is not enough water.
