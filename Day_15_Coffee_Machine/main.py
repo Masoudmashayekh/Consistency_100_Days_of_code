@@ -13,14 +13,43 @@
 # Sorry there is not enough water.
 # Please insert coins.
 # How many quarters?: 
-# 
+menu = {
+    "Espresso": {
+        "ingredients": {
+            "water": 50,
+            "coffee": 18
+        },
+        "price": 1.5
+    },
+    "Latte": {
+        "ingredients": {
+            "water": 200,
+            "coffee": 24,
+            "milk": 150
+        },
+        "price": 2.5
+    },
+    "Cappuccino": {
+        "ingredients": {
+            "water": 250,
+            "coffee": 24,
+            "milk": 100
+        },
+        "price": 3.0
+    }
+}
 
-from menu import resources, menu
+resources = {
+    "water": 300,
+    "coffee": 100,
+    "milk": 200,
+    "money": 0,
+}
 
 def check_resources():
     print(f"Water: {resources["water"]} ml")
-    print(f"Water: {resources["milk"]} ml")
-    print(f"Water: {resources["coffee"]} ml")
+    print(f"Milk: {resources["milk"]} ml")
+    print(f"Coffee: {resources["coffee"]} ml")
     print(f"Money: $ {resources["money"]}")
     
 def check_ingredients(user_request):
@@ -29,6 +58,12 @@ def check_ingredients(user_request):
             return True
         else:
             print(f"Sorry there is not enough {i}.")
+            return False
+
+def use_ingredients(user_request):
+    for i in menu[user_request]["ingredients"]:
+        resources[i] -= menu[user_request]["ingredients"][i]
+        
 
 
 def input_coins():
@@ -59,14 +94,16 @@ while machine_off:
     if user_request == "Report":
         check_resources()
     elif user_request in menu:
-        coins = input_coins()
-        if check_ingredients(user_request) == True:
+        if not check_ingredients(user_request):
+            pass
+        else:    
+            coins = input_coins()
             if coins >= menu[user_request]["price"]:
                 remain = coins - menu[user_request]["price"]
                 resources["money"] += menu[user_request]["price"]
                 print(f"Here is your ${remain} in change.")
                 print(f"Here is your {user_request} Enjoy!")
-                check_resources()
+                use_ingredients(user_request)
             else:
                 print("Sorry that's not enough money. Money refunded.")
     else:
