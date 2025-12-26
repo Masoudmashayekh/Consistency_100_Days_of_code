@@ -22,3 +22,6 @@
 # Here is your $ in change.
 # Here is your latte Enjoy!
 # Sorry there is not enough water.
+# Please insert coins.
+# How many quarters?: 
+# Sorry that's not enough money. Money refunded.
