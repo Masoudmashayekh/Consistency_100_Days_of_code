@@ -1,0 +1,4 @@
+print("Compare A: ")
+print("Against B: ")
+print("Who has more followers? Type 'A' or 'B': ")
+print("Sorry, that's wrong. Final score: 0")
