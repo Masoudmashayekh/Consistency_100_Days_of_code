@@ -16,3 +16,5 @@
 # You have the class which is normally written with the first letter of each word capitalized, which is known as Pascal case.
 # car = CarBlueprint() => car is object and CarBlueprint is Class
 # Turtle Graphics
+# Car.speed => attributes
+# Car.stop() => methods
