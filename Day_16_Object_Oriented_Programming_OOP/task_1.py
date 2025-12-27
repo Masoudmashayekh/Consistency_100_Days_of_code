@@ -6,4 +6,4 @@ timmy = Turtle()
 
 my_screen = Screen()
 my_screen.canvheight 
-
+my_screen.exitonclick()
