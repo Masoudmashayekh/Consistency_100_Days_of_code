@@ -11,3 +11,7 @@
 #                def take_payment(amount):
 #                    # add money to restaurant
 # The things that they can do are called methods and they are modeled by functions.
+
+# Constructing Objects:
+# You have the class which is normally written with the first letter of each word capitalized, which is known as Pascal case.
+# car = CarBlueprint() => car is object and CarBlueprint is Class
