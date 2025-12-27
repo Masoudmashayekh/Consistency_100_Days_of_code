@@ -2,7 +2,7 @@
 
 # Object Oriented Programming (OOP)
 # How to use OOP?
-# Waiter:
+# Waiter(Class):  Henry(Object)
 # has(attributes):  is_holding_plate = True
 #                   tables_responsible = [4, 5, 6]
 # The things that they have are their attributes and these are usually modeled with variables.
