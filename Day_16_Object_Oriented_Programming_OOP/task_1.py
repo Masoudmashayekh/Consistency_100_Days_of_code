@@ -1,5 +1,6 @@
 # Turtle Graphics
-import turtle
+from turtle import Turtle
 
-timmy = turtle.Turtle()
+# timmy = turtle.Turtle()
+timmy = Turtle()
 
