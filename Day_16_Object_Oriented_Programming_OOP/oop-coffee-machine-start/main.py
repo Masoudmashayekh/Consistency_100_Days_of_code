@@ -13,10 +13,9 @@ while continue_game:
         coffee_maker.report()
         money_machine.report()
     elif user_order == "off":
-        print("See you later. Bey!")
+        print("See you later. Bye!")
         continue_game = False
     else:
         drink_name = menu.find_drink(user_order)
-        if coffee_maker.is_resource_sufficient(drink_name):
-            if money_machine.make_payment(drink_name.cost):
-                coffee_maker.make_coffee(drink_name)
+        if coffee_maker.is_resource_sufficient(drink_name) and money_machine.make_payment(drink_name.cost):
+            coffee_maker.make_coffee(drink_name)
