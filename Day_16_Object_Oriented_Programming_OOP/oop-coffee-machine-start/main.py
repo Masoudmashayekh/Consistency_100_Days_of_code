@@ -6,16 +6,18 @@ menu = Menu()
 coffeemaker = CoffeeMaker()
 moneymachine = MoneyMachine()
 
-print(menu.get_items())
-print(menu.find_drink("latte"))
-print(coffeemaker.report())
-print(coffeemaker.is_resource_sufficient)
-print(moneymachine.report())
-
-user_order = input(f"What would you like to drink? {menu.get_items()}")
-drink_name = menu.find_drink(user_order).name
-drink_cost = menu.find_drink(user_order).cost
-drink_ingredients = menu.find_drink(user_order).ingredients
-print(drink_cost)
-print(drink_ingredients)
-print(drink_name)
+continue_game = True
+while continue_game:
+    user_order = input(f"What would you like to drink? {menu.get_items()}")
+    if user_order == "report":
+        coffeemaker.report()
+    elif user_order == "off":
+        print("See you later. Bey!")
+        quit
+    else:
+        drink_name = menu.find_drink(user_order)
+        drink_cost = menu.find_drink(user_order).cost
+        drink_ingredients = menu.find_drink(user_order).ingredients
+        if coffeemaker.is_resource_sufficient(drink_name):
+            if moneymachine.make_payment(drink_cost):
+                coffeemaker.make_coffee(drink_name)
