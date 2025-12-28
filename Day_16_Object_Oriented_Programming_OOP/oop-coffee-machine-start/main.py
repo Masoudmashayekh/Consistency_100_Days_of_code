@@ -11,13 +11,13 @@ while continue_game:
     user_order = input(f"What would you like to drink? {menu.get_items()}")
     if user_order == "report":
         coffeemaker.report()
+        moneymachine.report()
     elif user_order == "off":
         print("See you later. Bey!")
-        quit
+        continue_game = False
     else:
         drink_name = menu.find_drink(user_order)
         drink_cost = menu.find_drink(user_order).cost
-        drink_ingredients = menu.find_drink(user_order).ingredients
         if coffeemaker.is_resource_sufficient(drink_name):
             if moneymachine.make_payment(drink_cost):
                 coffeemaker.make_coffee(drink_name)
