@@ -11,8 +11,10 @@ class User:   # Class => PascalCase
     
        
 user_1 = User() # Object = Class
-# Creating Attribute
+# Creating Attribute, an attribute is a variable that's associated with an object.
 user_1.id = "001"
 user_1.username = "Masoud"
 
 print(user_1.username)
+
+# Constructor
