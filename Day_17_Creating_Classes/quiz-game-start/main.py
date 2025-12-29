@@ -13,4 +13,5 @@ for question in question_data:
  
     
 test = QuizBrain(question_bank)
+test.next_question()
 print(test.question_number)
