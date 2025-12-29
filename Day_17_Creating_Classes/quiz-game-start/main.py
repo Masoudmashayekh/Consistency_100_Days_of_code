@@ -12,6 +12,6 @@ for question in question_data:
 # print(question_bank[0].answer)  
  
     
-test = QuizBrain(question_bank)
-test.next_question()
-print(test.question_number)
+quiz = QuizBrain(question_bank)
+quiz.next_question()
+
