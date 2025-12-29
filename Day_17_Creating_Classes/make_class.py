@@ -17,4 +17,6 @@ user_1.username = "Masoud"
 
 print(user_1.username)
 
-# Constructor
+# Constructor or Initializing object
+# def __init__(self):
+#   Initialise attributes
