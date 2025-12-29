@@ -9,5 +9,11 @@
 # Creating Class 
 # Step 1: 
 #       class Car:
+# camelCase, snake_case
+class User:   # Class => PascalCase
+    pass
+    
+    
+    
 
-class
+user_1 = User() # Object = Class
