@@ -18,5 +18,8 @@ for i in range(0, len(draw_list)):
 
 
 
+
+
+
 screen = Screen()
 screen.exitonclick()
