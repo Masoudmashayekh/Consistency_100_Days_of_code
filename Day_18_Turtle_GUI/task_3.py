@@ -14,11 +14,6 @@ for i in range(0, len(draw_list)):
         timmy_the_turtle.color(colors[i])
         timmy_the_turtle.forward(100)
         timmy_the_turtle.right(angle)
- 
-    
-
-
-
 
 
 
