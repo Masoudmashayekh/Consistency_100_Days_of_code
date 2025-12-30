@@ -1,3 +1,4 @@
+# Task 2
 import turtle # Keyword & Module name
 # timmy_the_turtle = turtle.Turtle()
 
@@ -5,8 +6,8 @@ import turtle # Keyword & Module name
 # from turtle import *   => You can use everything that's in that module (But it is not usefull)
 # import turtle as t => keyword, module name, keyword, alias name
 timmy_the_tutle = turtle.Turtle()
-
-
+timmy_the_tutle.forward(100)
+timmy_the_tutle.pendown(40)
 
 
 screen = turtle.Screen()
