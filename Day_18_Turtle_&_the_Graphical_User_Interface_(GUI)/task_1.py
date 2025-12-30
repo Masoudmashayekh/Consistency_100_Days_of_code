@@ -2,8 +2,8 @@ from turtle import Turtle, Screen
 
 timmy_the_turtle = Turtle()
 
-for i in range(0,4):
-    timmy_the_turtle.forward(300)
+for _ in range(0,4):
+    timmy_the_turtle.forward(200)
     timmy_the_turtle.right(90)
 
 
