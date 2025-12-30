@@ -3,7 +3,7 @@ from turtle import Turtle, Screen
 import random
 
 colors = ["red", "green", "blue", "orange", "purple", "black", "gray"]
-angles = [0,45,60, 90, 120, 180, 360]
+angles = [0, 90, 180, 360]
 random_trun = random.choice(angles)
 random_color = random.choice(colors)
 
