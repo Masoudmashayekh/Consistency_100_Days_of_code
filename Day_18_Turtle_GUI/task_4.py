@@ -7,5 +7,16 @@ timmy_the_turtle.speed(1)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
 screen = Screen()
 screen.exitonclick()
