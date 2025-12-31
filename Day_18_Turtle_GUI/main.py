@@ -25,8 +25,8 @@ timmy_the_turtle.speed("fastest")
 colormode(255)
 
 
-for y in range(-200, 201, 100):
-    for x in range(-200, 201, 100):
+for y in range(-200, 201, 40):
+    for x in range(-200, 201, 40):
         timmy_the_turtle.penup()
         timmy_the_turtle.goto(x, y)
         timmy_the_turtle.pendown()
