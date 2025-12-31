@@ -20,8 +20,10 @@ for color in colors:
     
 
 timmy_the_turtle = Turtle()
+timmy_the_turtle.hideturtle()
 timmy_the_turtle.speed(0)
 colormode(255)
+
 for y in range(0, 401, 40):
     for x in range(0, 401, 40):
         timmy_the_turtle.penup()
