@@ -2,6 +2,8 @@
 from turtle import Turtle, Screen
 import random
 
+# Python tuple (1, 2, 3 ) => A tuple is going to be carved in stone, so you can't change the values like you can with list. (Immutalbe)
+
 colors = ["red", "green", "blue", "orange", "purple", "black", "gray"]
 angles = [0, 90, 180, 270]
 
