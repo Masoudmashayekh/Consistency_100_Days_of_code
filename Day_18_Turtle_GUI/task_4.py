@@ -4,21 +4,17 @@ import random
 
 colors = ["red", "green", "blue", "orange", "purple", "black", "gray"]
 angles = [0, 90, 180, 270]
-random_trun = random.choice(angles)
-random_color = random.choice(colors)
-
-
 
 timmy_the_turtle = Turtle()
 timmy_the_turtle.speed(5)
 
 
 size = 1
-for _ in range(200):
+for _ in range(20):
     timmy_the_turtle.pensize(size)
     timmy_the_turtle.color(random.choice(colors))
-    timmy_the_turtle.right(random.choice(angles))
     timmy_the_turtle.forward(30)
+    timmy_the_turtle.right(random.choice(angles))
     size += 0.1
 
 
