@@ -15,7 +15,7 @@ def random_color():
 
 
 for i in range(0, 360, 5):
-    timmy_the_turtle.left(i - (i-5))
+    timmy_the_turtle.setheading(i)
     timmy_the_turtle.color(random_color())
     timmy_the_turtle.circle(100)
 
