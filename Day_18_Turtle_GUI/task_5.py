@@ -10,18 +10,14 @@ def random_color():
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
-    return (r, g, b)
+    color = (r, g, b) 
+    return color
 
 
 for i in range(0, 360, 5):
     timmy_the_turtle.left(i - (i-5))
     timmy_the_turtle.color(random_color())
     timmy_the_turtle.circle(100)
-
-
-
-
-
 
 
 
