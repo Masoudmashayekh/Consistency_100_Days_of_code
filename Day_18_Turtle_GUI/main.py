@@ -1,21 +1,11 @@
-# Day 18: Turtle Graphics, Tuples and Importing Modules
-# keep in mind that the struggle is good. The more that you struggle, the stronger you get.
-from turtle import Turtle, Screen
+# Day 18: Turtle Graphics, Tuples and Importing Modules : hirst spot painting
+from turtle import Turtle, Screen, colormode
+import colorgram # colorgram.py is a Python library that lets you extract colors from images.
+import random
 
-timmy_the_turtle = Turtle()
-timmy_the_turtle.shape("turtle")
-timmy_the_turtle.color("DarkBlue") # https://cs111.wellesley.edu/reference/colors
-# tk color specification string
-timmy_the_turtle.forward(100)
-timmy_the_turtle.left(90)
-timmy_the_turtle.forward(100)
+colors = colorgram.extract('image.jpg', 5)
 
-
-
-
-
-
-
-
-screen = Screen()
-screen.exitonclick()
+colors_list = []
+for color in colors:
+    rgb = color.rgb
+    color.append(rgb)
