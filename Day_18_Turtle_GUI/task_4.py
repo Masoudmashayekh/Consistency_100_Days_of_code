@@ -11,16 +11,17 @@ random_color = random.choice(colors)
 
 timmy_the_turtle = Turtle()
 timmy_the_turtle.speed(5)
-timmy_the_turtle.pensize(5)
 
+size = 1
 i = True
 while i :
     random_trun = random.choice(angles)
+    timmy_the_turtle.pensize(size)
     random_color = random.choice(colors)
     timmy_the_turtle.color(random_color)
     timmy_the_turtle.right(random_trun)
     timmy_the_turtle.forward(20)
-
+    size += 1
 
 
 
