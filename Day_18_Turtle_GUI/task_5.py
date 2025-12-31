@@ -13,8 +13,8 @@ def random_color():
     return (r, g, b)
 
 
-for i in range(360):
-    timmy_the_turtle.left(i - (i-1))
+for i in range(0, 360, 5):
+    timmy_the_turtle.left(i - (i-5))
     timmy_the_turtle.color(random_color())
     timmy_the_turtle.circle(100)
 
