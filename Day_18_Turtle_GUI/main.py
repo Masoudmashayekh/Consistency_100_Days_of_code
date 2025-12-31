@@ -21,11 +21,12 @@ for color in colors:
 
 timmy_the_turtle = Turtle()
 timmy_the_turtle.hideturtle()
-timmy_the_turtle.speed(0)
+timmy_the_turtle.speed("fastest")
 colormode(255)
 
-for y in range(0, 401, 40):
-    for x in range(0, 401, 40):
+
+for y in range(-200, 201, 100):
+    for x in range(-200, 201, 100):
         timmy_the_turtle.penup()
         timmy_the_turtle.goto(x, y)
         timmy_the_turtle.pendown()
@@ -34,5 +35,4 @@ for y in range(0, 401, 40):
 
 
 screen = Screen()
-
 screen.exitonclick()
