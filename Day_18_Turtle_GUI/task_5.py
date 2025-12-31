@@ -13,13 +13,15 @@ def random_color():
     color = (r, g, b) 
     return color
 
+def draw_spirograph(size_of_gap):
+    for i in range(0, 360, size_of_gap):
+        timmy_the_turtle.setheading(i)
+        timmy_the_turtle.color(random_color())
+        timmy_the_turtle.circle(100)
 
-for i in range(0, 360, 5):
-    timmy_the_turtle.setheading(i)
-    timmy_the_turtle.color(random_color())
-    timmy_the_turtle.circle(100)
 
 
+draw_spirograph(20)
 
 
 screen = Screen()
