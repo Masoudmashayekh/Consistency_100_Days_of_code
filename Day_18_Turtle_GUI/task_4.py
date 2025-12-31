@@ -3,7 +3,7 @@ from turtle import Turtle, Screen
 import random
 
 colors = ["red", "green", "blue", "orange", "purple", "black", "gray"]
-angles = [0, 90, 180, 360]
+angles = [0, 90, 180, 270]
 random_trun = random.choice(angles)
 random_color = random.choice(colors)
 
@@ -12,15 +12,15 @@ random_color = random.choice(colors)
 timmy_the_turtle = Turtle()
 timmy_the_turtle.speed(5)
 
+
 size = 1
-i = True
-while i :
+for _ in range(200):
     random_trun = random.choice(angles)
     timmy_the_turtle.pensize(size)
     random_color = random.choice(colors)
     timmy_the_turtle.color(random_color)
     timmy_the_turtle.right(random_trun)
-    timmy_the_turtle.forward(20)
+    timmy_the_turtle.forward(30)
     size += 1
 
 
