@@ -18,5 +18,19 @@ for color in colors:
     rgb = (r, g, b)
     rgb_colors_list.append(rgb)
     
-    
-print(rgb_colors_list)
+
+timmy_the_turtle = Turtle()
+timmy_the_turtle.speed(0)
+colormode(255)
+for y in range(0, 401, 40):
+    for x in range(0, 401, 40):
+        timmy_the_turtle.penup()
+        timmy_the_turtle.goto(x, y)
+        timmy_the_turtle.pendown()
+        timmy_the_turtle.dot(20, random.choice(rgb_colors_list))
+
+
+
+screen = Screen()
+
+screen.exitonclick()
