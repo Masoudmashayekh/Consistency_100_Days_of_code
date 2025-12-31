@@ -11,11 +11,10 @@ t.colormode(255)
 timmy_the_turtle.speed(5)
 
 def random_color():
-    color = []
-    for _ in range(3):
-        color_random = random.randrange(0, 255)
-        color.append(color_random)
-    return (color[0], color[1], color[2])
+    r = random.randrange(0, 255)
+    g = random.randrange(0, 255)
+    b = random.randrange(0, 255) 
+    return (r, g, b)
 
 size = 1
 for _ in range(200):
