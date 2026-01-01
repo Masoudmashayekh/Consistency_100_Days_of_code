@@ -15,13 +15,18 @@ def move_backward():
 def clear():
     timmy.reset()
 
+def counter_clockwise():
+    timmy.left(5)
 
-
+def clockwise():
+    timmy.right(5)
 
 screen.listen()
-screen.onkey(key="w", fun=move_forwards)
-screen.onkey(key="s", fun=move_backward)
-screen.onkey(key="c", fun=clear)
+screen.onkey(key="w", fun= move_forwards)
+screen.onkey(key="s", fun= move_backward)
+screen.onkey(key="a", fun= counter_clockwise)
+screen.onkey(key="d", fun= clockwise)
+screen.onkey(key="c", fun= clear)
 
 
 
