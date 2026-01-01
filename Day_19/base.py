@@ -1,4 +1,4 @@
-# Day 19: More Turtle Graphics, Event Listeners, State and Multiple Instances
+# Day 19: More Turtle Graphics, Event Listeners, State and Multiple Instances, Higher Order Functions
 
 from turtle import Turtle, Screen, colormode
 
