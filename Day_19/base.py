@@ -9,9 +9,19 @@ screen = Screen()
 def move_forwards():
     timmy.forward(10)
 
+def move_backward():
+    timmy.backward(10)
+    
+def clear():
+    timmy.reset()
+
+
+
 
 screen.listen()
-screen.onkey(key="space", fun=move_forwards)
+screen.onkey(key="w", fun=move_forwards)
+screen.onkey(key="s", fun=move_backward)
+screen.onkey(key="c", fun=clear)
 
 
 
