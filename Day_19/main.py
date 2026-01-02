@@ -6,12 +6,12 @@ screen.setup(width= 500, height= 400)
 user_bet = screen.textinput(title= "Make your bet", prompt= "Which turtle will win the race? Enter a color: ").lower()
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
-for i in range(5):
+for i in range(6):
     colormode(255)
     timy = Turtle(shape= "turtle")
     timy.color(colors[i])
     timy.penup()
-    timy.goto(x= -220, y= -100 + (i*50))
+    timy.goto(x= -220, y= -110 + (i*50))
 
 
 
