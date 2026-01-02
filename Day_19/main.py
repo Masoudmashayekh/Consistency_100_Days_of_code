@@ -6,8 +6,7 @@ screen.setup(width= 500, height= 400)
 user_bet = screen.textinput(title= "Make your bet", prompt= "Which turtle will win the race? Enter a color: ").lower()
 
 for i in range(5):
-    timy = Turtle()
-    timy.shape("turtle")
+    timy = Turtle(shape= "turtle")
     timy.penup()
     timy.goto(x= -220, y= -100 + (i*50))
 
