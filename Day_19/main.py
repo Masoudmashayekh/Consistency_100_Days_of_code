@@ -7,7 +7,9 @@ user_bet = screen.textinput(title= "Make your bet", prompt= "Which turtle will w
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 for i in range(5):
+    colormode(255)
     timy = Turtle(shape= "turtle")
+    timy.color(colors[i])
     timy.penup()
     timy.goto(x= -220, y= -100 + (i*50))
 
