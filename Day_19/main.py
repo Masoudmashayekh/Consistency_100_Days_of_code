@@ -10,11 +10,11 @@ colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 turtles_list = []
 for turtle_index in range(6):
-    timy = Turtle(shape= "turtle")
-    timy.color(colors[turtle_index])
-    timy.penup()
-    timy.goto(x= -220, y= -110 + (turtle_index * 50))
-    list.append(timy)
+    new_turtle = Turtle(shape= "turtle")
+    new_turtle.color(colors[turtle_index])
+    new_turtle.penup()
+    new_turtle.goto(x= -220, y= -110 + (turtle_index * 50))
+    list.append(new_turtle)
     
 
 if user_bet:
