@@ -26,6 +26,12 @@ while is_race_on:
         turtle.forward(random_distance)
         if turtle.xcor() >= 220:
             is_race_on = False
+            winner = turtle
+            if winner == user_bet:
+                print("You win!")
+            else:
+                print("You loss!")
+            
     
     
     
