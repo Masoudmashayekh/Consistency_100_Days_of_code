@@ -14,14 +14,19 @@ for turtle_index in range(6):
     new_turtle.color(colors[turtle_index])
     new_turtle.penup()
     new_turtle.goto(x= -220, y= -110 + (turtle_index * 50))
-    list.append(new_turtle)
+    turtles_list.append(new_turtle)
     
 
 if user_bet:
     is_race_on = True
 
 while is_race_on:
-    random_distance = random.randint(0, 10)
+    for turtle in turtles_list:
+        random_distance = random.randint(0, 10)
+        turtle.forward(random_distance)
+        if turtle.xcor() >= 220:
+            is_race_on = False
+    
     
     
 
