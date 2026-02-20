@@ -7,14 +7,14 @@ screen.title("My Snake Game")
 
 
 
-turtle_list = []
+segments = []
 
-for item in range(3):
-    turtle = Turtle(shape="square")
-    turtle.color("white")
-    turtle.penup()
-    turtle.goto(x= 0 - item * 20, y= 0)
-    turtle_list.append(item)
+for segment in range(3):
+    new_segment = Turtle(shape="square")
+    new_segment.color("white")
+    new_segment.penup()
+    new_segment.goto(x= 0 - segment * 20, y= 0)
+    segments.append(segment)
     
 
     
