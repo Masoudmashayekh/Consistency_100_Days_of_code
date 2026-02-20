@@ -13,15 +13,14 @@ for item in range(3):
     turtle = Turtle(shape="square")
     turtle.color("white")
     turtle.penup()
-    turtle.shapesize(stretch_wid=1, stretch_len=1)
-    turtle.goto(x= 0 - item*20, y= 0)
+    turtle.goto(x= 0 - item * 20, y= 0)
     turtle_list.append(item)
     
 
     
 
 
-
+ 
 
 
 
