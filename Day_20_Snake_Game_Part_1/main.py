@@ -8,6 +8,9 @@ screen.bgcolor("black")
 screen.title("My Snake Game")
 screen.tracer(0)
 
+def quit_program():
+    screen.bye()
+
 snake = Snake()
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -22,7 +25,7 @@ while game_is_on:
     screen.update()
     time.sleep(0.1)
     snake.move()
-    
+    screen.onkey(quit_program, "q")
  
 
 
