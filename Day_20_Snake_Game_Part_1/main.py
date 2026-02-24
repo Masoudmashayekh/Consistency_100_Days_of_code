@@ -29,7 +29,10 @@ while game_is_on:
     time.sleep(0.1)
     snake.move()
     screen.onkey(quit_program, "q")
- 
+    
+    # Detect collision with food
+    if snake.head.distance(food) < 15:
+        print("hello")
 
 
 
