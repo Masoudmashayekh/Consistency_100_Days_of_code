@@ -1,5 +1,6 @@
 from turtle import Turtle
 
 class Food(Turtle):
-    super().__init__()
+    def __init__(self):
+        super().__init__()
     
