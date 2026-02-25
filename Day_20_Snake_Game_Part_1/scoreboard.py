@@ -1,9 +1,6 @@
 from turtle import Turtle
 
-class ScoreBoard:
+class ScoreBoard(Turtle):
     def __init__(self):
-        self.score = 0
-        
-    def board(self):
-        Turtle.write(f"Score: {self.score}")
+        super().__init__()
             
