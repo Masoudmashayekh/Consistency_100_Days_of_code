@@ -12,7 +12,7 @@ class Snake:
         self.segments = []
         self.create_snake()
         self.head = self.segments[0]
-        
+    
     
     
     def create_snake(self):
@@ -47,4 +47,6 @@ class Snake:
     def right(self):
         if self.head.heading() != LEFT:
             self.head.setheading(RIGHT)
+    
+    
     
