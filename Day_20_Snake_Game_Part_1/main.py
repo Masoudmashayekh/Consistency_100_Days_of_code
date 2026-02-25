@@ -16,7 +16,7 @@ def quit_program():
 snake = Snake()
 food = Food()
 board = ScoreBoard()
-board.score()
+
 
 screen.listen()
 screen.onkey(snake.up, "Up")
