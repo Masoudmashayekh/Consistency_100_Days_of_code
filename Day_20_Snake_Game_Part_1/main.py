@@ -16,6 +16,7 @@ def quit_program():
 snake = Snake()
 food = Food()
 board = ScoreBoard()
+board.score()
 
 screen.listen()
 screen.onkey(snake.up, "Up")
@@ -31,7 +32,7 @@ while game_is_on:
     time.sleep(0.1)
     snake.move()
     screen.onkey(quit_program, "q")
-    board
+   
     
     # Detect collision with food
     if snake.head.distance(food) < 15:
