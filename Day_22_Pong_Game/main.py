@@ -36,10 +36,13 @@ while game_is_on:
         ball.bounce_x()
     
     # Detect R paddel misses the ball
-    if ball.xcor() > 380 or ball.xcor() < -380:
-        ball.game_rest()
+    if ball.xcor() > 380:
+        ball.rest_position()
  
-
+    # Detect L paddel misses the ball
+    if ball.xcor() < -380:
+        ball.rest_position()
+ 
 
 
 
