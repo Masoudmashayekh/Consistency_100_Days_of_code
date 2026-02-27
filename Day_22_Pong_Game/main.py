@@ -12,6 +12,19 @@ padel.shape("square")
 padel.shapesize(stretch_wid= 5, stretch_len= 1)
 padel.goto(350, 0)
 
+def padel_up():
+    padel.setpos(350, padel.position()+ 20)
+    
+def padel_down():
+    padel.setpos(350, padel.position()- 20)
+  
+game_is_on = True
+while game_is_on:  
+    screen.listen()
+    screen.onkey(padel_up, "Up")
+    screen.onkey(padel_down, "Down")
+    
+    
  
 
 
