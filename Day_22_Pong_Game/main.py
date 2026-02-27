@@ -8,8 +8,9 @@ screen.title("Pong Game")
 padel = Turtle()
 padel.color("red")
 padel.penup()
-# padel.hideturtle()
-padel.turtlesize(stretch_wid= 20, stretch_len= 100)
+padel.shape("square")
+padel.shapesize(stretch_wid= 5, stretch_len= 1)
+padel.goto(350, 0)
 
  
 
