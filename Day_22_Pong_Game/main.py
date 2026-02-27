@@ -13,12 +13,12 @@ padel.shapesize(stretch_wid= 5, stretch_len= 1)
 padel.goto(350, 0)
 
 def padel_up():
-    y_position = padel.ycor() + 20
-    padel.goto(350, y_position)
+    new_y = padel.ycor() + 20
+    padel.goto(350, new_y)
     
 def padel_down():
-    y_position = padel.ycor() - 20
-    padel.goto(350, y_position)
+    new_y = padel.ycor() - 20
+    padel.goto(350, new_y)
     
     
 screen.listen()
