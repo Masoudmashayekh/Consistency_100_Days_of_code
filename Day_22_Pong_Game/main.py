@@ -1,6 +1,6 @@
-from turtle import Screen, Turtle
+from turtle import Screen
 from paddle import Paddle
-
+from ball import Ball
 
 screen = Screen()
 screen.bgcolor("black")
@@ -10,7 +10,8 @@ screen.tracer(0)
 
 r_paddel = Paddle((350, 0))
 l_paddel = Paddle((-350, 0))
-    
+
+ball = Ball()    
     
 screen.listen()
 screen.onkey(r_paddel.go_up, "Up")
