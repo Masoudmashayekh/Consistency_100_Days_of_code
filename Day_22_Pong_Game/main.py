@@ -35,7 +35,8 @@ while game_is_on:
     if ball.distance(r_paddel) < 50 and ball.xcor() > 320 or ball.distance(l_paddel) < 50 and ball.xcor() < -320:
         ball.bounce_x()
     
-    if ball.distance(r_paddel) > 50 and ball.xcor() > 370 or ball.distance(l_paddel) > 50 and ball.xcor() < -370:
+    # Detect R paddel misses the ball
+    if ball.xcor() > 380 or ball.xcor() < -380:
         ball.game_rest()
  
 
