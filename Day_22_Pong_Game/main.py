@@ -5,25 +5,25 @@ screen.bgcolor("black")
 screen.setup(width= 800, height= 600)
 screen.title("Pong Game")
 
-padel = Turtle()
-padel.color("white")
-padel.penup()
-padel.shape("square")
-padel.shapesize(stretch_wid= 5, stretch_len= 1)
-padel.goto(350, 0)
+paddle = Turtle()
+paddle.color("white")
+paddle.penup()
+paddle.shape("square")
+paddle.shapesize(stretch_wid= 5, stretch_len= 1)
+paddle.goto(350, 0)
 
-def padel_up():
-    new_y = padel.ycor() + 20
-    padel.goto(350, new_y)
+def go_up():
+    new_y = paddle.ycor() + 20
+    paddle.goto(350, new_y)
     
-def padel_down():
-    new_y = padel.ycor() - 20
-    padel.goto(350, new_y)
+def go_down():
+    new_y = paddle.ycor() - 20
+    paddle.goto(350, new_y)
     
     
 screen.listen()
-screen.onkey(padel_up, "Up")
-screen.onkey(padel_down, "Down")
+screen.onkey(go_up, "Up")
+screen.onkey(go_down, "Down")
 
 
 
