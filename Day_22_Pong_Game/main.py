@@ -6,7 +6,7 @@ screen.setup(width= 800, height= 600)
 screen.title("Pong Game")
 
 padel = Turtle()
-padel.color("red")
+padel.color("white")
 padel.penup()
 padel.shape("square")
 padel.shapesize(stretch_wid= 5, stretch_len= 1)
