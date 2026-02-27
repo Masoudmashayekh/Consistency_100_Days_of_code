@@ -26,10 +26,11 @@ screen.onkey(padel_up, "Up")
 screen.onkey(padel_down, "Down")
 
 
+
 game_is_on = True
 while game_is_on:
     screen.update()  
-    
+    screen.exitonclick()
     
     
  
