@@ -22,7 +22,7 @@ screen.onkey(l_paddel.go_down, "s")
 
 game_is_on = True
 while game_is_on:
-    ball.ball_move()
+    ball.move()
     screen.update()
  
 
