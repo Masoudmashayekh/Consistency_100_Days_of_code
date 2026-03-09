@@ -2,12 +2,15 @@ from turtle import Screen
 from paddle import Paddle
 from ball import Ball
 import time 
+from scoreboard import Scoreboard
 
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width= 800, height= 600)
 screen.title("Pong Game")
 screen.tracer(0)
+
+scoreboard = Scoreboard()
 
 r_paddel = Paddle((350, 0))
 l_paddel = Paddle((-350, 0))
