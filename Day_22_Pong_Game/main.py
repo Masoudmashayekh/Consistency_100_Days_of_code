@@ -4,6 +4,8 @@ from ball import Ball
 import time 
 from scoreboard import Scoreboard
 
+
+
 screen = Screen()
 screen.bgcolor("black")
 screen.setup(width= 800, height= 600)
@@ -26,7 +28,7 @@ screen.onkey(l_paddel.go_down, "s")
 
 game_is_on = True
 while game_is_on:
-    time.sleep(0.1)
+    time.sleep(BALL_SPEED)
     ball.move()
     screen.update()
     
@@ -42,11 +44,14 @@ while game_is_on:
     if ball.xcor() > 380:
         ball.rest_position()
         scoreboard.l_point()
+        
  
     # Detect L paddel misses the ball
     if ball.xcor() < -380:
         ball.rest_position()
         scoreboard.r_point()
+        
+ 
  
 
 
