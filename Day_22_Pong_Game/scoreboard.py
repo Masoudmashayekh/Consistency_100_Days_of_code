@@ -15,3 +15,9 @@ class Scoreboard(Turtle):
         self.write(self.r_score, align="center", font=("Courier", 80, "normal"))
         
         
+    def l_point(self):
+        self.l_score += 1
+        
+    def r_point(self):
+        self.r_point += 1
+        
