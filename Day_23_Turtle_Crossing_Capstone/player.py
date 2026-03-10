@@ -8,7 +8,16 @@ class Player(Turtle):
         super().__init__()
         self.color("black")
         self.penup()
+        self.left(90)
         self.shape("turtle")
         self.goto(STARTING_POSITION)
         
+        
     
+    def go_up(self):
+        new_y = self.ycor() + MOVE_DISTANCE
+        self.goto(self.xcor(), new_y)
+        
+    def level_up(self):
+        if self.ycor() > FINISHING_LINE_Y:
+            self.goto(STARTING_POSITION)
