@@ -11,9 +11,9 @@ class CarMaganer(Turtle):
         self.shape("square")
         self.penup()
         self.shapesize(stretch_len=2, stretch_wid=1)
-        self.goto(280, 0)
+        self.turtle_list = []
     
     def car(self):
         new_y = random.randint(-250, 250)
         while self.xcor() > -280:
-            self.goto()
+            self.got
