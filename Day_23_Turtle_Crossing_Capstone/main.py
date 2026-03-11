@@ -20,7 +20,7 @@ while game_is_on:
     palyer.level_up()
     screen.update()
     car_manager.create_car()
-    
+    car_manager.move_cars()
     
     
     
