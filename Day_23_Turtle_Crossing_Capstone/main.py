@@ -19,7 +19,7 @@ while game_is_on:
     time.sleep(0.1)
     palyer.level_up()
     screen.update()
-    
+    car_manager.create_car()
     
     
     
