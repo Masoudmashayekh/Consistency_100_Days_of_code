@@ -28,6 +28,7 @@ while game_is_on:
         if car.distance(palyer) < 20:
             game_is_on = False
     
+    # Detect seccessful crossing
     
 screen.exitonclick()
 
