@@ -5,15 +5,12 @@ STARTING_MOVE_DISTANCE = 5
 MOVE_INCREMENT = 10
 
 
-class CarMaganer(Turtle):
+class CarMaganer():
+   
     def __init__(self):
-        super().__init__()
-        self.shape("square")
-        self.penup()
-        self.shapesize(stretch_len=2, stretch_wid=1)
-        self.turtle_list = []
-    
-    def car(self):
-        new_y = random.randint(-250, 250)
-        while self.xcor() > -280:
-            self.got
+        all_cars = []
+        
+    def create_cars(self):
+        new_car = Turtle("square")
+        new_car.shapesize()
+   
