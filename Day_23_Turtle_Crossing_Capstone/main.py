@@ -19,9 +19,15 @@ while game_is_on:
     time.sleep(0.1)
     palyer.level_up()
     screen.update()
+    
     car_manager.create_car()
     car_manager.move_cars()
     
+    # Detect collision with car
+    for car in car_manager.all_cars:
+        if car.distance(palyer) < 20:
+            game_is_on = False
     
     
+screen.exitonclick()
 
