@@ -13,6 +13,7 @@ class Scoreboard(Turtle):
         
      
     def update_scoreboard(self): 
+        self.clear()
         self.write(f"Level: {self.level}", align="left", font= FONT )
         
     def increase_level(self):
