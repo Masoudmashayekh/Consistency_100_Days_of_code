@@ -27,6 +27,7 @@ while game_is_on:
     for car in car_manager.all_cars:
         if car.distance(player) < 25:
             game_is_on = False
+            scoreboard.game_over()
     
     # Detect seccessful crossing
     if player.is_at_finish_line():
