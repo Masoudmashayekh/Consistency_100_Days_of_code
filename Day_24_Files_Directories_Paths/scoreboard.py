@@ -8,7 +8,8 @@ class ScoreBoard(Turtle):
     def __init__(self):
         super().__init__()
         self.score = 0
-        self.high_score = self.read_high_score()
+        with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data.txt", mode= "r") as data:
+            self.high_score = data.read()
         self.color("white")
         self.hideturtle()
         self.penup()
@@ -25,7 +26,6 @@ class ScoreBoard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
-            self.write_high_score()
         self.score = 0
         self.update_scoreboard()
         
@@ -40,10 +40,4 @@ class ScoreBoard(Turtle):
         self.update_scoreboard()
         
         
-    def read_high_score(self):
-        with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data.txt", mode= "r") as file:
-            return file.read()
-        
-    def write_high_score(self):
-        with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data.txt", mode= "w") as file:
-            file.write(self.score)
+    
