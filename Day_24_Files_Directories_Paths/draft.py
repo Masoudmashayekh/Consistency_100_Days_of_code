@@ -14,4 +14,6 @@
 #     file.write("New text.")
     
     
-#
+# Append: "a"
+with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data/new_file.txt", mode="a") as file:
+    file.write("\nNew Text 2")   
