@@ -9,7 +9,7 @@ class ScoreBoard(Turtle):
         super().__init__()
         self.score = 0
         with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data.txt", mode= "r") as data:
-            self.high_score = int(data.read())
+            self.high_score = data.read()
         self.color("white")
         self.hideturtle()
         self.penup()
