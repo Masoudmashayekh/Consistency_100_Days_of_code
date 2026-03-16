@@ -4,16 +4,16 @@
 # file.close()
 
 # Read: "r"
-# with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data/my_file.txt", mode="r") as file:
-#     contents = file.read()
-#     print(contents)
+with open("./Day_24_Files_Directories_Paths/data/my_file.txt", mode="r") as file:
+    contents = file.read()
+    print(contents)
     
     
 # Write: "w"
-# with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data/my_file.txt", mode="w") as file:
+# with open("./Day_24_Files_Directories_Paths/data/my_file.txt", mode="w") as file:
 #     file.write("New text.")
     
     
 # Append: "a"
-with open("/Users/masoudmashayekh/Documents/Python/Consistency_100_Days_of_code/Day_24_Files_Directories_Paths/data/new_file.txt", mode="a") as file:
-    file.write("\nNew Text 2")   
+# with open("./Day_24_Files_Directories_Paths/data/new_file.txt", mode="a") as file:
+#     file.write("\nNew Text 2")   
