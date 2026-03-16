@@ -1,4 +1,4 @@
-# File Path
+# Absolute File Path
 # /Root                                 /
 #     |_Work                            /Work
 #           |_report.doc                /Work/report.doc
