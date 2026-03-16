@@ -7,3 +7,5 @@
 
 # Relative File Path
 # If we are here:|_Work => ./Project/talk.ppt
+
+# If we are here:|_Project and for go back => ../report.doc
