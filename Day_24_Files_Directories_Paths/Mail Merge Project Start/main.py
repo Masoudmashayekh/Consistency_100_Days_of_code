@@ -9,5 +9,6 @@
 
 with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Names/invited_names.txt", mode="r") as file:
     contents = file.read()
-    print(contents) 
+    names_list = contents.split("\n")
+    print(names_list)
         
