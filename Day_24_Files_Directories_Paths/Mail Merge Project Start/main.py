@@ -11,4 +11,9 @@ with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Names
     contents = file.read()
     names_list = contents.split("\n")
     print(names_list)
+
+for name in names_list:
+    with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Letters/starting_letter.txt", mode="r") as letter:
+        letter.replace("[name]", name)
+    
         
