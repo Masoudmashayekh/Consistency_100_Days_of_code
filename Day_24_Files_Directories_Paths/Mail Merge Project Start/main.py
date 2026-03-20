@@ -13,7 +13,10 @@ with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Names
     print(names_list)
 
 for name in names_list:
-    with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Letters/starting_letter.txt", mode="r") as letter:
-        letter.replace("[name]", name)
+    with open("./Day_24_Files_Directories_Paths/Mail Merge Project Start/Input/Letters/starting_letter.txt", mode="w") as letter:
+        text = letter
+        ready = text.
+        ready.write(f"./Day_24_Files_Directories_Paths/Mail Merge Project Start/Output/ReadyToSend/letter_for_{name}.txt")
+        
     
         
