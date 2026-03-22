@@ -11,3 +11,6 @@ print(data_dict)
 
 temp_list = data["temp"].to_list()
 print(temp_list)
+print(len(temp_list))
+temp_avrage = (sum(temp_list)/len(temp_list))
+print(temp_avrage)
