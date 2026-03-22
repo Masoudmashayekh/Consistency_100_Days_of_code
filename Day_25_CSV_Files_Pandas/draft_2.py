@@ -23,4 +23,10 @@ data = pandas.read_csv("./Day_25_CSV_Files_Pandas/weather_data.csv")
 
 # Get data in Row
 # print(data[data.day == "Monday"])
-print(data[data.temp == data.temp.max()])
+# print(data[data.temp == data.temp.max()])
+
+monday = data[data.day == "Monday"]
+print(monday.condition)
+
+monday_temp = (monday.temp * (9/5)) + 32
+print(monday_temp)
