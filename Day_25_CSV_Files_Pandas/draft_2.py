@@ -23,4 +23,4 @@ data = pandas.read_csv("./Day_25_CSV_Files_Pandas/weather_data.csv")
 
 # Get data in Row
 # print(data[data.day == "Monday"])
-print(data.temp.max())
+print(data[data.temp == data.temp.max()])
