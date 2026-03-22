@@ -16,3 +16,7 @@ temp_average = (sum(temp_list)/len(temp_list))
 print(temp_average)
 print(data["temp"].mean())
 print(data["temp"].max())
+
+# Get data in columns
+print(data["condition"])
+print(data.day)
