@@ -39,3 +39,4 @@ data_dict = {
 
 data = pandas.DataFrame(data_dict)
 print(data)
+data.to_csv("./Day_25_CSV_Files_Pandas/new_file.csv")
