@@ -25,14 +25,17 @@ data = pandas.read_csv("./Day_25_CSV_Files_Pandas/weather_data.csv")
 # print(data[data.day == "Monday"])
 # print(data[data.temp == data.temp.max()])
 
-monday = data[data.day == "Monday"]
-print(monday.condition)
+# monday = data[data.day == "Monday"]
+# print(monday.condition)
 
-monday_temp_F = (monday.temp * (9/5)) + 32
-print(monday_temp_F)
+# monday_temp_F = (monday.temp * (9/5)) + 32
+# print(monday_temp_F)
 
 # Create a dataframe from scratch
 data_dict = {
     "students": ["Anna", "Jamme", "Max"],
     "scores": [87, 56, 99]
 }
+
+data = pandas.DataFrame(data_dict)
+print(data)
