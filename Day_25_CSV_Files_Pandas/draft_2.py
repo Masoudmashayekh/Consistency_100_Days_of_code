@@ -33,5 +33,6 @@ print(monday_temp_F)
 
 # Create a dataframe from scratch
 data_dict = {
-    "students": ["Anna", "Jamme", "Max"]
+    "students": ["Anna", "Jamme", "Max"],
+    "scores": [87, 56, 99]
 }
