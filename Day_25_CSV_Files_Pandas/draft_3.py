@@ -2,24 +2,15 @@ import pandas
 
 data = pandas.read_csv("./Day_25_CSV_Files_Pandas/Central_Park_Squirrel_Census_Squirrel_Data.csv")
 print(data.Primary_Fur_Color)
-gray = 0
-cinnamon = 0
-black = 0
-
-data_list = data.Primary_Fur_Color.to_list()
-for i in data_list:
-    if i == "Gray":
-        gray += 1
-    elif i == "Cinnamon":
-        cinnamon += 1
-    elif i == "Black":
-        black += 1
-       
-print(f"{gray}, {cinnamon}, {black}")
+gray = len(data[data["Primary_Fur_Color"] == "Gray"])
+cinnamon = len(data[data["Primary_Fur_Color"] == "Cinnamon"])
+black = len(data[data["Primary_Fur_Color"] == "Black"])
         
 data_dict ={
     "Fur Color":["Gray", "Cinnamon", "Black"],
     "Count": [gray, cinnamon, black]
 }
+print(data_dict)
 data_frame = pandas.DataFrame(data_dict)
 data_frame.to_csv("./Day_25_CSV_Files_Pandas/Squirrel_Data.csv")
+print(data_frame)
