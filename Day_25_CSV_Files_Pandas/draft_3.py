@@ -18,5 +18,8 @@ for i in data_list:
 print(f"{gray}, {cinnamon}, {black}")
         
 data_dict ={
-    "Fur Color":["Gray", ""]
+    "Fur Color":["Gray", "Cinnamon", "Black"],
+    "Count": [gray, cinnamon, black]
 }
+data_frame = pandas.DataFrame(data_dict)
+data_frame.to_csv("./Day_25_CSV_Files_Pandas/Squirrel_Data.csv")
