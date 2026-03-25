@@ -7,7 +7,7 @@
 
 import csv
 
-with open("./Day_25_CSV_Files_Pandas/weather_data.csv", mode= "r") as data_file:
+with open("./Day_25_CSV_Files_Pandas/draft/weather_data.csv", mode= "r") as data_file:
     data = csv.reader(data_file)
     temperatures = []
     for row in data:
