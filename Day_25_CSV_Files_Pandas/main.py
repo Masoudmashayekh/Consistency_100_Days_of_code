@@ -15,8 +15,9 @@ turtle.shape(image)
 
 answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?")
 
-if answer_state in df[""]:
-    print("yes")
+x = data[data.state == "Alabama"]
+x_x = x.y
+print(x_x)
 
 
 
