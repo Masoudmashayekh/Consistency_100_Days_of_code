@@ -15,9 +15,9 @@ turtle.shape(image)
 
 answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?")
 
-x = data[data.state == "Alabama"]
-x_x = x.y
-print(x_x)
+if data[data.state == answer_state] in data:
+    x_x = data[data.state == answer_state].y
+    print(x_x)
 
 
 
