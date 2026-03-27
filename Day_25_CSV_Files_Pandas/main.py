@@ -13,11 +13,10 @@ image = "./Day_25_CSV_Files_Pandas/blank_states_img.gif"
 screen.addshape(image)
 turtle.shape(image)
 
-answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?")
+answer_state = screen.textinput(title="Guess the State", prompt="What's another state's name?").capitalize()
+print(answer_state)
 
-if data[data.state == answer_state] in data:
-    x_x = data[data.state == answer_state].y
-    print(x_x)
+
 
 
 
