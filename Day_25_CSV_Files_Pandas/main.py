@@ -22,8 +22,8 @@ if answer_state in all_states:
     t.penup()
     t.hideturtle()
     state_data = data[data.state == answer_state]
-    t.goto(int(state_data.x), int(state_data.y))
-    t.write(answer_state)
+    t.goto(state_data.x.item(), state_data.y.item())
+    t.write(state_data.state.item())
 
 
 
