@@ -18,7 +18,9 @@ answer_state = screen.textinput(title="Guess the State", prompt="What's another 
 
 
 if answer_state in all_states:
-    print("yes")
+    t = turtle.Turtle()
+    t.penup()
+    t.hideturtle()
 
 
 
