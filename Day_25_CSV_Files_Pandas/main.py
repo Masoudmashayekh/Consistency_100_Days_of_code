@@ -18,6 +18,11 @@ while len(guess_list) < 50:
     answer_state = screen.textinput(title= f"{len(guess_list)}/50 states correct", prompt="What's another state's name?").title()
 
     if answer_state == "Exit":
+        missing_states = []
+        for state in all_states:
+            if state not in guess_list:
+                missing_states.append(state)
+        print(missing_states)
         break
 
     if answer_state in all_states:
@@ -30,8 +35,7 @@ while len(guess_list) < 50:
         t.write(state_data.state.item())
 
 
-remain = all_states - guess_list
-print(remain)
+
 
 
 
