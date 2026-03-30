@@ -30,7 +30,8 @@ while len(guess_list) < 50:
         t.write(state_data.state.item())
 
 
-
+remain = all_states - guess_list
+print(remain)
 
 
 
