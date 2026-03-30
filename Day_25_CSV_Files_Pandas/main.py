@@ -17,6 +17,8 @@ guess_list = []
 while len(guess_list) < 50:
     answer_state = screen.textinput(title= f"{len(guess_list)}/50 states correct", prompt="What's another state's name?").title()
 
+    if answer_state == "Exit":
+        break
 
     if answer_state in all_states:
         guess_list.append(answer_state)
