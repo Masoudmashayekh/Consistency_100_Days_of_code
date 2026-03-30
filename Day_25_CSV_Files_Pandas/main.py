@@ -34,4 +34,4 @@ while len(guess_list) < 50:
 
 
 
-screen.exitonclick()
+# screen.exitonclick()
