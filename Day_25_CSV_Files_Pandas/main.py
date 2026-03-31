@@ -22,7 +22,8 @@ while len(guess_list) < 50:
         for state in all_states:
             if state not in guess_list:
                 missing_states.append(state)
-        print(missing_states)
+        new_data = pandas.DataFrame(missing_states)
+        new_data.to_csv("states_to_learn.csv")
         break
 
     if answer_state in all_states:
