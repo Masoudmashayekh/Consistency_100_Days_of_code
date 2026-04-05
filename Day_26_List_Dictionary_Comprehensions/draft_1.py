@@ -8,6 +8,10 @@
 
 # print(new_list)
 
-numbers = [1, 2, 3]
-new_list  = [ n+1 for n in numbers] # List Comprehension
+# numbers = [1, 2, 3]
+# new_list  = [ n+1 for n in numbers] # List Comprehension
+# print(new_list)
+
+name = "Angela"
+new_list = [letter for letter in name]
 print(new_list)
