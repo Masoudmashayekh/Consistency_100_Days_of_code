@@ -12,6 +12,9 @@
 # new_list  = [ n+1 for n in numbers] # List Comprehension
 # print(new_list)
 
-name = "Angela"
-new_list = [letter for letter in name]
+# name = "Angela"
+# new_list = [letter for letter in name]
+# print(new_list)
+
+new_list = [n for n in range(2,9,2)]
 print(new_list)
