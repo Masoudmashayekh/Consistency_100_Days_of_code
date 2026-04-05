@@ -1,4 +1,6 @@
 # Day 26 : List and Dictionary Comprehensions
+# Key word: new_list = [new_item for item in list] 
+
 
 # numbers = [1, 2, 3]
 # new_list = []
@@ -24,3 +26,4 @@
 
 
 # Conditional List Comprehension
+# Key word: new_list = [new_item for item in list if test]
