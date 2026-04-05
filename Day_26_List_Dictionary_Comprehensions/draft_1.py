@@ -16,5 +16,11 @@
 # new_list = [letter for letter in name]
 # print(new_list)
 
-new_list = [n for n in range(2,9,2)]
-print(new_list)
+# new_list = [num for num in range(2,9,2)]
+# print(new_list)
+
+# new_list = [num * 2 for num in range(1, 5)]
+# print(new_list)
+
+
+# Conditional List Comprehension
