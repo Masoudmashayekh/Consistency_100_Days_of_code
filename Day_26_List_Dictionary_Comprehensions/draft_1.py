@@ -35,3 +35,8 @@
 
 # long_names = [name.upper() for name in names if len(name) > 5]
 # print(long_names)
+
+
+
+# Dictionary Comprehension
+# new_dict = {new_key: new_value for item in list}
