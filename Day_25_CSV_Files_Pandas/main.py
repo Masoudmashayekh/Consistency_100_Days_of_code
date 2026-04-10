@@ -23,6 +23,7 @@ while len(guess_list) < 50:
         # for state in all_states:
         #     if state not in guess_list:
         #         missing_states.append(state)
+        
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("./Day_25_CSV_Files_Pandas/states_to_learn.csv")
         break
