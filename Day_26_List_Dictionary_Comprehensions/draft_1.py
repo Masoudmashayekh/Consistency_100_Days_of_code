@@ -78,4 +78,6 @@ student_dic={
 }
 
 # Looping through dictionaries:
-for (key: value) in studedents.items():
+for (key,value) in student_dic.items():
+    print(key)
+    print(value)
