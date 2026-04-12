@@ -45,17 +45,27 @@
 
 #-------------------------------------------
 
-import random
-names = ["Alex", "Beth", "Caroline", "Dave", "Elanor", "Freddie"]
-students_scores = {student: random.randint(0, 100) for student in names}
-print(students_scores)
-passed_students = {student: score for (student,score) in students_scores.items() if score > 75}
-print(passed_students)
+# import random
+# names = ["Alex", "Beth", "Caroline", "Dave", "Elanor", "Freddie"]
+# students_scores = {student: random.randint(0, 100) for student in names}
+# print(students_scores)
+# passed_students = {student: score for (student,score) in students_scores.items() if score > 75}
+# print(passed_students)
 
 
 
 
 #-------------------------------------------
-sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
-result = {word:len(word) for word in sentence.split()}
-print(result)
+
+# sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+# result = {word:len(word) for word in sentence.split()}
+# print(result)
+
+
+#-------------------------------------------
+
+weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
+
+weather_f = { key: (value*9/5)+32 for (key,value) in weather_c.items()}
+
+print(weather_f)
