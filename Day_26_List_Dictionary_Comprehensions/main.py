@@ -7,4 +7,8 @@ dic_df = {row.letter: row.code for (index, row) in df.iterrows()}
 print(dic_df)
 
 #TODO 2. Create a list of the phonetic code words from a word that the user inputs.
+name = "masoud"
+split_name = list(name.upper())
 
+final = [{value for (key,value) in dic_df.items() if key == word} for word in split_name]
+print(final)
