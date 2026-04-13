@@ -87,5 +87,6 @@ student_data_frame = pandas.DataFrame(student_dic)
 print(student_data_frame)
 # Loop through rows of a data frame
 for (index, row) in student_data_frame.iterrows():
-    print(row)
+    # print(row)
+    print(row.students)
 
