@@ -85,5 +85,7 @@ student_dic={
 import pandas
 student_data_frame = pandas.DataFrame(student_dic)
 print(student_data_frame)
-# Loop through a data frame
+# Loop through rows of a data frame
+for (index, row) in student_data_frame.iterrows():
+    print(row)
 
