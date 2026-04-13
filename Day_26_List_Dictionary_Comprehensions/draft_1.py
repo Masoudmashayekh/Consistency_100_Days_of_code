@@ -78,6 +78,12 @@ student_dic={
 }
 
 # Looping through dictionaries:
-for (key,value) in student_dic.items():
-    print(key)
-    print(value)
+# for (key,value) in student_dic.items():
+#     print(key)
+#     print(value)
+
+import pandas
+student_data_frame = pandas.DataFrame(student_dic)
+print(student_data_frame)
+# Loop through a data frame
+
