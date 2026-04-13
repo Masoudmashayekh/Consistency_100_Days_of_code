@@ -89,4 +89,5 @@ print(student_data_frame)
 for (index, row) in student_data_frame.iterrows():
     # print(row)
     print(row.students)
-
+    if row.students == "Jon":
+        print(row.scores)
