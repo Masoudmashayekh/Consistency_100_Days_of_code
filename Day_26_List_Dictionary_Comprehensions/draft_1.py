@@ -86,6 +86,8 @@ import pandas
 student_data_frame = pandas.DataFrame(student_dic)
 print(student_data_frame)
 # Loop through rows of a data frame
+# Keyword Method with iterrows()
+# {new_key:new_value for (index, row) in df.iterrows()}
 for (index, row) in student_data_frame.iterrows():
     # print(row)
     print(row.students)
