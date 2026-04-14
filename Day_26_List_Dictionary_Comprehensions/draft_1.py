@@ -93,3 +93,17 @@ for (index, row) in student_data_frame.iterrows():
     print(row.students)
     if row.students == "Jon":
         print(row.scores)
+
+
+
+
+
+# Key word: new_list = [new_item for item in list]
+# Conditional List Comprehension
+# Key word: new_list = [new_item for item in list if test]
+# Dictionary Comprehension
+# new_dict = {new_key: new_value for item in list}
+# new_dict = {new_key: new_value for (key,value) in dict.items()}
+# new_dict = {new_key: new_value for (key,value) in dict.items() if test}
+# Keyword Method with iterrows()
+# {new_key:new_value for (index, row) in df.iterrows()}
