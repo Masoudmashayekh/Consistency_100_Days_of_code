@@ -28,4 +28,10 @@
 # print(add(3,5,6,4,6,8,9,6,4,2,22,44,66,67))
 #-------------------------------------------------------------------------
 # **kwargs: Many keyworded Arguments
+def calculate(n, **kwargs):
+    n += kwargs["add"]
+    n *= kwargs["multiply"]
+    print(n)
+    
 
+calculate(2, add= 3, multiply= 5)
