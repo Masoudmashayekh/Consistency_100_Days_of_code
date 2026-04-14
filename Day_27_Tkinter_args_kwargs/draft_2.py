@@ -28,10 +28,22 @@
 # print(add(3,5,6,4,6,8,9,6,4,2,22,44,66,67))
 #-------------------------------------------------------------------------
 # **kwargs: Many keyworded Arguments
-def calculate(n, **kwargs):
-    n += kwargs["add"]
-    n *= kwargs["multiply"]
-    print(n)
+# def calculate(n, **kwargs):
+#     n += kwargs["add"]
+#     n *= kwargs["multiply"]
+#     print(n)
     
+# calculate(2, add= 3, multiply= 5)
+#-------------------------------------------------------------------------
+class Car:
+    def __init__(self, **kwargs):
+        self.make = kwargs.get("make")
+        self.model = kwargs.get("model") # kwargs["model"] is not ok use get
+        self.colour = kwargs.get("colour")
+        self.seats = kwargs.get("seats")
+        
+my_car = Car(make= "Nissan")
+print(my_car.make)
+print(my_car.model)
 
-calculate(2, add= 3, multiply= 5)
+        
