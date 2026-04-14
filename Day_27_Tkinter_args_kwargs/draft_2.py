@@ -18,14 +18,14 @@
 # if I want to change something then:
 # my_function(b=8)
 #-------------------------------------------------------------------------
-# Unlimited Arguments
-def add(*args):
-    number = 0
-    for n in args:
-        number += n
-    return number
+# Unlimited positional Arguments: *args
+# def add(*args):
+#     sum = 0
+#     for n in args:
+#         sum += n
+#     return sum
         
-print(add(5,5,5))
-
-
+# print(add(3,5,6,4,6,8,9,6,4,2,22,44,66,67))
+#-------------------------------------------------------------------------
+# **kwargs: Many keyworded Arguments
 
