@@ -8,8 +8,8 @@ window.title("My First GUI Program")
 window.minsize(width=500, height=300)
 
 # Label:
-my_label = tkinter.Label(text="I am a Label")
-my_label.pack()
+my_label = tkinter.Label(text="I am a Label",font=("Arial", 14, "bold"))
+my_label.pack(side="left") # this line is important for showing my_label
 
 
 
