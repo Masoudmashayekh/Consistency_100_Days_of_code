@@ -11,14 +11,17 @@ window.minsize(width=500, height=300)
 
 # Label:
 my_label = tkinter.Label(text="I am a Label",font=("Arial", 14, "bold"))
-my_label.pack(side="left") # this line is important for showing my_label
+my_label.pack() # this line is important for showing my_label
 
 my_label["text"] = "New Text 1"
 my_label.config(text="New Text 2")
 
 # Button
 
-button = tkinter.Button(text="Click me!")
+def button_clicked():
+    print("I got clicked.")
+
+button = tkinter.Button(text = "Click me!", command = button_clicked) # no need () in button_clicked function in command.
 button.pack()
 
 
