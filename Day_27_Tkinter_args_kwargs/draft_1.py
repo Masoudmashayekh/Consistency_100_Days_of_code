@@ -3,6 +3,7 @@
 # tkinter documentation: https://www.tcl-lang.org/man/tcl8.6/TkCmd/entry.htm
 
 import tkinter
+# from tkinter import *
 
 window = tkinter.Tk()
 window.title("My First GUI Program")
@@ -17,6 +18,8 @@ my_label.config(text="New Text 2")
 
 # Button
 
+button = tkinter.Button(text="Click me!")
+button.pack()
 
 
 
