@@ -19,7 +19,7 @@ my_label.config(text="New Text 2")
 # Button
 
 def button_clicked():
-    print("I got clicked.")
+    my_label.config(text="I got clicked.")
 
 button = tkinter.Button(text = "Click me!", command = button_clicked) # no need () in button_clicked function in command.
 button.pack()
