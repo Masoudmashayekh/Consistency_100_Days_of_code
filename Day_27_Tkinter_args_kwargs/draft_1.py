@@ -1,5 +1,6 @@
 # Day 27: Tkinter, *args, **kwargs and creating GUI programs
 # GUI : Graphical User Interface
+# tkinter documentation: https://www.tcl-lang.org/man/tcl8.6/TkCmd/entry.htm
 
 import tkinter
 
