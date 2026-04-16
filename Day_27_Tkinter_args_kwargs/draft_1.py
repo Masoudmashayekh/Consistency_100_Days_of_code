@@ -20,18 +20,24 @@ my_label = tkinter.Label(text="I am a Label",font=("Arial", 14, "bold"))
 # or
 my_label.config(text="New Text 2")
 
-my_label.pack() # this line is important for showing my_label
+# my_label.pack() # this line is important for showing my_label
+my_label.grid(row= 1, column= 1)
 
 # Button:------------------------------------------------------------------------------
 button = tkinter.Button(text = "Click me!", command = button_clicked) # no need () in button_clicked function in command.
-button.pack()
+# button.pack()
+button.grid(row= 2, column= 2)
 
 # Entry:------------------------------------------------------------------------------
 input = tkinter.Entry(width= 10)
-input.pack()
+# input.pack()
+input.grid(row=3, column= 4)
 
+# New button:------------------------------------------------------------------------------
+new_button = tkinter.Button(text="New button")
+new_button.grid(row= 1, column= 3)
 
-
+# Pack() , Place(x, y) , Grid
 
 window.mainloop()
     
