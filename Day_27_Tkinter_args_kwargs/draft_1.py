@@ -13,7 +13,7 @@ def button_clicked():
 window = tkinter.Tk()
 window.title("My First GUI Program")
 window.minsize(width=500, height=300)
-
+window.config(padx=20, pady=20)
 # Label:------------------------------------------------------------------------------
 my_label = tkinter.Label(text="I am a Label",font=("Arial", 14, "bold"))
 # my_label["text"] = "New Text 1"
@@ -22,6 +22,7 @@ my_label.config(text="New Text 2")
 
 # my_label.pack() # this line is important for showing my_label
 my_label.grid(row= 1, column= 1)
+my_label.config(padx=50, pady=50)
 
 # Button:------------------------------------------------------------------------------
 button = tkinter.Button(text = "Click me!", command = button_clicked) # no need () in button_clicked function in command.
