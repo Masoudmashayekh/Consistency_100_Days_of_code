@@ -21,7 +21,9 @@ window.title("Pomodoro")
 
 
 canvas = Canvas(width= 200, height= 224) # for put images in tkinter we should learn Canvas Widget
-canvas.create_image(100, 112)
+tomato_img = PhotoImage(file="./Day_28_Tkinter_Pomodoro_GUI_Application/pomodoro/tomato.png")
+canvas.create_image(100, 112, image= tomato_img)
+canvas.pack()
 
 
 
