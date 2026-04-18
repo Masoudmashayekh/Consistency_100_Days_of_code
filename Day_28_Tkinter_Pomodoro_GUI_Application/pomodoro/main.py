@@ -1,4 +1,4 @@
-import tkinter
+from tkinter import *
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
 RED = "#e7305b"
@@ -16,8 +16,17 @@ LONG_BREAK_MIN = 20
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 
 # ---------------------------- UI SETUP ------------------------------- #
-window = tkinter.Tk()
+window = Tk()
 window.title("Pomodoro")
+
+
+canvas = Canvas(width= 200, height= 224) # for put images in tkinter we should learn Canvas Widget
+canvas.create_image(100, 112)
+
+
+
+
+
 
 
 
