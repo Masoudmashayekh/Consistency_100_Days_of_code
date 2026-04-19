@@ -20,11 +20,10 @@ window = Tk()
 window.title("Pomodoro")
 window.config(padx= 100, pady= 50, bg= YELLOW)
 
+
 # Title Label -----------------------------------------------------------------------------------------------------------
 label_timer = Label(text="Timer",fg= GREEN, bg= YELLOW, font=(FONT_NAME, 50))
 label_timer.grid(row= 1, column= 2)
-
-
 
 
 # Canvas -----------------------------------------------------------------------------------------------------------
@@ -48,9 +47,6 @@ button_reset.grid(row= 3, column= 3)
 # Check mark Label -----------------------------------------------------------------------------------------------------------
 check_marks = Label(text="✓", fg= GREEN, bg= YELLOW, font=(FONT_NAME, 35, "bold"))
 check_marks.grid(row= 4, column= 2)
-
-
-
 
 
 window.mainloop()
