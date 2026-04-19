@@ -21,7 +21,7 @@ window.title("Pomodoro")
 window.config(padx= 100, pady= 50, bg= YELLOW)
 
 # Title Label -----------------------------------------------------------------------------------------------------------
-label_timer = Label(text="Timer",fg= GREEN, bg= YELLOW, font=(FONT_NAME, 50, "bold"))
+label_timer = Label(text="Timer",fg= GREEN, bg= YELLOW, font=(FONT_NAME, 50))
 label_timer.grid(row= 1, column= 2)
 
 
