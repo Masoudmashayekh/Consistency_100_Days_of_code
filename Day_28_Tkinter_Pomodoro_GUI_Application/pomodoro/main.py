@@ -44,7 +44,7 @@ canvas.grid(row= 2, column= 2)
 
 
 # Button(Start) -----------------------------------------------------------------------------------------------------------
-button_start = Button(text= "Start", font= (FONT_NAME, 15, "bold"), bg= YELLOW, highlightthickness= 0)
+button_start = Button(text= "Start", font= (FONT_NAME, 15, "bold"), bg= YELLOW, highlightthickness= 0, command= start_timer)
 button_start.grid(row= 3, column= 1)
 
 
