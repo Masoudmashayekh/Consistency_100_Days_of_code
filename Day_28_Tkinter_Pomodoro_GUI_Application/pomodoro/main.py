@@ -44,6 +44,8 @@ button_start.grid(row= 3, column= 1)
 button_reset = Button(text= "Reset", font= (FONT_NAME, 15, "bold"), bg= YELLOW, highlightthickness= 0)
 button_reset.grid(row= 3, column= 3)
 
+
+# Check mark Label -----------------------------------------------------------------------------------------------------------
 check_marks = Label(text="✓", fg= GREEN, bg= YELLOW, font=(FONT_NAME, 35, "bold"))
 check_marks.grid(row= 4, column= 2)
 
