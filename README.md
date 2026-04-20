@@ -264,7 +264,7 @@ def navigate_maze():
         else:
             turn_left()
 ```
-
+![Day 1](images/6.png)
 
 
 ---
@@ -322,7 +322,7 @@ while not game_over:
         print(f"You lose! The word was {chosen_word}.")
 ```
 
-
+![Day 1](images/7.png)
 ---
 ### 📂 Day 8: Functions with Inputs & Caesar Cipher
 
@@ -360,7 +360,7 @@ def caeser(text, shift, direction):
     # "".join(alphabet[(alphabet.index(char) + shift) % 26] ...)
 ```
 
-
+![Day 1](images/8.png)
 ---
 ### 📂 Day 9: Dictionaries & Nesting
 
