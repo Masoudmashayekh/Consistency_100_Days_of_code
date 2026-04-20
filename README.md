@@ -3,7 +3,6 @@
 # 🐍 100 Days of Code: Python
 Welcome to my journey through the **100 Days of Code** challenge! This repository serves as a digital log of my progress, daily learnings, and the projects I build along the way.
 
-
 ## 🗒️ Daily Log
 
 ### 📂 Day 1: Working with Variables to Manage Data
@@ -28,3 +27,22 @@ Today, I focused on the absolute building blocks of Python. I learned how to int
 # This is a comment - it's ignored by the computer!
 name = input("What is your name? ")
 print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
+
+
+---
+
+### 📂 Day 2: Data Types & String Manipulation
+**Topic:** Data Types, Numbers, and f-Strings
+
+*   **Data Types:** `str` (text), `int` (whole numbers), `float` (decimals), `bool` (True/False).
+*   **Subscripting:** Access characters using `[index]` (e.g., `"Hello"[0]` is "H").
+*   **Type Checking:** Use `type()` to identify a variable's class.
+*   **Type Conversion:** Change types using `str()`, `int()`, or `float()`.
+*   **Math Operators:** `+`, `-`, `*`, `/`, and `**` for exponents.
+*   **Rounding:** `round(number, precision)` for decimal control.
+*   **f-Strings:** Easily insert variables into strings: `f"Score: {score}"`.
+```python
+score = 0
+height = 1.8
+is_winning = True
+print(f"Your score is {score}, your height is {height}, you are winning: {is_winning}")
