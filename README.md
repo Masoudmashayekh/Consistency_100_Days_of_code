@@ -28,6 +28,8 @@ Today, I focused on the absolute building blocks of Python. I learned how to int
 name = input("What is your name? ")
 print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
 ```
+![Day 1](Day_01_Variables/image/1.png)
+
 
 
 ---
