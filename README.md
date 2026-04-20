@@ -685,13 +685,10 @@ else:
 
 **Topic:** Pomodoro GUI Application
 
-
 This project is a **Pomodoro Timer desktop application** built using Python’s `tkinter` module.  
 It helps manage work and break intervals using the Pomodoro Technique.
 
----
-
-## ⏱️ Project Overview
+### ⏱️ Project Overview
 
 - Work sessions and breaks are automatically scheduled  
 - Uses a countdown timer  
@@ -699,9 +696,7 @@ It helps manage work and break intervals using the Pomodoro Technique.
 - Includes Start and Reset functionality  
 - Built with a graphical user interface (GUI)
 
----
-
-## 🧠 Key Concepts Learned
+### 🧠 Key Concepts Learned
 
 - GUI development with `tkinter`  
 - Event-driven programming  
@@ -710,7 +705,6 @@ It helps manage work and break intervals using the Pomodoro Technique.
 - Structuring larger programs with functions  
 - Working with images in a GUI  
 
----
 
 ## ⚙️ Constants & Setup
 
@@ -736,10 +730,8 @@ def rest_timer():
   canvas.itemconfig(timer_text, text= "00:00")
   title_label.config(text= "Timer")
   check_marks.config(text= "")
-  
-  
-    
-    
+
+
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
     global reps
@@ -759,11 +751,6 @@ def start_timer():
         title_label.config(text= "Work", fg= GREEN)
        
         
-    
-    
-    
-    
-
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
     count_min = math.floor(count / 60)
@@ -785,7 +772,6 @@ def count_down(count):
         check_marks.config(text= marks)
         
 
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
@@ -803,7 +789,6 @@ tomato_img = PhotoImage(file="./Day_28_Tkinter_Pomodoro_GUI_Application/pomodoro
 canvas.create_image(100, 112, image= tomato_img)
 timer_text = canvas.create_text(100, 130, text= "00:00", fill="white",font= (FONT_NAME, 35, "bold"))
 canvas.grid(row= 2, column= 2)
-
 
 
 # Button(Start) -----------------------------------------------------------------------------------------------------------
