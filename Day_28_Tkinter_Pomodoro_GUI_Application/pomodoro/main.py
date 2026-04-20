@@ -6,7 +6,7 @@ RED = "#e7305b"
 GREEN = "#9bdeac"
 YELLOW = "#f7f5dd"
 FONT_NAME = "Courier"
-WORK_MIN = 25
+WORK_MIN = 1
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
@@ -23,10 +23,13 @@ def start_timer():
     
     if reps % 8 == 0:
         count_down(long_break_sec)    
+        title_label.config(text= "Break", fg= RED)
     elif reps % 2 == 0:
         count_down(short_break_sec)
+        title_label.config(text= "Break", fg= PINK)
     else:
         count_down(work_sec)
+        title_label.config(text= "Work", fg= GREEN)
        
         
     
@@ -45,6 +48,14 @@ def count_down(count):
     canvas.itemconfig(timer_text, text= f"{count_min}:{count_sec}") 
     if count > 0:
         window.after(1000, count_down, count - 1)
+    else:
+        start_timer()
+        marks = ""
+        work_sessions = math.floor(reps/2)
+        for _ in range(work_sessions):
+            marks += "✓"
+        check_marks.config(text= marks)
+        
 
 
 # ---------------------------- UI SETUP ------------------------------- #
@@ -54,8 +65,8 @@ window.config(padx= 100, pady= 50, bg= YELLOW)
 
 
 # Title Label -----------------------------------------------------------------------------------------------------------
-label_timer = Label(text="Timer",fg= GREEN, bg= YELLOW, font=(FONT_NAME, 50))
-label_timer.grid(row= 1, column= 2)
+title_label = Label(text="Timer",fg= GREEN, bg= YELLOW, font=(FONT_NAME, 50))
+title_label.grid(row= 1, column= 2)
 
 
 # Canvas -----------------------------------------------------------------------------------------------------------
@@ -78,7 +89,7 @@ button_reset.grid(row= 3, column= 3)
 
 
 # Check mark Label -----------------------------------------------------------------------------------------------------------
-check_marks = Label(text="✓", fg= GREEN, bg= YELLOW, font=(FONT_NAME, 35, "bold"))
+check_marks = Label(fg= GREEN, bg= YELLOW, font=(FONT_NAME, 35, "bold"))
 check_marks.grid(row= 4, column= 2)
 
 
