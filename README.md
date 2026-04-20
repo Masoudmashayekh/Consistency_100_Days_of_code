@@ -30,7 +30,7 @@ print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
 ```
 
 
-
+---
 ### 📂 Day 2: Understanding Data Types & Manipulating Numbers
 
 **Topic:** Primitive Data Types, Type Conversion, and f-Strings
@@ -707,7 +707,6 @@ It helps manage work and break intervals using the Pomodoro Technique.
 
 
 ## ⚙️ Constants & Setup
-
 ```python
 from tkinter import *
 import math
