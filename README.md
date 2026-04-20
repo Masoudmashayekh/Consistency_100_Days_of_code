@@ -28,7 +28,7 @@ Today, I focused on the absolute building blocks of Python. I learned how to int
 name = input("What is your name? ")
 print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
 ```
-![Day 1](Day_01_Variables/image/1.png)
+![Day 1](images/1.png)
 
 
 
@@ -71,7 +71,7 @@ print(f"Your calculated BMI is: {round(bmi, 2)}")
 score = 0
 score += 1 # score is now 1
 ```
-
+![Day 1](images/2.png)
 
 ---
 ### 📂 Day 3: Conditional Statements & Logical Operators
@@ -124,7 +124,7 @@ if height >= 120:
 else:
     print("Sorry, you have to grow taller before you can ride.")
 ```
-
+![Day 1](images/3.png)
 
 ---
 ### 📂 Day 4: Randomization & Python Lists
@@ -170,7 +170,7 @@ elif (my_choice == "Rock" and pc_choice == "Scissors") or \
 else:
     print("You lose!")
 ```
-
+![Day 1](images/4.png)
 
 ---
 ### 📂 Day 5: Loops, Range, and the Password Generator
@@ -215,7 +215,7 @@ password = "".join(password_list) # Converts list back to string
 print(f"Your secure password is: {password}")
 ```
 
-
+![Day 1](images/5.png)
 ---
 ### 📂 Day 6: Functions & While Loops
 
