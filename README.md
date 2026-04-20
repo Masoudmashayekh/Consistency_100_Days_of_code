@@ -357,3 +357,95 @@ def caeser(text, shift, direction):
     # alphabet logic using modulo for wrapping
     # "".join(alphabet[(alphabet.index(char) + shift) % 26] ...)
 ```
+
+
+
+### 📂 Day 9: Dictionaries & Nesting
+
+**Topic:** Key-Value Pairs and Complex Data Structures
+
+Today, I moved beyond lists to explore dictionaries, which allow for more structured data storage. I also learned how to nest lists and dictionaries inside one another to manage complex datasets.
+
+#### 🗝️ Key Concepts
+
+* **Basic Dictionaries:** Collections of data stored as `key : value` pairs.
+    * **Access:** `dictionary["key"]`
+    * **Add/Update:** `dictionary["new_key"] = value`
+    * **Wipe:** `empty_dict = {}`
+* **Looping:** When looping through a dictionary, the default behavior is to iterate over the **keys**. To get the values, use the key as an index: `dictionary[key]`.
+* **Nesting:**
+    * **List in a Dictionary:** Useful for associating multiple related items with a single key (e.g., `"France": ["Paris", "Lille"]`).
+    * **Dictionary in a Dictionary:** Useful for storing detailed metadata (e.g., `"France": {"visits": 8, "cities": ["Paris", "Lille"]}`).
+* **Finding the Max:** Using the `max()` function with a dictionary to identify the winner of the Secret Auction based on the highest value.
+
+#### 🛠️ Code Snippets
+```python
+# Nested Dictionary Example
+travel_log = {
+    "France": {
+        "cities_visited": ["Paris", "Lille", "Dijon"],
+        "total_visits": 12
+    },
+    "Germany": {
+        "cities_visited": ["Berlin", "Hamburg", "Stuttgart"],
+        "total_visits": 5
+    },
+}
+
+# Finding the highest bidder in a dictionary
+bids = {"Tom": 120, "Jerry": 150, "Spike": 100}
+winner = max(bids, key=bids.get)
+print(f"The winner is {winner} with a bid of ${bids[winner]}.")
+```
+
+
+
+### 📂 Day 10: Functions with Outputs
+
+**Topic:** Return Statements, Docstrings, and the Calculator Project
+
+Today, I explored how to get data out of functions using the `return` keyword. I also learned how to document code properly with docstrings and how to store functions inside dictionaries to build a modular calculator.
+
+#### 🗝️ Key Concepts
+
+* **Return Values:** Unlike `print()`, which just shows a value, `return` sends data back to the caller so it can be stored in a variable or used in further calculations.
+* **Docstrings:** Using triple quotes `""" """` on the first line after a function definition to provide documentation. This information appears when you hover over the function call.
+* **Early Returns:** Using a `return` statement to exit a function early if certain conditions are met (e.g., if a user provides invalid input).
+* **Functions as Values:** Storing functions in a dictionary (e.g., `operations = {"+": add}`) allows the program to call specific functions based on user input without using a long chain of `if/elif` statements.
+* **String Formatting:** Using `.title()` to automatically convert strings to "Title Case" (e.g., "masoud mashayekh" → "Masoud Mashayekh").
+
+#### 🛠️ Code Snippets
+```python
+# Functions in a Dictionary
+def add(n1, n2):
+    """Adds two numbers together."""
+    return n1 + n2
+
+def multiply(n1, n2):
+    return n1 * n2
+
+operations = {
+    "+": add,
+    "*": multiply,
+}
+
+num1 = 10
+num2 = 5
+# Accessing the function via the key and calling it
+function = operations["+"]
+result = function(num1, num2) 
+print(result) # Output: 15
+
+# Leap Year Checker Logic
+def is_leap(year):
+    if year % 4 == 0:
+        if year % 100 == 0:
+            if year % 400 == 0:
+                return True
+            else:
+                return False
+        else:
+            return True
+    else:
+        return False
+```
