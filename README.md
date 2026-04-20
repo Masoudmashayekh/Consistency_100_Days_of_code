@@ -544,3 +544,145 @@ def check_score():
 
 
 
+### 📂 Day 13: Debugging in Python 🐞
+
+**Topic:** The Art of Finding and Fixing Code Errors
+
+Debugging is a core programming skill. It is the process of finding errors, understanding why they occur, and fixing them without breaking other parts of the program. Today was about learning the mindset and the tools used to squish bugs effectively.
+
+#### 🗝️ Top 10 Debugging Strategies
+
+*   **Describe the Problem:** Before changing code, understand exactly what it *should* do vs. what it *is* doing. For example, realizing that `range(1, 20)` excludes 20 helps fix loops that stop too early.
+*   **Reproduce the Bug:** Make the bug happen consistently. If a list has 6 items, testing with `randint(1, 6)` might cause an **IndexError** because lists start at index 0. You must reproduce this to verify the fix.
+*   **Play Computer:** Step through the code line-by-line in your head or on paper. Evaluate "edge cases"—what happens exactly at the boundary of an `if` statement (e.g., if a user is exactly 1994 years old)?
+*   **Handle Exceptions:** Use `try / except` blocks to catch errors like `ValueError` when a user enters text instead of a number. This prevents the entire program from crashing.
+*   **Print is your BFF:** Use `print()` statements to "see" inside variables. It helps identify if you used a comparison operator `==` instead of an assignment operator `=` by mistake.
+*   **Use a Debugger:** Use software tools (like those in VS Code or PyCharm) to pause execution, inspect the current state of all variables, and "step into" complex functions.
+*   **Take a Break:** When logic blurs, step away from the screen. A fresh brain often spots invisible mistakes in seconds.
+*   **Ask a Friend:** Explaining your code to someone else helps you spot your own assumptions. If no one is around, try "Rubber Duck Debugging" by explaining it to an object.
+*   **Run Code Often:** Don't write 100 lines and then test. Write a small block, run it, fix it, and repeat. This prevents compound bugs that are harder to trace.
+*   **Consult Stack Overflow:** If you encounter a specific error message, search for it. Chances are, another developer has already solved the exact same problem.
+
+#### 🛠️ Code Snippets
+
+```python
+# 1. Handling User Input Errors
+try:
+    age = int(input("How old are you? "))
+except ValueError:
+    print("Invalid input. Please enter a numerical value.")
+    age = int(input("How old are you? "))
+
+# 2. Playing Computer: Checking Edge Cases
+year = int(input("What's your birth year? "))
+if year > 1980 and year <= 1994: # Checking the boundary of 1994
+    print("You are a millennial.")
+elif year > 1994:
+    print("You are a Gen Z.")
+```
+
+
+
+### 📂 Day 14: Higher or Lower Game 🎮
+
+**Topic:** Capstone Project - Logic Integration & State Management
+
+Today was the final Capstone project of the "Beginner" section. I built a "Higher or Lower" follower comparison game that required integrating dictionaries, nested loops, and global state management into a clean, professional program structure.
+
+#### 🗝️ Key Concepts
+
+*   **Realistic Data Structures:** Working with a large list of dictionaries where each item contains multiple keys (name, follower count, description, country).
+*   **Winner Stays Logic:** A key challenge was ensuring that if the player guesses correctly, the "winner" of the previous round becomes the new "Account A," while a new "Account B" is generated.
+*   **Data Formatting:** Creating a helper function `format_data()` to parse dictionary values into a user-friendly string, keeping the main game logic uncluttered.
+*   **Game State Control:** Using a `while` loop driven by a boolean flag (`continue_game`) and maintaining a running `score` variable throughout the session.
+*   **Input Validation:** Handling user guesses and ensuring the game provides immediate feedback before moving to the next round.
+
+#### 🛠️ Code Snippets
+```python
+# Helper function to format dictionary data into printable text
+def format_data(account):
+    """Takes the account data and returns a printable format."""
+    name = account["name"]
+    description = account["description"]
+    country = account["country"]
+    return f"{name}, a {description}, from {country}"
+
+# Core Logic: Checking the guess and updating the game state
+if user_guess == "A" and account_a["followers_count"] > account_b["followers_count"]:
+    score += 1
+    print(f"You're right! Current score: {score}")
+    # Account B is replaced for the next round
+    account_b = random.choice(instagram_data)
+elif user_guess == "B" and account_b["followers_count"] > account_a["followers_count"]:
+    score += 1
+    print(f"You're right! Current score: {score}")
+    # Account A is replaced by the winner (B)
+    account_a = account_b
+    account_b = random.choice(instagram_data)
+else:
+    print(f"Sorry, that's wrong. Final score: {score}")
+    continue_game = False
+```
+
+
+
+
+### 📂 Day 15: 
+
+**Topic:**
+
+
+### 📂 Day 16: 
+
+**Topic:**
+
+### 📂 Day 17: 
+
+**Topic:**
+
+### 📂 Day 18: 
+
+**Topic:**
+
+### 📂 Day 19: 
+
+**Topic:**
+
+### 📂 Day 20: 
+
+**Topic:**
+
+### 📂 Day 21: 
+
+**Topic:**
+
+### 📂 Day 22: 
+
+**Topic:**
+
+### 📂 Day 23: 
+
+**Topic:**
+
+### 📂 Day 24: 
+
+**Topic:**
+
+### 📂 Day 25: 
+
+**Topic:**
+
+
+### 📂 Day 26: 
+
+**Topic:**
+
+### 📂 Day 27: 
+
+**Topic:**
+
+### 📂 Day 28: 
+
+**Topic:**
+
+
