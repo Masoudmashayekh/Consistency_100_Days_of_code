@@ -29,3 +29,40 @@ name = input("What is your name? ")
 print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
 
 
+### 📂 Day 2: Understanding Data Types & Manipulating Numbers
+
+**Topic:** Primitive Data Types, Type Conversion, and f-Strings
+
+Today, I explored how Python handles different kinds of data under the hood and how to perform mathematical operations while keeping the output clean and readable.
+
+#### 🗝️ Key Concepts
+
+* **Data Types:** Python has 4 primary types:
+    * **Strings (str):** Text inside `" "` or `' '`. Use indexing `[ ]` to get specific characters (e.g., `"Hello"[0]` → `H`).
+    * **Integers (int):** Whole numbers. Use `_` for readability (e.g., `1_000_000`).
+    * **Floats (float):** Numbers with decimals (e.g., `3.14`).
+    * **Booleans (bool):** Only `True` or `False`.
+* **Type Management:**
+    * **Type Checking:** Use `type()` to identify the class of a variable (e.g., `type(123)` → `<class 'int'>`).
+    * **Type Conversion:** Convert between types using `int()`, `str()`, or `float()`.
+* **Math & Shorthand:**
+    * **Rounding:** Use `round(number, decimals)` to control decimal places.
+    * **Shorthand Operators:** Use `+=`, `-=`, `*=`, and `/=` to update variable values quickly.
+* **f-Strings:** Insert variables into strings easily by placing an `f` before the quotes and using curly braces: `f"Your score is {score}"`.
+
+#### 🛠️ Code Snippets
+```python
+# BMI Calculation Example
+height = 1.65
+weight = 84
+
+# Calculation using exponent (**)
+bmi = weight / (height ** 2)
+
+# Output using f-String and Rounding
+print(f"Height: {height}m, Weight: {weight}kg")
+print(f"Your calculated BMI is: {round(bmi, 2)}")
+
+# Shorthand usage
+score = 0
+score += 1 # score is now 1
