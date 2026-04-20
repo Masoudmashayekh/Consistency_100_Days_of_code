@@ -449,3 +449,98 @@ def is_leap(year):
     else:
         return False
 ```
+
+
+
+
+### 📂 Day 11: Blackjack Capstone Project
+
+**Topic:** Logic Integration and Complexity Management
+
+Today was a milestone project: building a complete, playable Blackjack game from scratch. This project required combining almost every concept learned so far, including functions with outputs, while loops, global/local scope, and advanced list manipulation.
+
+#### 🗝️ Key Concepts
+
+* **Card Representation:** Using a list of integers to represent a standard deck `[11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]`.
+* **The "Ace" Logic:** Handling the dual value of the Ace (11 or 1). If the score exceeds 21, the code checks for an 11 and converts it to a 1.
+* **Modular Functionality:**
+    * `deal_card()`: Uses `random.choice()` to return a card.
+    * `calculate_score()`: Checks for a Blackjack (Ace + 10) or adjusts for Aces.
+    * `compare()`: Contains the win/loss/draw logic based on final scores.
+* **Dealer AI:** Implementing the rule where the computer must keep drawing cards until its score is at least 17.
+* **Game State Management:** Using a main `play_game()` function and a recursive `while` loop to allow the user to restart the game and clear the console between rounds.
+
+#### 🛠️ Code Snippets
+```python
+def calculate_score(cards):
+    """Takes a list of cards and returns the score calculated from the cards"""
+    # Check for Blackjack (Ace + 10-value card)
+    if sum(cards) == 21 and len(cards) == 2:
+        return 0 
+    
+    # Check for an 11 (Ace). If score > 21, replace 11 with 1.
+    if 11 in cards and sum(cards) > 21:
+        cards.remove(11)
+        cards.append(1)
+        
+    return sum(cards)
+
+def compare(user_score, computer_score):
+    if user_score == computer_score:
+        return "Draw 🙃"
+    elif computer_score == 0:
+        return "Lose, opponent has Blackjack 😱"
+    elif user_score == 0:
+        return "Win with a Blackjack 😎"
+    elif user_score > 21:
+        return "You went over. You lose 😭"
+    elif computer_score > 21:
+        return "Opponent went over. You win 😁"
+    elif user_score > computer_score:
+        return "You win 😃"
+    else:
+        return "You lose 😤"
+```
+
+
+
+
+### 📂 Day 12: Scope & The Number Guessing Game
+
+**Topic:** Local vs. Global Scope and Namespace Management
+
+Today, I explored how Python determines the reach of variables and how to manage them using scope. I learned the difference between global and local namespaces and built a logic-based "Number Guessing Game."
+
+#### 🗝️ Key Concepts
+
+* **Scope:** Defines where a variable can be seen or used.
+    * **Global Scope:** Variables defined outside of functions. They are accessible anywhere in the file.
+    * **Local Scope:** Variables defined inside a function. They only exist within that function.
+* **The `global` Keyword:** Used to modify a global variable from inside a local function. *Best Practice:* Use this sparingly as it can make debugging difficult.
+* **No Block Scope:** Unlike many other languages, Python blocks like `if`, `for`, or `while` do **not** create a new scope. Variables defined inside these blocks are still accessible outside them.
+* **Global Constants:** Variables that are intended to never change. By convention, these are written in `ALL_UPPERCASE` (e.g., `PI = 3.14159`).
+* **Namespace:** A system to ensure that names in a program are unique and can be used without conflict.
+
+#### 🛠️ Code Snippets
+```python
+# Modifying Global Scope
+enemies = 1
+
+def increase_enemies():
+    global enemies # Explicitly tell Python we mean the global variable
+    enemies += 1
+    print(f"Enemies inside function: {enemies}")
+
+increase_enemies()
+
+# Global Constants Convention
+URL = "[https://www.google.com](https://www.google.com)"
+MAX_SCORE = 100
+
+def check_score():
+    if player_score > MAX_SCORE:
+        print("New Record!")
+```
+
+
+
