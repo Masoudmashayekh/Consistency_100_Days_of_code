@@ -71,7 +71,7 @@ score += 1 # score is now 1
 ```
 
 
-
+---
 ### 📂 Day 3: Conditional Statements & Logical Operators
 
 **Topic:** Control Flow and Decision Making
@@ -124,7 +124,7 @@ else:
 ```
 
 
-
+---
 ### 📂 Day 4: Randomization & Python Lists
 
 **Topic:** Generating Randomness and Organizing Data in Lists
@@ -170,7 +170,7 @@ else:
 ```
 
 
-
+---
 ### 📂 Day 5: Loops, Range, and the Password Generator
 
 **Topic:** For Loops, Range, and List Shuffling
@@ -214,7 +214,7 @@ print(f"Your secure password is: {password}")
 ```
 
 
-
+---
 ### 📂 Day 6: Functions & While Loops
 
 **Topic:** Defining Functions and Controlling Logic with While Loops
@@ -265,7 +265,7 @@ def navigate_maze():
 
 
 
-
+---
 ### 📂 Day 7: Hangman Project
 
 **Topic:** Logic Integration and Game Development
@@ -321,7 +321,7 @@ while not game_over:
 ```
 
 
-
+---
 ### 📂 Day 8: Functions with Inputs & Caesar Cipher
 
 **Topic:** Function Parameters, Keyword Arguments, and Cipher Logic
@@ -359,7 +359,7 @@ def caeser(text, shift, direction):
 ```
 
 
-
+---
 ### 📂 Day 9: Dictionaries & Nesting
 
 **Topic:** Key-Value Pairs and Complex Data Structures
@@ -399,7 +399,7 @@ print(f"The winner is {winner} with a bid of ${bids[winner]}.")
 ```
 
 
-
+---
 ### 📂 Day 10: Functions with Outputs
 
 **Topic:** Return Statements, Docstrings, and the Calculator Project
@@ -452,7 +452,7 @@ def is_leap(year):
 
 
 
-
+---
 ### 📂 Day 11: Blackjack Capstone Project
 
 **Topic:** Logic Integration and Complexity Management
@@ -504,7 +504,7 @@ def compare(user_score, computer_score):
 
 
 
-
+---
 ### 📂 Day 12: Scope & The Number Guessing Game
 
 **Topic:** Local vs. Global Scope and Namespace Management
@@ -543,7 +543,7 @@ def check_score():
 ```
 
 
-
+---
 ### 📂 Day 13: Debugging in Python 🐞
 
 **Topic:** The Art of Finding and Fixing Code Errors
@@ -582,7 +582,7 @@ elif year > 1994:
 ```
 
 
-
+---
 ### 📂 Day 14: Higher or Lower Game 🎮
 
 **Topic:** Capstone Project - Logic Integration & State Management
@@ -626,61 +626,73 @@ else:
 
 
 
-
+---
 ### 📂 Day 15: 
 
 **Topic:**
 
-
+---
 ### 📂 Day 16: 
 
 **Topic:**
 
+---
 ### 📂 Day 17: 
 
 **Topic:**
 
+---
 ### 📂 Day 18: 
 
 **Topic:**
 
+---
 ### 📂 Day 19: 
+
 
 **Topic:**
 
+---
 ### 📂 Day 20: 
 
 **Topic:**
 
+---
 ### 📂 Day 21: 
 
 **Topic:**
 
+---
 ### 📂 Day 22: 
 
 **Topic:**
 
+---
 ### 📂 Day 23: 
 
 **Topic:**
 
+---
 ### 📂 Day 24: 
 
 **Topic:**
 
+---
 ### 📂 Day 25: 
 
 **Topic:**
 
-
+---
 ### 📂 Day 26: 
 
 **Topic:**
 
+---
 ### 📂 Day 27: 
 
 **Topic:**
 
+---
 ### 📂 Day 28: Tkinter, Dynamic Typing and the Pomodoro GUI Application
 
 **Topic:** Pomodoro GUI Application
@@ -688,25 +700,22 @@ else:
 This project is a **Pomodoro Timer desktop application** built using Python’s `tkinter` module.  
 It helps manage work and break intervals using the Pomodoro Technique.
 
-### ⏱️ Project Overview
-
+#### ⏱️ Project Overview
 - Work sessions and breaks are automatically scheduled  
 - Uses a countdown timer  
 - Displays progress using checkmarks  
 - Includes Start and Reset functionality  
 - Built with a graphical user interface (GUI)
 
-### 🧠 Key Concepts Learned
-
+#### 🧠 Key Concepts Learned
 - GUI development with `tkinter`  
 - Event-driven programming  
 - Using `after()` for timing events  
 - Managing global state (`reps`, `timer`)  
 - Structuring larger programs with functions  
-- Working with images in a GUI  
+- Working with images in a GUI 
 
-
-## ⚙️ Constants & Setup
+#### ⚙️ Constants & Setup
 ```python
 from tkinter import *
 import math
