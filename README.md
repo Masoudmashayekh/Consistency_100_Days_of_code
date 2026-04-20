@@ -27,6 +27,8 @@ Today, I focused on the absolute building blocks of Python. I learned how to int
 # This is a comment - it's ignored by the computer!
 name = input("What is your name? ")
 print("Hello " + name + "!\nYour name has " + str(len(name)) + " characters.")
+```
+
 
 
 ### 📂 Day 2: Understanding Data Types & Manipulating Numbers
@@ -66,3 +68,7 @@ print(f"Your calculated BMI is: {round(bmi, 2)}")
 # Shorthand usage
 score = 0
 score += 1 # score is now 1
+```
+
+
+
