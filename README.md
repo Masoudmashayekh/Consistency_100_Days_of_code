@@ -212,3 +212,148 @@ random.shuffle(password_list) # Shuffles the list order
 password = "".join(password_list) # Converts list back to string
 print(f"Your secure password is: {password}")
 ```
+
+
+
+### 📂 Day 6: Functions & While Loops
+
+**Topic:** Defining Functions and Controlling Logic with While Loops
+
+Today, I focused on code reusability by defining my own functions and learned how to use `while` loops to repeat actions as long as a specific condition remains true. I applied these concepts to solve navigation puzzles in Reeborg's World.
+
+#### 🗝️ Key Concepts
+
+* **Functions:** Used to wrap a block of code so it can be executed multiple times without rewriting it.
+    * **Defining:** `def my_function():`
+    * **Calling:** `my_function()`
+    * **Indentation:** Python uses 4 spaces (or one Tab) to determine what code belongs inside the function.
+* **While Loops:** Repeats code while a condition is `True`. 
+    * Unlike `for` loops (which iterate over a set number of items), `while` loops are used when you don't know how many times the loop needs to run beforehand.
+    * ⚠️ **Warning:** If the condition never becomes `False`, you create an "infinite loop," which can crash the program.
+* **Reeborg's World Logic:**
+    * **Custom Maneuvers:** Creating `turn_right()` by calling `turn_left()` three times.
+    * **Conditional Navigation:** Combining `while` loops with `if/elif/else` statements to check if the front is clear or if a wall is in the way.
+    * **The Right-Hand Rule:** An algorithm used to solve mazes by always prioritizing turning right whenever possible.
+
+#### 🛠️ Code Snippets
+```python
+# Function Definition
+def greet_user():
+    print("Hello!")
+    print("Welcome to Day 6.")
+
+greet_user()
+
+# While Loop Example
+count = 5
+while count > 0:
+    print(f"Counting down: {count}")
+    count -= 1
+print("Blast off!")
+
+# Reeborg Navigation Pattern (Right-Hand Rule)
+def navigate_maze():
+    while not at_goal():
+        if right_is_clear():
+            turn_right()
+            move()
+        elif front_is_clear():
+            move()
+        else:
+            turn_left()
+```
+
+
+
+
+### 📂 Day 7: Hangman Project
+
+**Topic:** Logic Integration and Game Development
+
+Today was a capstone-style project where I combined loops, conditionals, and list manipulation to build a complete Hangman game. I learned how to manage complex game states and use external modules to keep code organized.
+
+#### 🗝️ Key Concepts
+
+* **External Modules:** Importing word lists and ASCII art from separate files (`hangman_words.py`, `hangman_art.py`) to keep the main script clean.
+* **Game Setup:**
+    * **Random Selection:** Using `random.choice()` to pick the secret word.
+    * **Placeholders:** Creating a list of underscores `["_"]` to represent the hidden letters and tracking the player's progress.
+    * **Life Management:** Initializing a `lives` variable (set to 6) to track failed attempts.
+* **The Game Loop:**
+    * **Continuous Play:** Using `while not game_over` to keep the game running.
+    * **String Join:** Using `" ".join(list_name)` to display the current state of the word (e.g., `a _ _ l e`) to the user.
+* **Conditional Logic:**
+    * Checking if the guessed letter has been guessed before.
+    * Updating the placeholder list if the guess is correct.
+    * Decrementing `lives` and displaying the corresponding ASCII hangman stage if the guess is wrong.
+* **Win/Loss Conditions:** Logic to detect when no more underscores remain (Win) or when lives reach zero (Loss).
+
+#### 🛠️ Code Snippets
+```python
+import random
+from hangman_art import HANGMANPICS
+
+chosen_word = "apple"
+display = ["_", "_", "_", "_", "_"]
+lives = 6
+game_over = False
+
+while not game_over:
+    guess = input("Guess a letter: ").lower()
+    
+    # Check if letter is in word
+    if guess in chosen_word:
+        for position in range(len(chosen_word)):
+            if chosen_word[position] == guess:
+                display[position] = guess
+    else:
+        lives -= 1
+        print(HANGMANPICS[6 - lives])
+
+    print(f"{' '.join(display)}")
+
+    if "_" not in display:
+        game_over = True
+        print("You win!")
+    elif lives == 0:
+        game_over = True
+        print(f"You lose! The word was {chosen_word}.")
+```
+
+
+
+### 📂 Day 8: Functions with Inputs & Caesar Cipher
+
+**Topic:** Function Parameters, Keyword Arguments, and Cipher Logic
+
+Today, I moved beyond simple functions to explore how to pass data into them. I learned the difference between positional and keyword arguments and applied these skills to build a functional Caesar Cipher encryption tool.
+
+#### 🗝️ Key Concepts
+
+* **Parameters vs. Arguments:**
+    * **Parameter:** The name of the data being passed in (the "placeholder" defined in the function).
+    * **Argument:** The actual value or data sent to the function when it is called.
+* **Positional vs. Keyword Arguments:**
+    * **Positional:** Arguments assigned based on the order they are passed.
+    * **Keyword:** Arguments assigned by name (e.g., `greet(name="Alice", location="London")`), making the code more readable and order-independent.
+* **Modular Arithmetic in Logic:** Using the modulo operator (`%`) to ensure that when shifting letters at the end of the alphabet (like 'z'), the index wraps back around to the beginning.
+* **Input Normalization:** Using `.lower()` to ensure user input matches the expected format for comparison logic.
+
+#### 🛠️ Code Snippets
+```python
+# Function with Multiple Keyword Arguments
+def greet_with(name, location):
+    print(f"Hello {name}!")
+    print(f"What is it like in {location}?")
+
+# Calling with keyword arguments
+greet_with(location="London", name="Masoud")
+
+# Core Caesar Cipher Logic
+def caeser(text, shift, direction):
+    if direction == "decode":
+        shift *= -1
+    
+    # alphabet logic using modulo for wrapping
+    # "".join(alphabet[(alphabet.index(char) + shift) % 26] ...)
+```
