@@ -9,7 +9,8 @@ from tkinter import *
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
-window.minsize(width= 500, height= 500)
+window.minsize(width= 200, height= 200)
+window.config(padx= 20, pady= 20)
 
 canvas = Canvas(width= 200, height= 200, highlightthickness=0)
 luck_img = PhotoImage(file="./Day_29_Password_Manager_GUI_App_Tkinter/password-manager-start/logo.png")
