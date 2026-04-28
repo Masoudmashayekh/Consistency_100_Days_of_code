@@ -1,3 +1,27 @@
 *.html linguist-vendored
 templates/* linguist-vendored
 static/* linguist-vendored
+
+# Ignore web/template files
+*.html linguist-vendored
+*.css linguist-vendored
+*.js linguist-vendored
+
+# Ignore LaTeX
+*.tex linguist-vendored
+
+# Ignore C / compiled-related
+*.c linguist-vendored
+*.h linguist-vendored
+
+# Ignore SQL / PLSQL
+*.sql linguist-vendored
+
+# Ignore shell scripts
+*.sh linguist-vendored
+
+# Ignore system / tracing stuff
+*.d linguist-vendored
+
+# Force Python
+*.py linguist-detectable=true
