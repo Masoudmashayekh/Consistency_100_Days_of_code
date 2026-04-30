@@ -20,12 +20,30 @@ canvas.pack()
 # Label: Website
 label_website = Label(text= "Website:", font= FONT)
 label_website.pack()
+# Input: Website
+input_website = Entry(width= 35)
+input_website.pack()
+
 
 # Label: Email / Username
 label_username = Label(text= "Email/username:")
 label_username.pack()
+# Input: Email / Username
+input_username = Entry(width= 35)
+input_username.pack()
 
-# Label
+# Label: Password
+label_password = Label(text= "Password:")
+label_password.pack()
+# Input: Password
+input_password = Entry(width= 21)
+
+# Button: Generate Password
+button_password = Button(text= "Generate Password", command= "")
+
+
+
+
 
 
 
