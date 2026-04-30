@@ -1,5 +1,5 @@
 from tkinter import *
-
+FONT = ("Arial", 14, "bold")
 
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
@@ -17,7 +17,15 @@ logo_img = PhotoImage(file="./Day_29_Password_Manager_GUI_App_Tkinter/password-m
 canvas.create_image(100, 100, image= logo_img)
 canvas.pack()
 
+# Label: Website
+label_website = Label(text= "Website:", font= FONT)
+label_website.pack()
 
+# Label: Email / Username
+label_username = Label(text= "Email/username:")
+label_username.pack()
+
+# Label
 
 
 
