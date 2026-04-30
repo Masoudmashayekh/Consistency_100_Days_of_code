@@ -23,7 +23,7 @@ label_website.grid(row= 2, column= 1)
 # Input: Website ----------------------------------
 input_website = Entry(width= 38)
 input_website.grid(row= 2, column= 2, columnspan= 2)
-
+input_website.focus() # for cursor
 
 # Label: Email / Username --------------------------
 label_username = Label(text= "Email/username:", font= FONT)
@@ -31,6 +31,7 @@ label_username.grid(row= 3, column= 1)
 # Input: Email / Username -------------------------
 input_username = Entry(width= 38)
 input_username.grid(row= 3, column= 2, columnspan= 2)
+input_username.insert(END, "masoud@yahoo.com")
 
 # Label: Password --------------------------------
 label_password = Label(text= "Password:", font= FONT)
