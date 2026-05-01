@@ -5,6 +5,7 @@ FONT = ("Arial", 14, "bold")
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
+
 def save_password():
     website = input_website.get()
     username = input_username.get()
@@ -14,11 +15,6 @@ def save_password():
     input_website.delete(first= 0, last= END)
     input_password.delete(first= 0, last= END)
     
-    
-
-
-
-
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
