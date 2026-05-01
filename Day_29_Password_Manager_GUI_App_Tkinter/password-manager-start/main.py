@@ -1,6 +1,9 @@
 from tkinter import *
-FONT = ("Arial", 14, "bold")
+from tkinter import messagebox
 
+
+
+FONT = ("Arial", 14, "bold")
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
@@ -10,6 +13,9 @@ def save_password():
     website = input_website.get()
     username = input_username.get()
     password = input_password.get()
+    
+    messagebox.askokcancel(title= website, message= f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?")
+    
     with open("Day_29_Password_Manager_GUI_App_Tkinter/password-manager-start/data.txt", "a") as file:
         file.write(f"{website} | {username} | {password} \n")
     input_website.delete(first= 0, last= END)
