@@ -5,7 +5,11 @@ FONT = ("Arial", 14, "bold")
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-
+def save_password(website, username, password):
+    with open("data.txt", "a") as file:
+        file.write(f"{website} | {username} | {password} \n")
+    
+    
 
 
 
@@ -28,6 +32,7 @@ label_website.grid(row= 2, column= 1)
 input_website = Entry(width= 38)
 input_website.grid(row= 2, column= 2, columnspan= 2)
 input_website.focus() # for cursor
+print(type(input_website))
 
 # Label: Email / Username --------------------------
 label_username = Label(text= "Email/username:", font= FONT)
@@ -48,7 +53,7 @@ input_password.grid(row= 4, column= 2)
 button_password = Button(text= "Generate Password", command= "")
 button_password.grid(row= 4, column= 3)
 # Button: Add -----------------------------------
-button_add = Button(text= "Add", width= 36, command= "")
+button_add = Button(text= "Add", width= 36, command= save_password(website= input_website, username= input_username, password= input_password))
 button_add.grid(row= 5, column= 2, columnspan= 2)
 
 
