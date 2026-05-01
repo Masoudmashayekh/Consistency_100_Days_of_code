@@ -1,3 +1,2 @@
-.!entry | .!entry2 | .!entry3 
-.!entry | .!entry2 | .!entry3 
-.!entry | .!entry2 | .!entry3 
+masoud mashayekh | masoud@yahoo.com | ;lasdkfj 
+masoud  | masoud@yahoo.com | ;lasdkfjdfg 

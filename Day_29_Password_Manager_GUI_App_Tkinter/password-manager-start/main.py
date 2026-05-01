@@ -5,7 +5,10 @@ FONT = ("Arial", 14, "bold")
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
-def save_password(website, username, password):
+def save_password():
+    website = input_website.get()
+    username = input_username.get()
+    password = input_password.get()
     with open("data.txt", "a") as file:
         file.write(f"{website} | {username} | {password} \n")
     
@@ -53,7 +56,7 @@ input_password.grid(row= 4, column= 2)
 button_password = Button(text= "Generate Password", command= "")
 button_password.grid(row= 4, column= 3)
 # Button: Add -----------------------------------
-button_add = Button(text= "Add", width= 36, command= save_password(website= input_website, username= input_username, password= input_password))
+button_add = Button(text= "Add", width= 36, command= save_password)
 button_add.grid(row= 5, column= 2, columnspan= 2)
 
 
