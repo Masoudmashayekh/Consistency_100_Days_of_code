@@ -14,13 +14,17 @@ def save_password():
     username = input_username.get()
     password = input_password.get()
     
-    messagebox.askokcancel(title= website, message= f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?")
-    
-    with open("Day_29_Password_Manager_GUI_App_Tkinter/password-manager-start/data.txt", "a") as file:
-        file.write(f"{website} | {username} | {password} \n")
-    input_website.delete(first= 0, last= END)
-    input_password.delete(first= 0, last= END)
-    
+    if len(website) == 0 or len(username) == 0 or len(password) == 0:
+        messagebox.showerror(title= "Oops", message= "Please don't leave any fields empty!")
+    else:    
+        is_ok = messagebox.askokcancel(title= website, message= f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?")
+        
+        if is_ok:
+            with open("Day_29_Password_Manager_GUI_App_Tkinter/password-manager-start/data.txt", "a") as file:
+                file.write(f"{website} | {username} | {password} \n")
+            input_website.delete(first= 0, last= END)
+            input_password.delete(first= 0, last= END)
+            
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Password Manager")
