@@ -19,14 +19,13 @@ nr_numbers = random.randint(2, 4)
 
 password_list = []
 
-for char in range(nr_letters):
-  password_list.append(random.choice(letters))
 
-for char in range(nr_symbols):
-  password_list += random.choice(symbols)
+[password_list.append(random.choice(letters)) for char in range(nr_letters)]
 
-for char in range(nr_numbers):
-  password_list += random.choice(numbers)
+[password_list.append(random.choice(symbols)) for char in range(nr_symbols)]
+
+[password_list.append(random.choice(numbers)) for char in range(nr_numbers)]
+
 
 random.shuffle(password_list)
 
