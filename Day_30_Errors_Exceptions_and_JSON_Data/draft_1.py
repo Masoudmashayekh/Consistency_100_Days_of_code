@@ -1,6 +1,7 @@
 # Errors and Exceptions
 # try => except => else => finally
 
+
 try:
     file = open("Day_30_Errors_Exceptions_and_JSON_Data/a_file.txt")
     a_dict = {"key": "value"}
@@ -16,3 +17,8 @@ else:
 finally:
     file.close()
     print("File was closed.")
+    
+    
+    
+    
+    
