@@ -5,15 +5,17 @@ data = pandas.read_csv("Day_30_Errors_Exceptions_and_JSON_Data/NATO/nato_phoneti
 phonetic_dict = {row.letter: row.code for (index, row) in data.iterrows()}
 
 
-go_on = True
-while go_on:
+def generate_phonetic():
+    word = input("Enter a word: ").upper()
     try:
-        word = input("Enter a word: ").upper()
         output_list = [phonetic_dict[letter] for letter in word]
     except KeyError:
         print("Sorry, only letters in the alphabet please.")
+        generate_phonetic()
     else:
-        go_on = False
+        print(output_list)
     
+    
+generate_phonetic()
 
-print(output_list)
+
