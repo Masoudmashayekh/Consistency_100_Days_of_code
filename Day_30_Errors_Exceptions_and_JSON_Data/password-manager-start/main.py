@@ -58,7 +58,7 @@ def save_password():
         
         if is_ok:
             with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
-                file.write(f"{website} | {username} | {password} \n")
+                json.dump(new_data, file)
             input_website.delete(first= 0, last= END)
             input_password.delete(first= 0, last= END)
             
