@@ -59,13 +59,16 @@ def save_password():
         if is_ok:
             try:
                 with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
+                    # Reading old data
+                    data = json.load(file)
             except FileNotFoundError:
-                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
+                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file
+                    # Saving updated data
+                json.dump(new_data, file, indent= 4)
+            else:
+                # Updating old data with new data
+                data.update(new_data)
                 
-            # Reading old data
-            data = json.load(file)
-            # Updating old data with new data
-            data.update(new_data)
             with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
                 # Saving updated data
                 json.dump(data, file, indent= 4)
