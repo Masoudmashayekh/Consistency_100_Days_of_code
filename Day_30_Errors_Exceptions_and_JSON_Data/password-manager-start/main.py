@@ -67,14 +67,13 @@ def save_password():
                 json.dump(new_data, file, indent= 4)
             else:
                 # Updating old data with new data
-                data.update(new_data)
-                
-            with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
-                # Saving updated data
-                json.dump(data, file, indent= 4)
-            
-            input_website.delete(first= 0, last= END)
-            input_password.delete(first= 0, last= END)
+                data.update(new_data)    
+                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
+                    # Saving updated data
+                    json.dump(data, file, indent= 4)
+            finally:    
+                input_website.delete(first= 0, last= END)
+                input_password.delete(first= 0, last= END)
             
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
