@@ -92,7 +92,7 @@ def find_password():
             password = data[website]["password"]
             messagebox.showinfo(title= website, message= f"Email: {username}\nPassword: {password}" )
         else:
-            messagebox.showerror(title= website, message= f"No details for the website exists." )
+            messagebox.showerror(title= website, message= f"No details for the {website} exists." )
 
    
 
