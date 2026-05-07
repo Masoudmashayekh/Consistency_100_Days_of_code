@@ -88,7 +88,7 @@ def find_password():
             password = data[website]["password"]
             messagebox.showerror(title= website, message= f"Email: {username} \n Password: {password}" )
         else:
-            messagebox.showerror(title= website, message= f"You don't have it!!!" )
+            messagebox.showerror(title= website, message= f"No details for the website exists." )
    
    
 #    website = input_website.get().title()
