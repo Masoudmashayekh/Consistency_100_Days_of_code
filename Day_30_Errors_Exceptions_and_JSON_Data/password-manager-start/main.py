@@ -79,22 +79,23 @@ def save_password():
  # ---------------------------- FIND PASSWORD ------------------------------- #  
    
 def find_password():
-   with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
-        # Reading old data
-        data = json.load(file) 
-        website = input_website.get().title()
+    website = input_website.get().title()
+    try:
+        with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
+            # Reading old data
+            data = json.load(file) 
+    except FileNotFoundError:
+        messagebox.showinfo(title= "Error", message= "No Data File Found.")
+    else:   
         if website in data:
             username = data[website]["email"]
             password = data[website]["password"]
-            messagebox.showerror(title= website, message= f"Email: {username} \n Password: {password}" )
+            messagebox.showinfo(title= website, message= f"Email: {username}\nPassword: {password}" )
         else:
             messagebox.showerror(title= website, message= f"No details for the website exists." )
+
    
-   
-#    website = input_website.get().title()
-#     username = input_username.get()
-#     password = input_password.get()
-   
+
    
             
 # ---------------------------- UI SETUP ------------------------------- #
