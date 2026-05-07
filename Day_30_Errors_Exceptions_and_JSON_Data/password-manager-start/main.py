@@ -40,7 +40,7 @@ def generate_password():
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 
 def save_password():
-    website = input_website.get()
+    website = input_website.get().title()
     username = input_username.get()
     password = input_password.get()
     new_data = {
@@ -62,9 +62,9 @@ def save_password():
                     # Reading old data
                     data = json.load(file)
             except FileNotFoundError:
-                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file
+                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
                     # Saving updated data
-                json.dump(new_data, file, indent= 4)
+                    json.dump(new_data, file, indent= 4)
             else:
                 # Updating old data with new data
                 data.update(new_data)    
