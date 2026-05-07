@@ -57,12 +57,15 @@ def save_password():
         is_ok = messagebox.askokcancel(title= website, message= f"These are the details entered: \nEmail: {username} \nPassword: {password} \nIs it ok to save?")
         
         if is_ok:
-            with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
-                # Reading old data
-                data = json.load(file)
-                # Updating old data with new data
-                data.update(new_data)
+            try:
+                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
+            except FileNotFoundError:
+                with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
                 
+            # Reading old data
+            data = json.load(file)
+            # Updating old data with new data
+            data.update(new_data)
             with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "w") as file:
                 # Saving updated data
                 json.dump(data, file, indent= 4)
