@@ -74,6 +74,28 @@ def save_password():
             finally:    
                 input_website.delete(first= 0, last= END)
                 input_password.delete(first= 0, last= END)
+   
+   
+ # ---------------------------- FIND PASSWORD ------------------------------- #  
+   
+def find_password():
+   with open("Day_30_Errors_Exceptions_and_JSON_Data/password-manager-start/data.json", "r") as file:
+        # Reading old data
+        data = json.load(file) 
+        website = input_website.get().title()
+        if website in data:
+            username = data[website]["email"]
+            password = data[website]["password"]
+            messagebox.showerror(title= website, message= f"Email: {username} \n Password: {password}" )
+        else:
+            messagebox.showerror(title= website, message= f"You don't have it!!!" )
+   
+   
+#    website = input_website.get().title()
+#     username = input_username.get()
+#     password = input_password.get()
+   
+   
             
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -90,8 +112,8 @@ canvas.grid(row= 1, column= 2)
 label_website = Label(text= "Website:", font= FONT)
 label_website.grid(row= 2, column= 1)
 # Input: Website ----------------------------------
-input_website = Entry(width= 38)
-input_website.grid(row= 2, column= 2, columnspan= 2)
+input_website = Entry(width= 21)
+input_website.grid(row= 2, column= 2)
 input_website.focus() # for cursor
 print(type(input_website))
 
@@ -116,8 +138,9 @@ button_password.grid(row= 4, column= 3)
 # Button: Add -----------------------------------
 button_add = Button(text= "Add", width= 36, command= save_password)
 button_add.grid(row= 5, column= 2, columnspan= 2)
-
-
+# Button: Search ---------------------------------
+button_search = Button(text= "Search",width= 14,command= find_password)
+button_search.grid(row= 2, column= 3)
 
 
 
