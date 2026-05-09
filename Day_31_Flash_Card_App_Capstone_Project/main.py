@@ -4,9 +4,23 @@ FONT_NAME = "Ariel"
                                             
 #----------------------------------------------
 from tkinter import *
+import pandas
+import random
+
+
+# Data -------------------------------------------
+data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/italian_words.csv")
+df = pandas.DataFrame(data)
+
+def call_word():
+    n = random.randint(0,len(df))
+    new_word = df["italian"][n]
+    canves.itemconfig(word, text= f"{new_word}")
 
 
 
+
+# Tk --------------------------------------------------------
 window = Tk()
 window.title("Flashy")
 # window.minsize(height= 750, width=950)
@@ -23,12 +37,12 @@ canves.grid(row= 1, column= 1, columnspan= 2)
 
 # Button Right --------------------------------------------------------
 right_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
-unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0)
+unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= call_word)
 unknown_button.grid(row= 2, column= 2)
 
 # Button Wrong --------------------------------------------------------
 wrong_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
-known_button = Button(image= wrong_img, highlightthickness= 0)
+known_button = Button(image= wrong_img, highlightthickness= 0, command= call_word)
 known_button.grid(row= 2, column= 1)
 
 
