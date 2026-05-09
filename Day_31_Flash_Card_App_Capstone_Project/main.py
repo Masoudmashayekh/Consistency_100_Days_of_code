@@ -14,6 +14,7 @@ to_learn = data.to_dict(orient= "records")
 
 def call_next_card():
     current_card = random.choice(to_learn)
+    canves.itemconfig(title, text= "Italian")
     canves.itemconfig(word, text= f"{current_card["italian"]}")
 
 
