@@ -6,7 +6,7 @@ FONT_NAME = "Ariel"
 from tkinter import *
 import pandas
 import random
-
+import time
 
 # Data -------------------------------------------
 data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/italian_words.csv")
@@ -17,7 +17,12 @@ def call_next_card():
     canves.itemconfig(title, text= "Italian")
     canves.itemconfig(word, text= f"{current_card["italian"]}")
 
-
+def call_back_card():
+    current_card = random.choice(to_learn)
+    canves.itemconfig(canves_img, image= card_back_img)
+    canves.itemconfig(title, text= "English")
+    canves.itemconfig(word, text= f"{current_card["english"]}")
+    
 
 
 # Tk --------------------------------------------------------
@@ -29,7 +34,8 @@ window.config(padx= 50, pady= 50, bg= BACKGROUND_COLOR)
 # Front card --------------------------------------------------------
 canves = Canvas(height=526, width= 800, bg= BACKGROUND_COLOR, highlightthickness= 0)
 card_front_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/card_front.png")
-canves.create_image(400, 263, image = card_front_img)
+card_back_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/card_back.png")
+canves_img = canves.create_image(400, 263, image = card_front_img)
 title = canves.create_text(400, 130, text=f"Title", font=(FONT_NAME, 40, "italic"))
 word = canves.create_text(400, 263, text="Word", font=(FONT_NAME, 60, "bold"))
 canves.grid(row= 1, column= 1, columnspan= 2)
@@ -47,5 +53,10 @@ known_button.grid(row= 2, column= 1)
 
 
 
+n = 20
+while n > 0:
+    call_next_card()
+    time.sleep(3000)
+    call_back_card()    
 
 window.mainloop()
