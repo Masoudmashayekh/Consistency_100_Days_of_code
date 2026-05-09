@@ -22,14 +22,14 @@ canves.grid(row= 1, column= 1, columnspan= 2)
 
 
 # Button Right --------------------------------------------------------
-image_right = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
-button_right = Button(image= image_right,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0)
-button_right.grid(row= 2, column= 2)
+right_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
+unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0)
+unknown_button.grid(row= 2, column= 2)
 
 # Button Wrong --------------------------------------------------------
-image_wrong = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
-button_wrong = Button(image= image_wrong, highlightthickness= 0)
-button_wrong.grid(row= 2, column= 1)
+wrong_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
+known_button = Button(image= wrong_img, highlightthickness= 0)
+known_button.grid(row= 2, column= 1)
 
 
 
