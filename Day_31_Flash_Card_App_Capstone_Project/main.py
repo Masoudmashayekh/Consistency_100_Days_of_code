@@ -18,15 +18,20 @@ front_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/card
 canves.create_image(400, 270, image = front_img)
 canves.create_text(400, 100, text=f"English", font=(FONT_NAME, 30))
 canves.create_text(400, 270, text="Word", font=(FONT_NAME, 50, "bold"))
-canves.pack()
+canves.grid(row= 1, column= 1, columnspan= 2)
 
 
-# Button True --------------------------------------------------------
-button_true = Button(text="")
-button_true.config(padx=30, pady=30,bg= BACKGROUND_COLOR, highlightthickness= 0)
-button_true.pack()
+# Button Right --------------------------------------------------------
+image_right = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
+button_right = Button(image= image_right,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0)
+button_right.grid(row= 2, column= 2)
 
-# Button True --------------------------------------------------------
+# Button Wrong --------------------------------------------------------
+image_wrong = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
+button_wrong = Button(image= image_wrong, highlightthickness= 0)
+button_wrong.grid(row= 2, column= 1)
+
+
 
 
 window.mainloop()
