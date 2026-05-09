@@ -10,12 +10,11 @@ import random
 
 # Data -------------------------------------------
 data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/italian_words.csv")
-df = pandas.DataFrame(data)
+to_learn = data.to_dict(orient= "records")
 
-def call_word():
-    n = random.randint(0,len(df))
-    new_word = df["italian"][n]
-    canves.itemconfig(word, text= f"{new_word}")
+def call_next_card():
+    current_card = random.choice(to_learn)
+    canves.itemconfig(word, text= f"{current_card["italian"]}")
 
 
 
@@ -37,12 +36,12 @@ canves.grid(row= 1, column= 1, columnspan= 2)
 
 # Button Right --------------------------------------------------------
 right_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
-unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= call_word)
+unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= call_next_card)
 unknown_button.grid(row= 2, column= 2)
 
 # Button Wrong --------------------------------------------------------
 wrong_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
-known_button = Button(image= wrong_img, highlightthickness= 0, command= call_word)
+known_button = Button(image= wrong_img, highlightthickness= 0, command= call_next_card)
 known_button.grid(row= 2, column= 1)
 
 
