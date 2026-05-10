@@ -9,7 +9,7 @@ import random
 import time
 
 # Data -------------------------------------------
-data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/italian_words.csv")
+data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv")
 to_learn = data.to_dict(orient= "records")
 current_card = {}
 
@@ -29,8 +29,11 @@ def flip_card():
     
 def is_known():
     to_learn.remove(current_card)
+    data = pandas.DataFrame(to_learn)
+    data.to_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv")
+    
     call_next_card()
-    print(len(to_learn))
+    
     
     
 
