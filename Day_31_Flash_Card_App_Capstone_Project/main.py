@@ -63,6 +63,9 @@ known_button.grid(row= 2, column= 1)
 
 call_next_card()
 
-       
+
+if known_button is True:
+    print("hello")    
+
 
 window.mainloop()
