@@ -28,6 +28,9 @@ def flip_card():
     canves.itemconfig(card_word, text= f"{current_card["english"]}", fill= "white")
     
 def is_known():
+    to_learn.remove(current_card)
+    call_next_card()
+    print(len(to_learn))
     
     
 
