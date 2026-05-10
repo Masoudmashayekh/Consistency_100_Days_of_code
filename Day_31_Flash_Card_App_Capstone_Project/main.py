@@ -39,7 +39,7 @@ def flip_card():
 def is_known():
     to_learn.remove(current_card)
     data = pandas.DataFrame(to_learn)
-    data.to_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv")
+    data.to_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv", index= False)
     
     call_next_card()
     
