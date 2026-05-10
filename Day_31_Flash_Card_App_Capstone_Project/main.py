@@ -27,6 +27,9 @@ def flip_card():
     canves.itemconfig(card_title, text= "English", fill= "white")
     canves.itemconfig(card_word, text= f"{current_card["english"]}", fill= "white")
     
+def is_known():
+    
+    
 
 
 # Tk --------------------------------------------------------
@@ -49,7 +52,7 @@ canves.grid(row= 1, column= 1, columnspan= 2)
 
 # Button Right --------------------------------------------------------
 right_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/right.png")
-unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= call_next_card)
+unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= is_known)
 unknown_button.grid(row= 2, column= 2)
 
 # Button Wrong --------------------------------------------------------
@@ -64,8 +67,7 @@ known_button.grid(row= 2, column= 1)
 call_next_card()
 
 
-if known_button is True:
-    print("hello")    
+print()  
 
 
 window.mainloop()
