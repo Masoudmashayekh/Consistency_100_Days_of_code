@@ -2,14 +2,14 @@ BACKGROUND_COLOR = "#B1DDC6"
 # FONT_NAME = "Courier"
 FONT_NAME = "Ariel"
 current_card = {}
-to_learn = {}                                            
+to_learn = {}
+
+                                            
 #----------------------------------------------
 from tkinter import *
 import pandas
 import random
 import time
-
-
 
 
 # Data -------------------------------------------
@@ -31,22 +31,20 @@ def call_next_card():
     canves.itemconfig(card_background, image= card_front_img)
     flip_timer = window.after(3000, func= flip_card)
 
+
 def flip_card():
     canves.itemconfig(card_background, image= card_back_img)
     canves.itemconfig(card_title, text= "English", fill= "white")
     canves.itemconfig(card_word, text= f"{current_card["english"]}", fill= "white")
     
+    
 def is_known():
     to_learn.remove(current_card)
     data = pandas.DataFrame(to_learn)
     data.to_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv", index= False)
-    
     call_next_card()
     
     
-    
-
-
 # Tk --------------------------------------------------------
 window = Tk()
 window.title("Flashy")
@@ -54,6 +52,7 @@ window.title("Flashy")
 window.config(padx= 50, pady= 50, bg= BACKGROUND_COLOR)
 
 flip_timer = window.after(3000, func= flip_card)
+
 
 # Front card --------------------------------------------------------
 canves = Canvas(height=526, width= 800, bg= BACKGROUND_COLOR, highlightthickness= 0)
@@ -70,19 +69,14 @@ right_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/righ
 unknown_button = Button(image= right_img,padx= 50 ,bg= BACKGROUND_COLOR, highlightthickness= 0, command= is_known)
 unknown_button.grid(row= 2, column= 2)
 
+
 # Button Wrong --------------------------------------------------------
 wrong_img = PhotoImage(file= "Day_31_Flash_Card_App_Capstone_Project/images/wrong.png")
 known_button = Button(image= wrong_img, highlightthickness= 0, command= call_next_card)
 known_button.grid(row= 2, column= 1)
 
 
-
-
-
-call_next_card()
-
-
-print()  
+call_next_card() 
 
 
 window.mainloop()
