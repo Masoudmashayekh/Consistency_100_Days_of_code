@@ -1,17 +1,26 @@
 BACKGROUND_COLOR = "#B1DDC6"
 # FONT_NAME = "Courier"
 FONT_NAME = "Ariel"
-                                            
+current_card = {}
+to_learn = {}                                            
 #----------------------------------------------
 from tkinter import *
 import pandas
 import random
 import time
 
+
+
+
 # Data -------------------------------------------
-data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv")
-to_learn = data.to_dict(orient= "records")
-current_card = {}
+try:
+    data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/words_to_learn.csv")
+except FileNotFoundError:
+    original_data= pandas.read_csv("./Day_31_Flash_Card_App_Capstone_Project/data/italian_words.csv")
+    to_learn = original_data.to_dict(orient= "records")
+else:
+    to_learn = data.to_dict(orient= "records")
+
 
 def call_next_card():
     global current_card, flip_timer

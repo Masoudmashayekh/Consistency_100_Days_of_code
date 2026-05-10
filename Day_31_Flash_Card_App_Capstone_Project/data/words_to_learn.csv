@@ -1,52 +1,75 @@
-,italian,english
-0,Andare,Go
-1,Essere,To be
-2,Stare,Stay
-3,Venire,Come
-4,Diventare,Become
-5,Tornare,Return
-6,Nascere,Be born
-7,Morire,Die
-8,Salire,Go out
-9,Entrare,Enter
-10,Piacere,Pleasure
-11,Sembrare,Seem
-12,Accendere,Turn on
-13,Assistere,Assist
-14,Chiedere,Ask
-15,Chiudere,Close
-16,Concludere,To conclude
-17,Conoscere,Know
-18,Cuocere,Cook
-19,Difendere,Defend
-20,Dipingere,PAINT
-21,Dirigere,To direct
-22,Discutere,Discuss
-23,Dividere,Split
-24,Illudere,To deceive
-25,Introdurre,Introduce
-26,Muovere,Move
-27,Nascondere,HIDE
-28,Offendere,Offend
-29,Offrire,Offer
-30,Perdere,LOSE
-31,Piangere,Cry
-32,Prendere,Take
-33,Produrre,Produce
-34,Proteggere,Protect
-35,Rispondere,Answer
-36,Rompere,Break
-37,Scegliere,Choose
-38,Sciogliere,MELT
-39,Scrivere,Write
-40,Soffrire,Suffer
-41,Sospendere,Suspend
-42,Spendere,Spend
-43,Spingere,Push
-44,Tradurre,Translate
-45,Uccidere,Kill
-46,Vedere,See
-47,Camminare,Walk
-48,Parlare,Speak
-49,Dormire,Sleep
-50,Lavorare,Work
+,Unnamed: 0,italian,english
+0,0,Essere,To be
+1,1,Stare,Stay
+2,2,Partire,Start
+3,3,Arrivare,Arrive
+4,4,Uscire,Go out
+5,5,Venire,Come
+6,6,Tornare,Return
+7,7,Nascere,Be born
+8,8,Morire,Die
+9,9,Salire,Go out
+10,10,Scendere,DESCEND
+11,11,Entrare,Enter
+12,12,Piacere,Pleasure
+13,13,Rimanere,Stay
+14,14,Sembrare,Seem
+15,15,Accendere,Turn on
+16,16,Aprire,Open
+17,17,Assistere,Assist
+18,18,Assumere,Assume
+19,19,Bere,Drink
+20,20,Chiedere,Ask
+21,21,Chiudere,Close
+22,22,Cogliere,To seize
+23,23,Concludere,To conclude
+24,24,Correggere,Correct
+25,25,Correre,Run
+26,26,Cuocere,Cook
+27,27,Decidere,Decide
+28,28,Deludere,Disappoint
+29,29,Difendere,Defend
+30,30,Dipingere,PAINT
+31,31,Dire,Say
+32,32,Dirigere,To direct
+33,33,Discutere,Discuss
+34,34,Distruggere,Destroy
+35,35,Dividere,Split
+36,36,Fare,Do
+37,37,Leggere,Light
+38,38,Mettere,Put
+39,39,Muovere,Move
+40,40,Nascondere,HIDE
+41,41,Offendere,Offend
+42,42,Offrire,Offer
+43,43,Perdere,LOSE
+44,44,Piangere,Cry
+45,46,Produrre,Produce
+46,47,Proteggere,Protect
+47,48,Ridere,LAUGH
+48,49,Ridurre,Reduce
+49,50,Risolvere,Solve
+50,51,Rispondere,Answer
+51,52,Rompere,Break
+52,53,Scegliere,Choose
+53,54,Sciogliere,MELT
+54,55,Scrivere,Write
+55,56,Soffrire,Suffer
+56,57,Sospendere,Suspend
+57,58,Spegnere,Turn off
+58,59,Spendere,Spend
+59,60,Tradurre,Translate
+60,61,Uccidere,Kill
+61,62,Vedere,See
+62,63,Vincere,WIN
+63,64,Vivere,Live
+64,65,Ballare,Dance
+65,66,Camminare,Walk
+66,67,Passeggiare,Stroll
+67,68,Parlare,Speak
+68,69,Mangiare,Eat
+69,70,Dormire,Sleep
+70,71,Lavorare,Work
+71,72,Comprare,Buy
+72,73,Cadere,Fall
+73,74,Restare,Remain
