@@ -8,9 +8,6 @@ load_dotenv()
 
 # Constants ---------------------------------------------------
 EMAIL = os.environ["MY_EMAIL"]
-print(EMAIL)
 
-
-
-
-# connection = smtplib.SMTP("smtp.gmail.com")
+# SMTP -------------------------------------------------------
+connection = smtplib.SMTP("smtp.gmail.com")
