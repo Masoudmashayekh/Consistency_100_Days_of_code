@@ -38,5 +38,4 @@ print(year)
 print(month)
 print(day)
 print(day_of_week)
-
 print(hour)
