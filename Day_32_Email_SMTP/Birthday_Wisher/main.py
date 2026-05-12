@@ -1,38 +1,13 @@
-import random
-import datetime as dt
-import smtplib
+##################### Extra Hard Starting Project ######################
 
-# Use .env -----------------------------------------------------
-import os
-from dotenv import load_dotenv
-load_dotenv()
+# 1. Update the birthdays.csv
 
+# 2. Check if today matches a birthday in the birthdays.csv
 
-# Constants ---------------------------------------------------
-MY_EMAIL = os.environ["MY_EMAIL"]
-APP_PASSWORD = os.environ["APP_PASSWORD"]
-CLIENT_EMAIL = os.environ["CLIENT_EMAIL"]
-TUESDAY = 1
+# 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 
-# Week day ----------------------------------------------------
-now = dt.datetime.now()
-week_day = now.weekday()
+# 4. Send the letter generated in step 3 to that person's email address.
 
 
-if week_day == TUESDAY:
-    # Read Data from quotes.txt -----------------------------------
-    with open("Day_32_Email_SMTP/quotes/quotes.txt") as data:
-        quotes = data.readlines()
-        quote = random.choice(quotes)
 
-
-    # SMTP -------------------------------------------------------
-    with smtplib.SMTP("smtp.gmail.com") as connection:
-        connection.starttls()  # For security reasion
-        connection.login(user= MY_EMAIL, password= APP_PASSWORD)
-        connection.sendmail(
-            from_addr= MY_EMAIL, 
-            to_addrs= CLIENT_EMAIL, 
-            msg=f"Subject: Daily Quote \n\n {quote}"
-            )
 

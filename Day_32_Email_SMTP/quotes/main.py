@@ -21,7 +21,7 @@ week_day = now.weekday()
 
 if week_day == TUESDAY:
     # Read Data from quotes.txt -----------------------------------
-    with open("Day_32_Email_SMTP/Birthday_Wisher/quotes.txt") as data:
+    with open("Day_32_Email_SMTP/quotes/quotes.txt") as data:
         quotes = data.readlines()
         quote = random.choice(quotes)
 
