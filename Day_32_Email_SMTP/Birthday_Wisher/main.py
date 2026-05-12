@@ -8,6 +8,17 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+# Read Data from quotes.txt -----------------------------------
+with open("Day_32_Email_SMTP/Birthday_Wisher/quotes.txt") as data:
+   quotes = data.readlines()
+   quote = random.choice(quotes)
+
+
+# Week day ----------------------------------------------------
+now = dt.datetime.now()
+day = now.weekday()
+
+
 # Constants ---------------------------------------------------
 MY_EMAIL = os.environ["MY_EMAIL"]
 APP_PASSWORD = os.environ["APP_PASSWORD"]
@@ -22,12 +33,8 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
         msg="Subject: Hello \n\n This is body of my email."
         )
 
-with open("Day_32_Email_SMTP/Birthday_Wisher/quotes.txt") as data:
-   quotes = data.readlines()
-   quote = random.choice(quotes)
 
-now = dt.datetime.now()
-day = now.weekday()
+
 
 
    
