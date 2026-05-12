@@ -36,8 +36,3 @@ if week_day == TUESDAY:
             msg=f"Subject: Daily Quote \n\n {quote}"
             )
 
-
-
-
-
-
