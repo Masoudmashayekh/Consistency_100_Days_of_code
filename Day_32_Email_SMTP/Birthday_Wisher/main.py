@@ -14,19 +14,19 @@ APP_PASSWORD = os.environ["APP_PASSWORD"]
 CLIENT_EMAIL = os.environ["CLIENT_EMAIL"]
 TUESDAY = 1
 
-# Read Data from quotes.txt -----------------------------------
-with open("Day_32_Email_SMTP/Birthday_Wisher/quotes.txt") as data:
-   quotes = data.readlines()
-   quote = random.choice(quotes)
-
-
 # Week day ----------------------------------------------------
 now = dt.datetime.now()
 week_day = now.weekday()
 
 
-# SMTP -------------------------------------------------------
 if week_day == TUESDAY:
+    # Read Data from quotes.txt -----------------------------------
+    with open("Day_32_Email_SMTP/Birthday_Wisher/quotes.txt") as data:
+        quotes = data.readlines()
+        quote = random.choice(quotes)
+
+
+    # SMTP -------------------------------------------------------
     with smtplib.SMTP("smtp.gmail.com") as connection:
         connection.starttls()  # For security reasion
         connection.login(user= MY_EMAIL, password= APP_PASSWORD)
@@ -40,4 +40,4 @@ if week_day == TUESDAY:
 
 
 
-   
+
