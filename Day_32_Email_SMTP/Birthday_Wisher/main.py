@@ -3,16 +3,16 @@ import pandas
 import datetime as dt
 
 now = dt.datetime.now()
-day = now.weekday()
+day = now.day
 month = now.month
-
+print(month)
 
 # 1. Update the birthdays.csv
 data = pandas.read_csv("./Day_32_Email_SMTP/birthday_wisher/birthdays.csv")
-t = len(data)
-for _ in t:
-    if data["month"] == month and data["day"] == day:
-        print(data["name"])
+dic = data.to_dict(orient="records")
+for i in dic:
+    if i["month"] == month and i["day"] == day:
+        print(i["name"])
 
 # 2. Check if today matches a birthday in the birthdays.csv
 
