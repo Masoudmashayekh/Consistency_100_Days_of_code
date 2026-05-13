@@ -35,10 +35,15 @@ for i in data_dict:
             letter = file.read()
         new_letter = letter.replace("[NAME]", i["name"])
         print(new_letter)
-
-
 # 4. Send the letter generated in step 3 to that person's email address. ------------------------
-
+        with smtplib.SMTP("smtp.gimal.com") as connection:
+            connection.starttls()
+            connection.login(user= MY_EMAIL, password= APP_PASSWORD)
+            connection.sendmail(
+                from_addr= MY_EMAIL,
+                to_addrs= i["email"],
+                msg= f"Subject: Happy birthday! \n\n {new_letter}"
+            )
 
 
 
