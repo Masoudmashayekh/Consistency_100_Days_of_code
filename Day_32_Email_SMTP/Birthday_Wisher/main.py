@@ -36,7 +36,7 @@ for i in data_dict:
         new_letter = letter.replace("[NAME]", i["name"])
         print(new_letter)
 # 4. Send the letter generated in step 3 to that person's email address. ------------------------
-        with smtplib.SMTP("smtp.gimal.com") as connection:
+        with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
             connection.login(user= MY_EMAIL, password= APP_PASSWORD)
             connection.sendmail(
