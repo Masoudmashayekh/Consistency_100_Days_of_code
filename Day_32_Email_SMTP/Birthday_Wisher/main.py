@@ -1,6 +1,10 @@
 ##################### Extra Hard Starting Project ######################
 import pandas
+import datetime as dt
 
+now = dt.datetime.now()
+day = now.weekday()
+month = now.month
 
 
 # 1. Update the birthdays.csv
