@@ -45,5 +45,3 @@ for i in data_dict:
                 msg= f"Subject: Happy birthday! \n\n {new_letter}"
             )
 
-
-
