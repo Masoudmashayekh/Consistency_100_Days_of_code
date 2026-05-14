@@ -17,9 +17,9 @@ APP_PASSWORD = os.environ["APP_PASSWORD"]
 
 
 # Date ----------------------------------------------------------------------------------------
-now = dt.datetime.now()
-day = now.day
-month = now.month
+today = dt.datetime.now()
+day = today.day
+month = today.month
 
 
 # 1. Update the birthdays.csv -----------------------------------------------------------------
