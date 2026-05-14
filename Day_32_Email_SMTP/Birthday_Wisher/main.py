@@ -33,8 +33,8 @@ for i in data_dict:
 # 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
         with open(f"Day_32_Email_SMTP/birthday_wisher/letter_templates/letter_{random.randint(1,3)}.txt") as file:
             letter = file.read()
-        new_letter = letter.replace("[NAME]", i["name"])
-        print(new_letter)
+            new_letter = letter.replace("[NAME]", i["name"])
+            print(new_letter)
 # 4. Send the letter generated in step 3 to that person's email address. ------------------------
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
