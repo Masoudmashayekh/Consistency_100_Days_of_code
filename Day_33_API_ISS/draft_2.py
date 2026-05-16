@@ -1,7 +1,7 @@
 import requests
 
-MY_LAT = 45.17686636485815
-MY_LONG = 9.192895944384869
+MY_LAT = 45.176792
+MY_LONG = 9.192834
 
 parameters = {
     "lat": MY_LAT,
@@ -9,5 +9,7 @@ parameters = {
 }
 
 
-response = requests.get("https://api.sunrise-sunset.org/json")
+response = requests.get("https://api.sunrise-sunset.org/json", params= parameters)
 response.raise_for_status()
+data = response.json()
+print(data)
