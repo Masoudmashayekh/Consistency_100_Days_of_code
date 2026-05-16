@@ -5,7 +5,8 @@ MY_LONG = 9.192834
 
 parameters = {
     "lat": MY_LAT,
-    "lng": MY_LONG
+    "lng": MY_LONG,
+    "formatted": 0
 }
 
 
