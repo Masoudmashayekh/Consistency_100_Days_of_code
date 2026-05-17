@@ -13,22 +13,24 @@ parameters = {
     "formatted": 0
 }
 
-MY_POSITION = (MY_LONG, MY_LAT)
 # API ISS-------------------------------------------------------------------
-response = requests.get(url= "http://api.open-notify.org/iss-now.json")
-response.raise_for_status()
+def is_iss_overhead():
+    response = requests.get(url= "http://api.open-notify.org/iss-now.json")
+    response.raise_for_status()
 
-data = response.json()["iss_position"]
+    data = response.json()["iss_position"]
 
-longitude = float(data["longitude"])
-latitude = float(data["latitude"])
+    iss_longitude = float(data["longitude"])
+    iss_latitude = float(data["latitude"])
 
-iss_position = (longitude, latitude)
-# https://www.latlong.net/
+    iss_position = (iss_longitude, iss_latitude)
+    # https://www.latlong.net/
 
-print(iss_position)
- 
-
+    print(iss_position)
+    if MY_LAT - 5 <= iss_latitude <= MY_LAT + 5 and MY_LONG - 5 <= iss_longitude <= MY_LONG + 5:
+        return True
+    
+    
 # API Sun-------------------------------------------------------------------
 response = requests.get("https://api.sunrise-sunset.org/json", params= parameters)
 response.raise_for_status()
@@ -42,7 +44,3 @@ print(sunset)
 time_now = datetime.now()
 print(time_now.hour)
 
-if (longitude -5, latitude - 5) == MY_POSITION or (longitude + 5, latitude + 5) == MY_POSITION:
-    print("is near")
-else:
-    print("nothing")
