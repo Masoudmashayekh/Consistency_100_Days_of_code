@@ -1,5 +1,5 @@
 import requests
-
+from datetime import datetime
 MY_LAT = 45.176792
 MY_LONG = 9.192834
 
@@ -18,3 +18,6 @@ sunset = data["results"]["sunset"]
 
 print(sunrise)
 print(sunset)
+
+time_now = datetime.now()
+print(time_now)
