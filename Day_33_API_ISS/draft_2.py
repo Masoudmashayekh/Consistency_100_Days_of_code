@@ -20,4 +20,4 @@ print(sunrise)
 print(sunset)
 
 time_now = datetime.now()
-print(time_now)
+print(time_now.hour)
