@@ -1,7 +1,10 @@
 from tkinter import *
 
 
+
+
 THEME_COLOR = "#375362"
+
 
 
 class QuizInterface:
@@ -13,9 +16,6 @@ class QuizInterface:
         
         self.score_label = Label(text= "Score: 0", fg= "white", bg= THEME_COLOR)
         self.score_label.grid(row=0, column= 1)      
-        
-        
-        
         
         
         self.window.mainloop()
