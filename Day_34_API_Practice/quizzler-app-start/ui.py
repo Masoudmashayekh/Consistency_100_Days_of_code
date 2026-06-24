@@ -9,7 +9,8 @@ FONT = ("Arial", 20, "italic")
 
 class QuizInterface: 
     
-    def  __init__(self):
+    def  __init__(self, quiz_brain):
+        self.quiz = quiz_brain
         self.window = Tk()
         self.window.title("Quizzler")
         self.window.config(padx=20, pady=20, bg= THEME_COLOR)
@@ -33,4 +34,4 @@ class QuizInterface:
         
         self.window.mainloop()
         
-x = QuizInterface()
+def get_next_question(self):
