@@ -14,8 +14,8 @@ class QuizInterface:
         self.window = Tk()
         self.window.title("Quizzler")
         self.window.config(padx=20, pady=20, bg= THEME_COLOR)
-        
-        self.score_label = Label(text= "Score: 0", fg= "white", bg= THEME_COLOR)
+        self.score = 0
+        self.score_label = Label(text= f"Score: {self.score}", fg= "white", bg= THEME_COLOR)
         self.score_label.grid(row=1, column= 2)   
         
         self.canvas = Canvas(width= 300, height= 250, bg= "white")
