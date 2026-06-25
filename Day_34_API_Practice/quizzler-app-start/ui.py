@@ -27,7 +27,7 @@ class QuizInterface:
         self.true_button.grid(row= 3, column= 1)
         
         false_image = PhotoImage(file="Day_34_API_Practice/quizzler-app-start/images/false.png")
-        self.false_button = Button(image= false_image, highlightthickness= 0, compound= self.false_pressed)
+        self.false_button = Button(image= false_image, highlightthickness= 0, command= self.false_pressed)
         self.false_button.grid(row= 3, column= 2)
         
         self.get_next_question()
@@ -40,7 +40,7 @@ class QuizInterface:
         
         
     def true_pressed(self):
-        pass
+        self.quiz.check_answer("True")
     
     def false_pressed(self):
-        pass
+        self.quiz.check_answer("False")
